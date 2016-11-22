@@ -11,6 +11,7 @@ var app=express();
 
 //设置路径
 app.set('views',path.join(__dirname,'views'));
+app.use('/public',express.static(__dirname+'/public'));
 //设置模板
 app.set('view engine','ejs');
 
