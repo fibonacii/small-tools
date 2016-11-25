@@ -1,15 +1,26 @@
+/**
+ * 主路由
+ */
+
+
 var userModel=require('../models/user.js');
+var userInfo=require('./userInfo.js');
 
 module.exports=function (app) {
     app.get('/',function (req,res,next) {
-        var person=new userModel({name:"有意思"});
-        person.save(function (err) {
-            if(err){
-                console.log(err);
-            }else {
-                console.log("successful");
-            }
-        });
-        res.send('123');
-    })
+        res.render('mainpage');
+    });
+    app.use('/user',userInfo);
 };
+
+/**
+ * mongoose使用
+ */
+// var person=new userModel({name:new Date()});
+// person.save(function (err) {
+//     if(err){
+//         console.log(err);
+//     }else {
+//         console.log("successful");
+//     }
+// });
