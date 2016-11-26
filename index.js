@@ -18,6 +18,6 @@ app.set('view engine','ejs');
 routes(app);
 
 app.listen(config.port,function () {
-    console.log();
+    console.log("server is running at http://127.0.0.1:10086/");
 })
 
