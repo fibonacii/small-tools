@@ -6,6 +6,10 @@ $(function () {
         window.location.href="http://localhost:10086/user/register";
     });
     $('#login').bind('click',function () {
-
+        // fortest()()();
+        haha();
+        Object.getName()();
     });
+
+
 });

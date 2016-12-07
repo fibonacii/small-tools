@@ -1,5 +1,6 @@
 <%- include('../components/header') %>
-<script type="text/javascript" ></script>
+<script type="text/javascript" src="../../public/js/base/baseValidator.js"></script>
+<script type="text/javascript" src="../../public/js/register/register.js"></script>
 
 <% /* 右半侧弄个花哨的图挂上去，后面再看 */ %>
 <div class="container">
@@ -7,14 +8,22 @@
     <form class="form-horizontal">
         <div class="form-group ">
             <div class="col-lg-4">
-            <label class="control-label">用户名:</label>
-               <input type="text" class="form-control input-lg" id="userName" placeholder="请输入用户名"/>
+            <label class="control-label">邮箱:</label>
+               <input type="text" class="form-control input-lg" id="mailBox" placeholder="请输入邮箱"/>
+            </div>
+        </div>
+
+        <% /*对输入密码进行密码强度校验*/%>
+        <div class="form-group ">
+            <div class="col-lg-4">
+            <label for="passWord">密码:</label>
+            <input type="password" id="passWord" class="form-control input-lg" placeholder="请输入密码,最少6位"/>
             </div>
         </div>
         <div class="form-group ">
             <div class="col-lg-4">
-            <label for="passWord">密码:</label>
-            <input type="password" id="passWord" class="form-control input-lg" placeholder="请输入密码"/>
+            <label for="passWord2">密码确认:</label>
+            <input type="password" id="passWord2" class="form-control input-lg" placeholder="请再次输入密码"/>
             </div>
         </div>
         <div class="form-group ">
