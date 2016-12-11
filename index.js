@@ -6,12 +6,17 @@ var flash=require('connect-flash');
 var config=require('config-lite');
 var routes =require('./routes');
 var pkg=require('./package');
+var bodyParser= require('body-parser');
 
 var app=express();
 
 //设置路径
 app.set('views',path.join(__dirname,'views'));
 app.use('/public',express.static(__dirname+'/public'));
+
+//设置对request的解析
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 //设置模板
 app.set('view engine','ejs');
 

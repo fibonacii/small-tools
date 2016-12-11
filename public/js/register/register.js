@@ -21,6 +21,7 @@ function registerHandler() {
         var param={};
         param.email=email;
         param.password=password;
+        return param;
     }
 
     return {
