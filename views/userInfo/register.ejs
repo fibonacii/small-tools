@@ -8,7 +8,7 @@
     <form class="form-horizontal">
         <div class="form-group ">
             <div class="col-lg-4">
-            <label class="control-label">邮箱:</label>
+            <label  class="control-label">邮箱:</label>
                <input type="text" class="form-control input-lg" id="mailBox" placeholder="请输入邮箱"/>
             </div>
         </div>
@@ -16,28 +16,39 @@
         <% /*对输入密码进行密码强度校验*/%>
         <div class="form-group ">
             <div class="col-lg-4">
-            <label for="passWord">密码:</label>
+            <label  for="passWord">密码:</label>
             <input type="password" id="passWord" class="form-control input-lg" placeholder="请输入密码,最少6位"/>
             </div>
         </div>
         <div class="form-group ">
             <div class="col-lg-4">
-            <label for="passWord2">密码确认:</label>
+            <label  for="passWord2">密码确认:</label>
             <input type="password" id="passWord2" class="form-control input-lg" placeholder="请再次输入密码"/>
             </div>
         </div>
         <div class="form-group ">
-            <div class="col-lg-4">
-            <label for="checkAlpha">验证码：</label>
-            <input type="text" id="checkAlpha" class="form-control input-lg" placeholder="请输入验证码">
+             <div class="col-lg-4">
+                 <label  for="inputAlpha">验证码：</label>
+                 <div>
+                 <div style="float: left;width:49%">
+                  <input type="text" id="inputAlpha" class="form-control input-lg" placeholder="请输入验证码" >
+                 </div>
+                 <div style="float: right;width:49%">
+                     <input type="button" class="btn btn-block code" id="code" style="color:#357ebd;font-weight:bold;font-style:italic;letter-spacing: 10px";>
+                 </div>
+                </div>
+             </div><br>
+            <h4 class="text-error" id="message"></h4>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-4 ">
+                <button type="button" class="btn btn-primary btn-block " id="sign_up">注册</button>
             </div>
         </div>
         <div class="form-group">
-            <div class="col-sm-2 ">
-                <button type="button" class="btn btn-primary btn-block " id="sign_up">注册</button>
-            </div>
-            <div class="col-sm-2 ">
-                <button type="button" class="btn btn-primary btn-block " id="login">登录</button>
+            <div class="col-lg-offset-2">
+                <text >已有账号，去登录>>></text>
+                <button class="btn btn-primary" id="login">登录</button>
             </div>
         </div>
 
