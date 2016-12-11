@@ -10,11 +10,6 @@ UserSchema.static.findUserByEmail = function (email,cb) {
 };
 
 var UserModel=mongoose.model('user',UserSchema);
-UserModel.prototype.findUserByEmail= function (email) {
-    var users= this.find({email:email});
-    if(users){
-        console.log()
-    }
-}
+
 
 module.exports=UserModel;
