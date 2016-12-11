@@ -1,5 +1,5 @@
 var mongoose=require('../lib/mongo.js')
-var userSchema=new mongoose.Schema({
+var UserSchema=new mongoose.Schema({
     name: { type: 'string' },
     password: { type: 'string' },
     touxiang: { type: 'string' },
