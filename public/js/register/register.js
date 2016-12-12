@@ -11,10 +11,11 @@ $(function () {
     });
 
     $('#sign_up').bind('click',function () {
-        if(!registerHandler().validatorInput()){
-            return false;
-        }
-        registerHandler().postRegister()();
+        registerHandler().postRegister();
+        // if(!registerHandler().validatorInput()){
+        //     return false;
+        // }
+        // registerHandler().postRegister()();
     });
 
     $('#code').bind('click',function () {
@@ -57,12 +58,20 @@ function registerHandler() {
     var postRegisterUrl='/user/signUp';
     var email=$('#mailBox').val(),
         //通过公钥私钥进行加密传输
-        password=$('#password').val(),
-        password2=$('#password2').val();
+        password=$('#passWord').val(),
+        password2=$('#passWord2').val();
     var getSignUpParam = function () {
+        var rsa = new RSAKey();
+        var public_key='-----BEGIN PUBLIC KEY-----' +
+            '\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0uOY/giRmNlcPnCXtfWhqkNiP' +
+            'tXk0kT7bOex0H6p+Dn4HExpndGDEq07Mk6oEWyCwUk4dzfpOJoa3J+BwVOxe7RNS' +
+            'I4R1GIvl+Yn1Z8n/WNbagaQzsXlBOqmuFFfE62sZoVet2CxIc/bmNatUjJtjIoYh' +
+            '5DbHzxvwznjhsijUDwIDAQAB' +
+            '\n-----END PUBLIC KEY-----';
+        rsa.setPublic(public_key,'10001');
         var param={};
         param.email=email;
-        param.password=password;
+        param.password=rsa.encrypt(password);
         return param;
     }
 
@@ -82,7 +91,9 @@ function registerHandler() {
             var signUpParam=getSignUpParam();
             return $.post(postRegisterUrl,signUpParam,function () {
                 window.location.href='/';
-            }).error(alert('注册僵硬了'))
+            }).error(function (err) {
+                alert(err);
+            })
         }
     }
 }
