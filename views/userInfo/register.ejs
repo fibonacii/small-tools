@@ -11,31 +11,37 @@
 <div class="container">
     <h1 >这是注册页</h1>
     <div class="row myCenter">
-    <div class="col-center-block">
+    <div class="col-md-offset-4">
     <form class="form-horizontal">
         <div class="form-group ">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <label  class="control-label">邮箱:</label>
                 <input type="text" class="form-control input-lg" id="mailBox" placeholder="请输入邮箱"/>
              </div>
         </div>
+        <div class="form-group ">
+            <div class="col-lg-5">
+                <label  class="control-label">用户名:</label>
+                <input type="text" class="form-control input-lg" id="userName" placeholder="请输入用户名"/>
+            </div>
+        </div>
 
         <% /*对输入密码进行密码强度校验*/%>
         <div class="form-group ">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
             <label  for="passWord">密码:</label>
             <input type="password" id="passWord" class="form-control input-lg" placeholder="请输入密码,最少6位"/>
             </div>
         </div>
         <div class="form-group ">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
             <label  for="passWord2">密码确认:</label>
             <input type="password" id="passWord2" class="form-control input-lg" placeholder="请再次输入密码"/>
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <label for="gender">性别:</label>
                 <select class=" dropdown-menu-left" name="gender">
                     <option value="m">男</option>
@@ -45,14 +51,14 @@
             </div>
         </div>
         <div class="form-group field required">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <label>头像:</label>
                 <input type="file" name="touxiang">
                 <h4 class="text-error" id="touxiang_message"></h4>
             </div>
         </div>
         <div class="form-group ">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <label  for="inputAlpha">验证码：</label>
                 <div>
                     <div style="float: left;width:49%">
@@ -66,14 +72,14 @@
             <h4 class="text-error" id="message"></h4>
         </div>
         <div class="form-group">
-            <div class="col-sm-4 ">
-                <button type="button" class="btn btn-primary btn-block " id="sign_up">注册</button>
+            <div class="col-sm-5 ">
+                <button type="button" class="btn btn-primary btn-block " id="sign_up">注 册</button>
             </div>
         </div>
         <div class="form-group">
             <div class="col-lg-offset-2">
                 <text >已有账号，去登录>>></text>
-                <button class="btn btn-primary" id="login">登录</button>
+                <a href="/user/login" class="btn btn-primary" id="login">登录</a>
             </div>
         </div>
 

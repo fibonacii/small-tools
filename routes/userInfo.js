@@ -11,6 +11,10 @@ router.get('/register',function (req,res) {
    res.render('userInfo/register') ;
 });
 
+router.get('/login',function (req,res) {
+    res.render('userInfo/login') ;
+});
+
 router.post('/signUp',function (req,res) {
     var private_key='-----BEGIN RSA PRIVATE KEY-----' +
         '\nMIICXAIBAAKBgQC0uOY/giRmNlcPnCXtfWhqkNiPtXk0kT7bOex0H6p+Dn4HExpn' +
