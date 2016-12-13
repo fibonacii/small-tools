@@ -117,6 +117,11 @@
       "from": "crc@3.4.1",
       "resolved": "https://registry.npmjs.org/crc/-/crc-3.4.1.tgz"
     },
+    "crypto": {
+      "version": "0.0.3",
+      "from": "crypto@latest",
+      "resolved": "https://registry.npmjs.org/crypto/-/crypto-0.0.3.tgz"
+    },
     "debug": {
       "version": "2.2.0",
       "from": "debug@>=2.2.0 <2.3.0",

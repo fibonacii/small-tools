@@ -11,11 +11,11 @@ $(function () {
     });
 
     $('#sign_up').bind('click',function () {
+
+        if(!registerHandler().validatorInput()||!validate()){
+            return false;
+        }
         registerHandler().postRegister();
-        // if(!registerHandler().validatorInput()){
-        //     return false;
-        // }
-        // registerHandler().postRegister()();
     });
 
     $('#code').bind('click',function () {
@@ -42,14 +42,17 @@ function validate() {
     var inputCode = document.getElementById("inputAlpha").value.toUpperCase(); //取得输入的验证码并转化为大写
     if (inputCode.length <= 0) { //若输入的验证码长度为0
         $("#message").text("请输入验证码！"); //则弹出请输入验证码
+        return false;
     }
     else if (inputCode != code) { //若输入的验证码与产生的验证码不一致时
         $("#message").text("验证码输入错误！@_@"); //则弹出验证码输入错误
         createCode();//刷新验证码
         document.getElementById("inputAlpha").value = "";//清空文本框
+        return false;
     }
     else { //输入正确时
         $("#message").text(""); //弹出^-^
+        return true;
     }
 }
 
@@ -59,19 +62,21 @@ function registerHandler() {
     var email=$('#mailBox').val(),
         //通过公钥私钥进行加密传输
         password=$('#passWord').val(),
-        password2=$('#passWord2').val();
+        password2=$('#passWord2').val(),
+        userName=$('#userName').val();
     var getSignUpParam = function () {
-        var rsa = new RSAKey();
+        var encrypt = new JSEncrypt();
         var public_key='-----BEGIN PUBLIC KEY-----' +
-            '\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0uOY/giRmNlcPnCXtfWhqkNiP' +
-            'tXk0kT7bOex0H6p+Dn4HExpndGDEq07Mk6oEWyCwUk4dzfpOJoa3J+BwVOxe7RNS' +
-            'I4R1GIvl+Yn1Z8n/WNbagaQzsXlBOqmuFFfE62sZoVet2CxIc/bmNatUjJtjIoYh' +
-            '5DbHzxvwznjhsijUDwIDAQAB' +
+            '\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3OMhJHP4wlMsVVIZ5VykQr+PK' +
+            '\nPcPeHL/EHl+fwOI7rQbaYk2ES+ptCfCXSHIf6B72JxhX9Cxb8IYeyU7ENgdsj1AB' +
+            '\n8hs93Y2zyhHqQz/kuIxAnSUfUIfoqDGEyhafNqT/Q2gTVCTiHn7vZNj6ATvMlkyB' +
+            '\n0yLod1q3NfnhDx89UwIDAQAB' +
             '\n-----END PUBLIC KEY-----';
-        rsa.setPublic(public_key,'10001');
+        encrypt.setPublicKey(public_key);
         var param={};
         param.email=email;
-        param.password=rsa.encrypt(password);
+        param.password=encrypt.encrypt(password);
+        param.userName=userName;
         return param;
     }
 
@@ -89,8 +94,8 @@ function registerHandler() {
         },
         postRegister: function () {
             var signUpParam=getSignUpParam();
-            return $.post(postRegisterUrl,signUpParam,function () {
-                window.location.href='/';
+            return $.post(postRegisterUrl,signUpParam,function (response) {
+                alert(response);
             }).error(function (err) {
                 alert(err);
             })

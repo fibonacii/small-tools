@@ -1,6 +1,8 @@
 var mongoose=require('../lib/mongo.js')
 var UserSchema=new mongoose.Schema({
-    email:String
+    email:String,
+    userName:String,
+    password:String
     // name: { type: 'string' },
     // password: { type: 'string' },
     // touxiang: { type: 'string' },
@@ -9,13 +11,15 @@ var UserSchema=new mongoose.Schema({
 
 var UserModel=mongoose.model('user',UserSchema);
 UserModel.findUserByEmail = function (email) {
-    this.findOne({'email':email},'some select',function (err,person) {
+    var persons;
+    this.findOne({'email':email},'some select',function (err,result) {
         if(err){
             console.log(err);
         }else{
-            console.log(person);
+            persons=result;
         }
     })
+    return persons;
 }
 
 
