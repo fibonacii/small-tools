@@ -18,10 +18,9 @@ router.get('/login',function (req,res) {
 
 router.post('/signUp',function (req,res) {
 
-    var person=UserModel.findUserByEmail(req.body.email);
-    if(person){
-        res.send('001');
-    }
+    UserModel.findUserByEmail(req.body.email).then(function (persons) {
+        console.log(persons);
+    })
 
     var private_key='-----BEGIN RSA PRIVATE KEY-----' +
         '\nMIICXQIBAAKBgQC3OMhJHP4wlMsVVIZ5VykQr+PKPcPeHL/EHl+fwOI7rQbaYk2E' +

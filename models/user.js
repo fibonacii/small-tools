@@ -10,16 +10,9 @@ var UserSchema=new mongoose.Schema({
 });
 
 var UserModel=mongoose.model('user',UserSchema);
-UserModel.findUserByEmail = function (email) {
-    var persons;
-    this.findOne({'email':email},'some select',function (err,result) {
-        if(err){
-            console.log(err);
-        }else{
-            persons=result;
-        }
-    })
-    return persons;
+UserModel.findUserByEmail = function(email) {
+
+    return this.findOne({'email':email},'some select').exec();
 }
 
 
