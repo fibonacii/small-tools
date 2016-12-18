@@ -2,63 +2,99 @@
  * 用户相关操作路由
  */
 
-var express=require('express');
-var router=express.Router();
-var UserModel=require('../models/user.js');
+var express = require('express');
+var router = express.Router();
+var UserModel = require('../models/user.js');
 var NodeRSA = require('node-rsa');
-var crypto=require('crypto');
+var crypto = require('crypto');
+var config = require('config-lite');
 
-router.get('/register',function (req,res) {
-   res.render('userInfo/register') ;
+router.get('/register', function (req, res) {
+    res.render('userInfo/register');
 });
 
-router.get('/login',function (req,res) {
-    res.render('userInfo/login') ;
+router.get('/login', function (req, res) {
+    res.render('userInfo/login');
 });
 
-router.post('/signUp',function (req,res) {
+router.post('/signUp', function (req, res) {
 
-    UserModel.findUserByEmail(req.body.email).then(function (persons) {
-        console.log(persons);
-    })
+    var private_key = config.RSA_PRIVATE_KEY;
 
-    var private_key='-----BEGIN RSA PRIVATE KEY-----' +
-        '\nMIICXQIBAAKBgQC3OMhJHP4wlMsVVIZ5VykQr+PKPcPeHL/EHl+fwOI7rQbaYk2E' +
-        '\nS+ptCfCXSHIf6B72JxhX9Cxb8IYeyU7ENgdsj1AB8hs93Y2zyhHqQz/kuIxAnSUf' +
-        '\nUIfoqDGEyhafNqT/Q2gTVCTiHn7vZNj6ATvMlkyB0yLod1q3NfnhDx89UwIDAQAB' +
-        '\nAoGBAJniO/2EN02QOr0Qf9z7woa8Y6IhnBc5qCpMpF2lf51FZoMWmyppJFwuQ/6b' +
-        '\nnxaDOzXcggqlDnitm8fRpbEP+8zZZHWY6tidXrfSnZq9EUklfLLWWWDzj1WozLN8' +
-        '\n6icYV0MRbSnfdCi/IDxriEYTkh6OP2Tu1o8un90fTVlr321JAkEA7iX3FNcN5awt' +
-        '\nuQwWKnQQ/h//Xx3AsXOeirmb7nDESbZnDu9n9aBA4sqxMZCke0xaOZ1T5duiecYh' +
-        '\n1jYa+XxOJQJBAMT0yPDJ741cEKEl1szxxKfaPiFwSvBk+POTc3Fj5Vwf0WAZuD6l' +
-        '\nL2yUn6DvDpopRooa9W+TdIgGGEJa11th2BcCQG3cU7xobP/Lyxf3jG4vNvuUlUEy' +
-        '\nv4bdGIFUmKuJl/ONUsOgC6xTLjuxV8bOvCIpGeJEQsTh6nUUwt1H/m+jOYUCQAL6' +
-        '\nbJtvgkbR8JJvPwtEUKP1IeFhkFCIRldwkFtTlmFJPeJFIUsZNlle+fb2BnOAUke+' +
-        '\nVp3ETgvMg8tlEkKYfSsCQQDXfDsstwe2dr1gjwhsdJAXN3x5Vy9gTV5gNpu+pPht' +
-        '\n9msw1N8uoBCx4MeQBBcYXX0ZraheL91h+YlW1kvXzVgA' +
-        '\n-----END RSA PRIVATE KEY-----';
-    var decrypt=new NodeRSA(private_key);
+    //todo 增加输入校验
+    var decrypt = new NodeRSA(private_key);
     decrypt.setOptions({encryptionScheme: 'pkcs1'});
-    var password1=decrypt.decrypt(req.body.password,'utf-8');
-    var md5=crypto.createHash('md5');
-    password1=md5.update(password1).digest('base64');
+    var password1 = decrypt.decrypt(req.body.password, 'utf-8');
+    var md5 = crypto.createHash('md5');
+    password1 = md5.update(password1).digest('base64');
     var email1 = req.body.email;
-    var username1='';
-    if(req.body.userName){
+    var username1 = '';
+    if (req.body.userName) {
         userName1 = req.body.userName;
-    }else {
-        userName1 = email1.slice(0,email1.indexOf('@'));
+    } else {
+        userName1 = email1.slice(0, email1.indexOf('@'));
     }
-    var userEntity=new UserModel({email:email1,userName:userName1,password:password1});
-    UserModel.create(userEntity,function (err) {
-        if(err){
-            console.log(err);
-        }else{
-            console.log("insert success");
+    var userEntity = new UserModel({email: email1, userName: userName1, password: password1});
+    var resJson = new Object();
+    UserModel.create(userEntity, function (err) {
+        if (err) {
+            if (err.code === 11000) {
+                console.log(err);
+                resJson.code='01';
+                resJson.msg='email has been 注册'
+                res.send(resJson);
+            } else {
+                console.log(err);
+                resJson.code='99'
+                resJson.msg='unknown exception , please call administror';
+                res.send(resJson);
+            }
+        } else {
+            UserModel.findUserByEmail(email1).then(function (person) {
+                if (person) {
+                    req.flash('info', '注册成功');
+                    req.session.uid = person.id;
+                    req.session.userName = person.userName;
+                    resJson.code='00';
+                    resJson.msg='diao';
+                    res.send(resJson);
+                }
+            })
         }
     })
-    UserModel.findUserByEmail(req.body.email);
-    res.send('ok');
-})
+});
 
-module.exports=router;
+router.post('/loginHandler',function (req,res) {
+
+    var private_key = config.RSA_PRIVATE_KEY;
+
+    //todo 增加输入校验
+    var decrypt = new NodeRSA(private_key);
+    decrypt.setOptions({encryptionScheme: 'pkcs1'});
+    var password1 = decrypt.decrypt(req.body.password, 'utf-8');
+    var md5 = crypto.createHash('md5');
+    password1 = md5.update(password1).digest('base64');
+    var email1 = req.body.email;
+    var resJson= new Object();
+    UserModel.findUserByEmail(email1).then(function (person) {
+        if(person){
+            if(person.password===password1){
+                resJson.code='00';
+                req.flash('info', '欢迎回来,'+person.userName);
+                req.session.uid=person.id;
+                req.session.userName=person.userName;
+                res.send(resJson);
+            }else {
+                resJson.code='01';
+                resJson.msg='incorrect password';
+                res.send(resJson);
+            }
+        }else{
+            resJson.code='02';
+            resJson.msg='no such user';
+            res.send(resJson);
+        }
+    })
+});
+
+module.exports = router;

@@ -1,15 +1,19 @@
 <%- include('../components/header') %>
+<script type="text/javascript" src="../../public/js/libs/rsa/jsencrypt.js"></script>
+<script type="text/javascript" src="../../public/js/base/baseInput.js"></script>
+<script type="text/javascript" src="../../public/js/user/login.js"></script>
 
 
 <div class="container">
     <h1 >这是登录页</h1>
+    <p id="notification"></p>
     <div class="row myCenter">
         <div class="col-md-offset-4">
             <form class="form-horizontal">
                 <div class="form-group ">
                     <div class="col-lg-5">
-                       <label  class="control-label">用户名:</label>
-                       <input type="text" class="form-control input-lg" id="userName" placeholder="请输入用户名"/>
+                       <label  class="control-label">邮箱:</label>
+                       <input type="text" class="form-control input-lg" id="email" placeholder="请输入注册邮箱"/>
                     </div>
                 </div>
                 <div class="form-group ">

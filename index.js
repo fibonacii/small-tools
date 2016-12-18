@@ -1,12 +1,14 @@
-var path =require('path')
-var express =require('express');
-var session =require('express-session');
-var MongoStore=require('connect-mongo')(session);
-var flash=require('connect-flash');
-var config=require('config-lite');
-var routes =require('./routes');
-var pkg=require('./package');
-var bodyParser= require('body-parser');
+var path = require('path')
+var express = require('express');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+var flash = require('connect-flash');
+var config = require('config-lite');
+var routes = require('./routes');
+var pkg = require('./package');
+var bodyParser = require('body-parser');
+var session = require('express-session');
+var flash = require('connect-flash');
 
 var app=express();
 
@@ -19,6 +21,23 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 //设置模板
 app.set('view engine','ejs');
+
+//session setting
+app.use(session({
+    name: config.session.key,
+    secret: config.session.secret,
+    resave: false,
+    saveUninitialized: true
+}));
+
+app.use(flash());
+//set flash
+app.use(function (req,res,next) {
+    res.locals.userName = req.session.userName;
+    res.locals.error = req.flash('error');
+    res.locals.info = req.flash('info');
+    next();
+});
 
 routes(app);
 

@@ -18,9 +18,14 @@
                         个人中心 <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">修改头像</a></li>
-                        <li><a href="#">修改签名</a></li>
-                        <li><a href="#">我的日志</a></li>
+                        <% if(userName) { %>
+                            <li><a href="#">修改头像</a></li>
+                            <li><a href="#">修改签名</a></li>
+                            <li><a href="#">我的日志</a></li>
+                        <% } else { %>
+                            <li><a href="/user/login">登录</a></li>
+                            <li><a href="/user/register">注册</a></li>
+                        <% } %>
                     </ul>
                 </li>
             </ul>
@@ -28,9 +33,4 @@
     </div>
 </div><hr>
 
-<div>
-    <h1>这是主页</h1>
-    <button type="button" id="register">注册</button>
-    <button type="button" id="login">登陆</button>
-</div>
 <%- include('components/footer') %>

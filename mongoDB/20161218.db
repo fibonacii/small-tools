@@ -1,0 +1,3 @@
+use small_tools;
+db.createCollection("users");
+db.users.ensureIndex({"email":1},{"unique":true});

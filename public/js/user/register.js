@@ -93,12 +93,14 @@ function registerHandler() {
             return true;
         },
         postRegister: function () {
-            var signUpParam=getSignUpParam();
-            return $.post(postRegisterUrl,signUpParam,function (response) {
-                alert(response);
-            }).error(function (err) {
-                alert(err);
-            })
+            var signUpParam = getSignUpParam();
+            return $.post(postRegisterUrl, signUpParam, function (response) {
+                if(response.code==='00'){
+                    window.location.href='/';
+                }else {
+                    $('#notification').text('code:'+response.code+" message:"+response.msg);
+                }
+            });
         }
     }
 }
