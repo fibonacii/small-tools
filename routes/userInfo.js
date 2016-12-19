@@ -2,6 +2,7 @@
  * 用户相关操作路由
  */
 
+var path = require('path');
 var express = require('express');
 var router = express.Router();
 var UserModel = require('../models/user.js');
@@ -28,13 +29,20 @@ router.post('/signUp', function (req, res) {
     var md5 = crypto.createHash('md5');
     password1 = md5.update(password1).digest('base64');
     var email1 = req.body.email;
+    var avatar=req.body.avatar;
+    var gender=req.body.gender;
     var username1 = '';
     if (req.body.userName) {
         userName1 = req.body.userName;
     } else {
         userName1 = email1.slice(0, email1.indexOf('@'));
     }
-    var userEntity = new UserModel({email: email1, userName: userName1, password: password1});
+    var userEntity = new UserModel({
+         email: email1,
+         userName: userName1,
+         password: password1,
+         gender:gender,
+         avatar:avatar});
     var resJson = new Object();
     UserModel.create(userEntity, function (err) {
         if (err) {
@@ -45,7 +53,7 @@ router.post('/signUp', function (req, res) {
                 res.send(resJson);
             } else {
                 console.log(err);
-                resJson.code='99'
+                resJson.code='99';
                 resJson.msg='unknown exception , please call administror';
                 res.send(resJson);
             }
@@ -58,6 +66,7 @@ router.post('/signUp', function (req, res) {
                     resJson.code='00';
                     resJson.msg='diao';
                     res.send(resJson);
+                    res.redirect('/');
                 }
             })
         }

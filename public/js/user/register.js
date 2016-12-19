@@ -22,6 +22,32 @@ $(function () {
         createCode();
     });
 
+    $('.fileupload').change(function(event) {
+        /* Act on the event */
+        if ($('.fileupload').val().length) {
+            var fileName = $('.fileupload').val();
+            var extension = fileName.substring(fileName.lastIndexOf('.'), fileName.length).toLowerCase();
+            if (extension == ".jpg" || extension == ".png") {
+                var data = new FormData();
+                data.append('upload', $('.fileToUpload')[0].files[0]);
+                $.ajax({
+                    url: 'apply/upload',
+                    type: 'POST',
+                    data: data,
+                    cache: false,
+                    contentType: false, //不可缺参数
+                    processData: false, //不可缺参数
+                    success: function(data) {
+                        console.log(data);
+                    },
+                    error: function() {
+                        console.log('error');
+                    }
+                });
+            }
+        }
+    });
+
 });
 
 function createCode() {
@@ -45,7 +71,7 @@ function validate() {
         return false;
     }
     else if (inputCode != code) { //若输入的验证码与产生的验证码不一致时
-        $("#message").text("验证码输入错误！@_@"); //则弹出验证码输入错误
+        $("#message").text("验证码输入错误！"); //则弹出验证码输入错误
         createCode();//刷新验证码
         document.getElementById("inputAlpha").value = "";//清空文本框
         return false;
@@ -63,7 +89,9 @@ function registerHandler() {
         //通过公钥私钥进行加密传输
         password=$('#passWord').val(),
         password2=$('#passWord2').val(),
-        userName=$('#userName').val();
+        userName=$('#userName').val(),
+        gender=$('#gender').val(),
+        avatar=$('#avatar').val();
     var getSignUpParam = function () {
         var encrypt = new JSEncrypt();
         var public_key='-----BEGIN PUBLIC KEY-----' +
@@ -77,8 +105,10 @@ function registerHandler() {
         param.email=email;
         param.password=encrypt.encrypt(password);
         param.userName=userName;
+        param.gender=gender;
+        param.avatar=avatar;
         return param;
-    }
+    };
 
     return {
         validatorInput: function () {
@@ -88,6 +118,14 @@ function registerHandler() {
             }
             if(password!==password2){
                 alert('两次输入的密码不一致');
+                return false;
+            }
+            if(!gender){
+                alert("请输入性别");
+                return false;
+            }
+            if(!avatar){
+                alert("请上传头像");
                 return false;
             }
             return true;

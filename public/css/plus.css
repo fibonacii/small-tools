@@ -4,3 +4,17 @@
     margin-left:auto;
     margin-right:auto;
 }
+.upload-container {
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 200px;
+    padding-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.fileupload {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 200px;
+    height: 200px;
+}
