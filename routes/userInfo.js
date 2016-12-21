@@ -9,6 +9,10 @@ var UserModel = require('../models/user.js');
 var NodeRSA = require('node-rsa');
 var crypto = require('crypto');
 var config = require('config-lite');
+var formidable = require('formidable'),
+    http = require('http'),
+    fs=require("fs"),
+    util = require('util');
 
 router.get('/register', function (req, res) {
     res.render('userInfo/register');
@@ -104,6 +108,18 @@ router.post('/loginHandler',function (req,res) {
             res.send(resJson);
         }
     })
+});
+
+//touxiang
+router.post('/fileUpload',function (req,res) {
+    var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files) {
+        // var types       = files.upload.name.split('.');
+        var date        = new Date();
+        var ms          = Date.parse(date);
+        fs.renameSync(files.upload.path,"/public/img/upload"+ ms +"."+String(types[types.length-1]));
+    });
+    res.send("");
 });
 
 module.exports = router;

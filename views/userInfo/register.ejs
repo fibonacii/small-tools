@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="../../public/css/plus.css"/>
 <script type="text/javascript" src="../../public/js/libs/rsa/jsencrypt.js"></script>
 <script type="text/javascript" src="../../public/js/base/baseInput.js"></script>
+<script type="text/javascript" src="../../public/js/public/ajaxFileUpload.js"></script>
 <script type="text/javascript" src="../../public/js/user/register.js"></script>
 
 <% /* 右半侧弄个花哨的图挂上去，后面再看 */ %>
@@ -51,7 +52,9 @@
         <div class="form-group field required">
             <div class="col-lg-5">
                 <label>头像:</label>
-                <input type="file" id="avatar" name="fileToUpload" class="fileupload">
+                <input type="file" id="avatar" name="file">
+                <input type="button" id="fileUpload" name="fileUpload"  value="上传头像">
+                <span id="avatar-message"></span>
             </div>
         </div>
         <div class="form-group ">

@@ -19,6 +19,8 @@
     "express-session": "^1.14.2",
     "mongoose": "4.6.8",
     "node-rsa": "^0.4.2",
-    "formidable":"1.0.17"
+    "formidable":"1.0.17",
+    "winston":"2.3.0",
+    "express-winston":"2.1.0"
   }
 }

@@ -21,6 +21,8 @@ app.use('/public',express.static(__dirname+'/public'));
 //设置对request的解析
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+//设置上传图像路径
+// app.use(bodyParser.urlencoded({ uploadDir: "../public/img/upload" }));
 //设置模板
 app.set('view engine','ejs');
 
