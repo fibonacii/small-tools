@@ -11,7 +11,8 @@ var crypto = require('crypto');
 var config = require('config-lite');
 
 router.get('/register', function (req, res) {
-    res.render('userInfo/register');
+    res.render('task/createTask');
+    // res.render('userInfo/register');
 });
 
 router.get('/login', function (req, res) {
