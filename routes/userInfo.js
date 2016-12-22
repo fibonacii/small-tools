@@ -113,11 +113,25 @@ router.post('/loginHandler',function (req,res) {
 //touxiang
 router.post('/fileUpload',function (req,res) {
     var form = new formidable.IncomingForm();
-    form.parse(req, function(err, fields, files) {
-        // var types       = files.upload.name.split('.');
-        var date        = new Date();
-        var ms          = Date.parse(date);
-        fs.renameSync(files.upload.path,"/public/img/upload"+ ms +"."+String(types[types.length-1]));
+    form.parse(req, function(err,fields,files){
+       var avatar1=path.basename(files.avatar.path);
+       var avatarEntity=new avatarModel({avatar:avatar1});
+        avatrSchema.create(avatarEntity,function (err) {
+            if (err) {
+                if (err.code === 11000) {
+                    console.log(err);
+                    resJson.code = '01';
+                    resJson.msg = 'email has been 注册'
+                    res.send(resJson);
+                } else {
+                    console.log(err);
+                    resJson.code = '99';
+                    resJson.msg = 'unknown exception , please call administror';
+                    res.send(resJson);
+                }
+            }
+
+        });
     });
     res.send("");
 });

@@ -117,55 +117,32 @@ $(function () {
     };
 
 
-    function ajaxFileUpload() {
-        var data = new FormData();
-        files = $("#avatar")[0].files;
-        if(files) {
-            data.append("file", files[0]);
-            // data.append("CompanyPicAddress","");
-            // data.append("CompanyNameCN",$('#CompanyNameCN').textbox("getValue"));
-            // data.append("CompanyNameEN",$('#CompanyNameEN').textbox("getValue"));
+function ajaxFileUpload() {
+        $.ajaxFileUpload(
+        {
+            url: '/user/fileUpload', //用于文件上传的服务器端请求地址
+            secureuri: false,
+            type: "POST",
+            fileElementId:'avatar',
+            dataType: 'json',
+            success: function (data) {
+                console.log('success:',data);
+                $("#avatar-message").html("上传成功");
+                // $("#img1").attr("src", data.imgurl);
+                // if (typeof (data.error) != 'undefined') {
+                //     if (data.error != '') {
+                //         alert(data.error);
+                //     } else {
+                //         alert(data.msg);
+                //     }
+                // }
+            },
+            //服务器响应失败处理函数
+            error: function (data, status, e) {
+                console.log('error:', e);
+                alert(e);
+            }
+        });
+};
 
-            $.ajax({
-                type: 'POST',
-                dataType: 'json',
-                url: '/user/fileUpload',
-                data: data,
-                contentType: false,
-                processData: false,
-                success: function (data, textStatus) {
-                    console.log('success:');
-                },
-                error: function (xhr) {
-                    console.log('error:');
-                }
-
-            });
-            //     $.ajaxFileUpload(
-            //     {
-            //         url: '/user/fileUpload', //用于文件上传的服务器端请求地址
-            //         type: "POST",
-            //         fileElementId: 'avatar',
-            //         dataType: 'json',
-            //         success: function (data, status) {
-            //             console.log('success:');
-            //             $("#avatar-message").html("上传成功");
-            //             // $("#img1").attr("src", data.imgurl);
-            //             // if (typeof (data.error) != 'undefined') {
-            //             //     if (data.error != '') {
-            //             //         alert(data.error);
-            //             //     } else {
-            //             //         alert(data.msg);
-            //             //     }
-            //             // }
-            //         },
-            //         //服务器响应失败处理函数
-            //         error: function (data, status, e) {
-            //             console.log('error:', e);
-            //             alert(e);
-            //         }
-            //     }
-            // );
-        }
-}
 
