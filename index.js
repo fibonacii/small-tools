@@ -9,6 +9,8 @@ var pkg = require('./package');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
+var expressWinston = require('express-winston');
+var winston = require('winston');
 
 var app=express();
 
