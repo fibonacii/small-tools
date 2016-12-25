@@ -8,18 +8,11 @@ var UserSchema=new mongoose.Schema({
 
 });
 
-var avatrSchema=new mongoose.Schema({
-    avatar:String
-});
-
 var UserModel=mongoose.model('user',UserSchema);
-
-var avatarModel=mongoose.model('avatar',avatrSchema);
 UserModel.findUserByEmail = function(email) {
 
     return this.findOne({'email':email},{'userName':1,'password':1}).exec();
-};
+}
 
 
 module.exports=UserModel;
-module.exports=avatarModel;

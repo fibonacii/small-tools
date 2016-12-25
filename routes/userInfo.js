@@ -111,29 +111,33 @@ router.post('/loginHandler',function (req,res) {
 });
 
 //touxiang
-router.post('/fileUpload',function (req,res) {
-    var form = new formidable.IncomingForm();
-    form.parse(req, function(err,fields,files){
-       var avatar1=path.basename(files.avatar.path);
-       var avatarEntity=new avatarModel({avatar:avatar1});
-        avatrSchema.create(avatarEntity,function (err) {
-            if (err) {
-                if (err.code === 11000) {
-                    console.log(err);
-                    resJson.code = '01';
-                    resJson.msg = 'email has been 注册'
-                    res.send(resJson);
-                } else {
-                    console.log(err);
-                    resJson.code = '99';
-                    resJson.msg = 'unknown exception , please call administror';
-                    res.send(resJson);
-                }
-            }
+router.post('/fileUpload', function(req, res, next) {
+    var form = formidable.IncomingForm();
+    form.encoding = 'utf-8';
+    form.uploadDir ='public/img/upload';
+    form.keepExtensions = true;
+    // form.maxFieldsSize = 2 * 1024 * 1024; // 单位为byte
 
-        });
+    form.on('progress', function(bytesReceived, bytesExpected) {
+        var progressInfo = {
+            value: bytesReceived,
+            total: bytesExpected
+        };
+        console.log('[progress]: ' + JSON.stringify(progressInfo));
+        res.write(JSON.stringify(progressInfo));
     });
-    res.send("");
+
+    form.on('end', function() {
+        console.log('end');
+        res.send('success');
+    });
+
+    form.on('error', function(err) {
+        console.error('upload failed', err.message);
+        next(err);
+    });
+
+    form.parse(req);
 });
 
 module.exports = router;
