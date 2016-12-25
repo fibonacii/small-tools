@@ -10,6 +10,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
 var expressWinston = require('express-winston');
+var formidable = require('formidable');
+var express_formidable=require("express-formidable");
 var winston = require('winston');
 
 var app=express();
@@ -21,6 +23,11 @@ app.use('/public',express.static(__dirname+'/public'));
 //设置对request的解析
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+//设置上传图像路径
+app.use(express_formidable({
+    uploadDir: path.join(__dirname, 'public/img/upload'),// 上传文件目录
+    keepExtensions: true// 保留后缀
+}));
 //设置模板
 app.set('view engine','ejs');
 
