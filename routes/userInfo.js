@@ -8,10 +8,18 @@ var UserModel = require('../models/user.js');
 var NodeRSA = require('node-rsa');
 var crypto = require('crypto');
 var config = require('config-lite');
+var formidable = require('formidable'),
+    http = require('http'),
+    fs=require("fs"),
+    util = require('util');
 
 router.get('/register', function (req, res) {
+    // res.render('task/createTask');
+     res.render('userInfo/register');
+});
+
+router.get('/newTask',function (req, res) {
     res.render('task/createTask');
-    // res.render('userInfo/register');
 });
 
 router.get('/login', function (req, res) {
@@ -96,6 +104,36 @@ router.post('/loginHandler',function (req,res) {
             res.send(resJson);
         }
     })
+});
+
+//touxiang
+router.post('/fileUpload', function(req, res, next) {
+    var form = formidable.IncomingForm();
+    form.encoding = 'utf-8';
+    form.uploadDir ='public/img/upload';
+    form.keepExtensions = true;
+    // form.maxFieldsSize = 2 * 1024 * 1024; // 单位为byte
+
+    form.on('progress', function(bytesReceived, bytesExpected) {
+        var progressInfo = {
+            value: bytesReceived,
+            total: bytesExpected
+        };
+        console.log('[progress]: ' + JSON.stringify(progressInfo));
+        res.write(JSON.stringify(progressInfo));
+    });
+
+    form.on('end', function() {
+        console.log('end');
+        res.send('success');
+    });
+
+    form.on('error', function(err) {
+        console.error('upload failed', err.message);
+        next(err);
+    });
+
+    form.parse(req);
 });
 
 module.exports = router;
