@@ -11,6 +11,7 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var expressWinston = require('express-winston');
 var winston = require('winston');
+var ueditor = require("ueditor");
 
 var app=express();
 
@@ -21,6 +22,17 @@ app.use('/public',express.static(__dirname+'/public'));
 //设置对request的解析
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+
+app.get("/public/js/libs/ueditor/ue",ueditor(path.join(__dirname,'public'),function (req,res,next) {
+
+    if(req.query.action=='uploadimage'){
+        res.ue_up('/images/ueditor/');
+    }else {
+        res.setHeader('Content-Type', 'application/json');
+        res.redirect('config.json');
+    }
+}))
+
 //设置模板
 app.set('view engine','ejs');
 
