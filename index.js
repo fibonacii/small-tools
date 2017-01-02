@@ -25,20 +25,20 @@ app.use('/public',express.static(__dirname+'/public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 //设置上传图像路径
-app.use(express_formidable({
-    uploadDir: path.join(__dirname, 'public/img/upload'),// 上传文件目录
-    keepExtensions: true// 保留后缀
-}));
+// app.use(express_formidable({
+//     uploadDir: path.join(__dirname, 'public/img/upload'),// 上传文件目录
+//     keepExtensions: true// 保留后缀
+// }));
 
-app.get("/public/js/libs/ueditor/ue",ueditor(path.join(__dirname,'public'),function (req,res,next) {
-
-    if(req.query.action=='uploadimage'){
-        res.ue_up('/images/ueditor/');
-    }else {
-        res.setHeader('Content-Type', 'application/json');
-        res.redirect('config.json');
-    }
-}))
+// app.use("/ueditor/ue",ueditor(path.join(__dirname,'/'),function (req,res,next) {
+//
+//     if(req.query.action=='uploadimage'){
+//         res.ue_up('/public/upload/');
+//     }else {
+//         res.setHeader('Content-Type', 'application/json');
+//         res.redirect('/public/ueditor/config.json');
+//     }
+// }))
 
 //设置模板
 app.set('view engine','ejs');

@@ -5,14 +5,16 @@
 
 var userModel=require('../models/user.js');
 var userInfo=require('./userInfo.js');
-// var ueditor=require('./ueditor1.js');
+var ueditor=require('./ueditor1.js');
+var task=require('./task.js');
 
 module.exports=function (app) {
     app.get('/',function (req,res,next) {
         res.render('mainpage');
     });
     app.use('/user',userInfo);
-    // app.use('/public/js/libs',ueditor);
+    app.use('/ueditor',ueditor);
+    app.use('/task',task);
 };
 
 /**

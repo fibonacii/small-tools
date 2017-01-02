@@ -7,17 +7,14 @@ var ueditor = require("ueditor");
 var path = require('path');
 
 
-router.get("/ueditor/ue", ueditor(path.join(__dirname,'~/ueditor'),function (req,res,next) {
+router.use("/ue", ueditor(path.join(__dirname,'/'),function (req,res,next) {
 
-    if(req.query.action === 'uploadimage'){
-        var foo= req.ueditor;
-        console.log(foo.filename);
-        console.log(foo.encoding);
-        console.log(foo.mimetype);
+    if(req.query.action=='uploadimage'){
+        res.ue_up('../public/upload/');
+    }else {
+        res.setHeader('Content-Type', 'application/json');
+        res.redirect('/public/ueditor/config.json');
     }
-
-    var img_url='image';
-    res.ue_up(img_url);
 }))
 
 module.exports = router;
