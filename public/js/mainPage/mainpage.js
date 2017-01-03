@@ -8,5 +8,10 @@ $(function () {
     $('#login').bind('click',function () {
     });
 
+    $("#logout").bind("click",function () {
+        $.cookie("user_name", null, {path: '/'});
+        console.log($.cookie("user_name"));
+        window.location.href='/';
+    });
 
 });
