@@ -5,7 +5,7 @@
 
 var userModel=require('../models/user.js');
 var userInfo=require('./userInfo.js');
-var ueditor=require('./ueditor1.js');
+var wangEditor=require('./wangEditor.js');
 var task=require('./task.js');
 
 module.exports=function (app) {
@@ -13,7 +13,7 @@ module.exports=function (app) {
         res.render('mainpage');
     });
     app.use('/user',userInfo);
-    app.use('/ueditor',ueditor);
+    app.use('/wangEditor',wangEditor);
     app.use('/task',task);
 };
 

@@ -13,7 +13,8 @@ var expressWinston = require('express-winston');
 var formidable = require('formidable');
 var express_formidable=require("express-formidable");
 var winston = require('winston');
-var ueditor = require("ueditor");
+var fs=require('fs');
+var util=require('util');
 
 var app=express();
 
@@ -24,21 +25,49 @@ app.use('/public',express.static(__dirname+'/public'));
 //设置对request的解析
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
-//设置上传图像路径
+// 设置上传图像路径
 // app.use(express_formidable({
 //     uploadDir: path.join(__dirname, 'public/img/upload'),// 上传文件目录
 //     keepExtensions: true// 保留后缀
 // }));
 
-// app.use("/ueditor/ue",ueditor(path.join(__dirname,'/'),function (req,res,next) {
+// app.use('/upload',function (req,res) {
+//     var form = new formidable.IncomingForm();
 //
-//     if(req.query.action=='uploadimage'){
-//         res.ue_up('/public/upload/');
-//     }else {
-//         res.setHeader('Content-Type', 'application/json');
-//         res.redirect('/public/ueditor/config.json');
-//     }
-// }))
+//     form.parse(req,function (err,field,files) {
+//         var item;
+//         for(item in files){
+//             var file = files[item];
+//             var tempfilepath=file.path;
+//             var type=file.type;
+//             var filename=file.name;
+//             var extname = filename.lastIndexOf('.') >= 0
+//                 ? filename.slice(filename.lastIndexOf('.') - filename.length)
+//                 : '';
+//             if (extname === '' && type.indexOf('/') >= 0) {
+//                 extname = '.' + type.split('/')[1];
+//             }
+//
+//             filename = Math.random().toString().slice(2) + extname;
+//
+//             var filenewpath = path.join(__dirname, '/public/upload/'+filename);
+//
+//             var readStream =fs.createReadStream(tempfilepath);
+//             var writeStream = fs.createWriteStream(filenewpath);
+//
+//             util.pump(readStream,writeStream,function () {
+//                 fs.unlinkSync(tempfilepath);
+//                 var result='/public/upload/'+filename;
+//                 res.writeHead(200,{
+//                     'Content-type': 'text/html'
+//                 });
+//                 res.end(result);
+//             })
+//         }
+//         console.log(files);
+//     })
+// })
+
 
 //设置模板
 app.set('view engine','ejs');
