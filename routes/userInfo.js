@@ -89,12 +89,15 @@ router.post('/loginHandler',function (req,res) {
         if(person){
             if(person.password===password1){
                 resJson.code='00';
+                resJson.msg="success";
+                resJson.userName=person.userName;
                 req.flash('info', '欢迎回来,'+person.userName);
                 req.session.uid=person.id;
                 req.session.userName=person.userName;
                 res.send(resJson);
             }else {
                 resJson.code='01';
+                resJson.userName=person.userName;
                 resJson.msg='incorrect password';
                 res.send(resJson);
             }

@@ -5,7 +5,7 @@ $(function () {
     $('#login').bind('click',function () {
         loginHandler().postLogin();
     })
-})
+});
 
 function loginHandler() {
 
@@ -29,6 +29,7 @@ function loginHandler() {
             var param=loginHandler().getLoginParameter();
             return $.post(postLoginUrl,param,function (response) {
                 if(response.code==='00'){
+                    $.cookie('user_name', response.userName, {path:'/'});
                     window.location.href='/';
                 }else {
                     $('#notification').text('code:'+response.code+" message:"+response.msg);
