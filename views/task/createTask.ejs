@@ -2,17 +2,17 @@
 <link rel="stylesheet" type="text/css" href="../../public/wangEditor/css/wangEditor.css">
 <script type="text/javascript" src="../../public/js/public/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="../../public/wangEditor/js/wangEditor.js"></script>
+<script type="text/javascript" src="../../public/js/task/createTask.js"></script>
 <body>
+
+    <label>任务名</label>
+    <input id="taskName" style="width: 100%"/>
+    <p></p>
     <div>
-        <div id="div1" style="height: 400px;max-height: 500px"></div>
+        <div id="editorArea" style="height: 400px;max-height: 500px"></div>
     </div>
+    <button type="button" id="saveTask">提交</button>
 </body>
 
-<script type="text/javascript">
-    var editor=new wangEditor('div1');
-    editor.config.uploadImgUrl = '/wangEditor/uploadImage';
-
-    editor.create();
-</script>
 
 <%- include('../components/footer') %>

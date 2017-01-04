@@ -4,7 +4,11 @@
 var mongoose=require('../lib/mongo.js');
 var TaskSchema=new mongoose.Schema({
     user:String,
-    content:String
+    taskName:String,
+    content:String,
+    createdAt:String,
+    updatedAt:String,
+    status:String
 });
 
 var TaskModel=mongoose.model('task',TaskSchema);

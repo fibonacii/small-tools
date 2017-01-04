@@ -6,12 +6,26 @@ var router = express.Router();
 var TaskModel=require('../models/task.js');
 
 router.post('/save',function (req,res) {
-    var taskEntity = new TaskModel({user:req.session.userName,content:req.body.content});
 
-    TaskModel.create(taskEntity,function (err) {
-        console.log(err);
-    })
-    res.send('123');
+    if(!req.session.userName){
+        req.flash('error','请登录后发表');
+        res.send('01');
+    }else {
+        var taskEntity = new TaskModel({
+            user: req.session.userName,
+            taskName: req.body.taskName,
+            content: req.body.content,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            status: 'init'
+        });
+
+        TaskModel.create(taskEntity, function (err) {
+            console.log(err);
+            req.flash('info', '任务发布成功');
+            res.send('00');
+        })
+    }
 })
 
 module.exports=router;
