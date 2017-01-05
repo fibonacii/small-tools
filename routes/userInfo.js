@@ -22,6 +22,10 @@ router.get('/newTask',function (req, res) {
     res.render('task/createTask');
 });
 
+router.get('/userSpace',function (req, res) {
+    res.render('userInfo/userSpace');
+});
+
 router.get('/login', function (req, res) {
     res.render('userInfo/login');
 });

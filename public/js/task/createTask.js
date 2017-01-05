@@ -10,6 +10,10 @@ $(function () {
         createTask().createTask($('#taskName').val(),content);
     })
 
+    $('#cancelTask').bind('click',function () {
+        window.location.reload();
+    })
+
 
 });
 

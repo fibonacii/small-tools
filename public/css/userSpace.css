@@ -1,0 +1,3277 @@
+
+.nav {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 2px solid #e1e1e1;
+    margin-bottom: 10px;
+}
+.nav .nav_content {
+    height: 49px;
+    line-height: 47px;
+    margin: 0 auto;
+    width: 1170px;
+}
+.nav .nav_content li {
+    float: left;
+    line-height: 47px;
+    list-style: outside none none;
+    margin-right: 34px;
+}
+.nav .nav_content li a {
+    color: #727272;
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav .nav_content .active {
+    border-bottom: 2px solid #dc3c00;
+}
+.nav .nav_content li:hover {
+    border-bottom: 2px solid #dc3c00;
+}
+.csdn-toolbar .container {
+    width: 1170px;
+}
+.err {
+    background: #fff0f0 none repeat scroll 0 0;
+    border-bottom: 1px solid #ffd2d2;
+    border-top: 1px solid #ffd2d2;
+    font-size: 12px;
+    height: 28px;
+    left: 50%;
+    line-height: 28px;
+    margin-left: -585px;
+    padding-left: 5px;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    width: 1170px;
+    z-index: 5000;
+}
+.err i {
+    color: #dc3c00;
+    font-size: 16px;
+    margin-right: 6px;
+}
+.err em {
+    color: #b74d46;
+    font-style: normal;
+}
+.autocomplete-suggestions {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f0f0f0;
+}
+.autocomplete-suggestions .autocomplete-suggestion {
+    color: #999;
+    font-size: 14px;
+    padding: 5px;
+}
+.autocomplete-suggestions .autocomplete-selected {
+    color: #2b81a9;
+}
+.main {
+    margin: 0 auto;
+    width: 1170px;
+}
+.main .persional_property {
+    clear: both;
+    margin: 10px 0;
+}
+.main .persional_property .person-status {
+    float: left;
+    margin: 0;
+    width: 950px;
+}
+.main .persional_property .person-status .status {
+    display: table;
+    margin-left: -18px;
+}
+.main .persional_property .person-status .status em, .main .persional_property .person-status .status i {
+    font-style: normal;
+}
+.main .persional_property .person-status .status span {
+    border-left: 1px solid #999;
+    display: table-cell;
+    padding: 0 18px;
+    vertical-align: middle;
+}
+.main .persional_property .person-status .status span:first-child {
+    border-left: medium none;
+}
+.main .persional_property .person-status .status span:first-child .cb {
+    color: #666;
+    cursor: default;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+.main .persional_property .person-status .status span:first-child i {
+    background: rgba(0, 0, 0, 0) url("/assets2/images/cb-icon.png") no-repeat scroll 0 0;
+    color: #f8b62d;
+    display: inline-block;
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 17px;
+    width: 16px;
+}
+.main .persional_property .person-status .status .scores {
+    white-space: nowrap;
+}
+.main .persional_property .person-status .status .scores em {
+    display: inline-block;
+    height: 16px;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 48px;
+}
+.main .persional_property .person-status .status .scores em:first-child {
+    margin-left: 0;
+}
+.main .persional_property .person-status .status .scores .blog1 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog1.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog2 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog2.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog3 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog3.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog4 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog4.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog5 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog5.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog6 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog6.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog7 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog7.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog8 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog8.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog9 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog9.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog10 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog10.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog11 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog11.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog12 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog12.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog13 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog13.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog14 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog14.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .blog15 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/blog15.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down1 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down1.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down2 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down2.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down3 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down3.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down4 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down4.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down5 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down5.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down6 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down6.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down7 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down7.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down8 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down8.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down9 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down9.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down10 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down10.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down11 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down11.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down12 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down12.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down13 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down13.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down14 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down14.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .down15 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/down15.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs1 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs1.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs2 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs2.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs3 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs3.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs4 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs4.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs5 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs5.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs6 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs6.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs7 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs7.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs8 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs8.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs9 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs9.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs10 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs10.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs11 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs11.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs12 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs12.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs13 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs13.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs14 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs14.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .bbs15 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/bbs15.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code1 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code1.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code2 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code2.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code3 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code3.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code4 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code4.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code5 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code5.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code6 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code6.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code7 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code7.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code8 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code8.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code9 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code9.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code10 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code10.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code11 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code11.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code12 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code12.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code13 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code13.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code14 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code14.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .code15 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/code15.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student1 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club1.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student2 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club2.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student3 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club3.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student4 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club4.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student5 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club5.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student6 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club6.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student7 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club7.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student8 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club8.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student9 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club9.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student10 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club10.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student11 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club11.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student12 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club12.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student13 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club13.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student14 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club14.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .student15 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/club15.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask1 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask1.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask2 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask2.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask3 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask3.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask4 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask4.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask5 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask5.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask6 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask6.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask7 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask7.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask8 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask8.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask9 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask9.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask10 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask10.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask11 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask11.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask12 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask12.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask13 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask13.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask14 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask14.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask15 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask15.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask16 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask16.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask17 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask17.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask18 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask18.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask19 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask19.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .scores .ask20 {
+    background: rgba(0, 0, 0, 0) url("//csdnimg.cn/jifen/images/xunzhang/jianzhang/ask20.png") no-repeat scroll 0 0;
+}
+.main .persional_property .person-status .status .medals {
+    position: relative;
+}
+.main .persional_property .person-status .status .medals .wraper {
+    border: medium none;
+    padding: 0;
+    width: 100%;
+}
+.main .persional_property .person-status .status .medals .medal {
+    background: url("/assets2/images/medal-icon.svg") repeat scroll 0 0%, rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    display: inline-block;
+    height: 24px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out 0s;
+    vertical-align: middle;
+    width: 21px;
+}
+.main .persional_property .person-status .status .medals .medal:first-child {
+    margin-left: 0;
+}
+.main .persional_property .person-status .status .medals .medal:hover {
+    transform: scale(1.5);
+}
+.main .persional_property .person-status .status .medals .m203 {
+    background-position: -155px 0;
+}
+.main .persional_property .person-status .status .medals .m204 {
+    background-position: -217px 0;
+}
+.main .persional_property .person-status .status .medals .m205 {
+    background-position: -186px 0;
+}
+.main .persional_property .person-status .status .medals .m206 {
+    background-position: -248px 0;
+}
+.main .persional_property .person-status .status .medals .m207 {
+    background-position: -279px 0;
+}
+.main .persional_property .person-status .status .medals .m208 {
+    background-position: -310px 0;
+}
+.main .persional_property .person-status .status .medals .m209 {
+    background-position: 0 0;
+}
+.main .persional_property .person-status .status .medals .m210 {
+    background-position: -31px 0;
+}
+.main .persional_property .person-status .status .medals .m211 {
+    background-position: -62px 0;
+}
+.main .persional_property .person-status .status .medals .m212 {
+    background-position: -124px 0;
+}
+.main .persional_property .person-status .status .medals .m213 {
+    background-position: -93px 0;
+}
+.main .persional_property .person-status .status .medals .m214 {
+    background-position: -403px 0;
+}
+.main .persional_property .person-status .status .medals .m301 {
+    background-position: -372px 0;
+    width: 24px;
+}
+.main .persional_property .person-status .status .medals .m302 {
+    background-position: -496px 0;
+}
+.main .persional_property .person-status .status .medals .m304 {
+    background-position: -465px 0;
+}
+.main .persional_property .person-status .status .medals .m305 {
+    background-position: -527px 0;
+}
+.main .persional_property .person-status .status .medals .m306 {
+    background-position: -558px 0;
+}
+.main .persional_property .person-status .status .medals .m307 {
+    background-position: -341px 0;
+}
+.main .persional_property .person-status .status .medals .m701 {
+    background-position: -589px 0;
+}
+.main .persional_property .person-status .status .medals .m702 {
+    background-position: -620px 0;
+}
+.main .persional_property .person_info_con {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #dcdcdc;
+    margin: 10px auto 0;
+    overflow: hidden;
+    position: relative;
+}
+.main .persional_property .person_info_con:hover .person-info-edit {
+    display: block;
+}
+.main .persional_property .person-info-edit {
+    color: #a6a9ac;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+.main .persional_property .person-photo {
+    float: left;
+    height: 200px;
+    margin: 15px 30px 15px 20px;
+    width: 150px;
+}
+.main .persional_property .person-photo img {
+    border: medium none;
+    height: 150px;
+    width: 150px;
+}
+.main .persional_property .person-photo dt {
+    float: left;
+    height: 160px;
+    width: 150px;
+}
+.main .persional_property .person-photo dt a {
+    cursor: default;
+    display: block;
+    height: 150px;
+    position: relative;
+    width: 150px;
+}
+.main .persional_property .person-photo dt a .edit_person_pic {
+    background: rgba(0, 0, 0, 0) url("../images/edit_photo.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: none;
+    height: 33px;
+    left: 59px;
+    position: absolute;
+    top: 110px;
+    width: 33px;
+}
+.main .persional_property .person-photo dt a:hover .edit_person_pic {
+    display: block;
+}
+.main .persional_property .person-photo .focus_num {
+    border-right: 1px solid #f0f0f0;
+    color: #999;
+    float: left;
+    font-size: 14px;
+    height: 32px;
+    overflow: hidden;
+    text-align: center;
+    width: 72px;
+}
+.main .persional_property .person-photo .focus_num b {
+    color: #333;
+    display: block;
+    float: left;
+    line-height: 14px;
+    text-align: center;
+    width: 72px;
+}
+.main .persional_property .person-photo .focus_num b a {
+    color: #000;
+    text-decoration: none;
+}
+.main .persional_property .person-photo .fans_num {
+    color: #999;
+    float: left;
+    font-size: 14px;
+    height: 32px;
+    overflow: hidden;
+    text-align: center;
+    width: 72px;
+}
+.main .persional_property .person-photo .fans_num b {
+    color: #333;
+    display: block;
+    float: left;
+    line-height: 14px;
+    text-align: center;
+    width: 72px;
+}
+.main .persional_property .person-photo .fans_num b a {
+    color: #000;
+    text-decoration: none;
+}
+.main .persional_property .person-info {
+    float: left;
+    margin-top: 30px;
+    width: 950px;
+}
+.main .persional_property .person-info dt {
+    overflow: hidden;
+}
+.main .persional_property .person-info .person-nick-name span {
+    color: #333;
+    display: block;
+    float: left;
+    font-size: 24px;
+    font-weight: normal;
+}
+.main .persional_property .person-info .person-nick-name .cto {
+    background: rgba(0, 0, 0, 0) url("../images/cto.png") repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 17px;
+    margin: 8px 0 0 10px;
+    width: 25px;
+}
+.main .persional_property .person-info .person-nick-name .pro {
+    background: rgba(0, 0, 0, 0) url("../images/pro.png") repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 17px;
+    margin: 8px 0 0 10px;
+    width: 55px;
+}
+.main .persional_property .person-info .person-detail {
+    color: #333;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.main .persional_property .person-info .person-detail span {
+    color: #999;
+    font-size: 14px;
+    padding: 0 15px;
+}
+.main .persional_property .person-info .person-sign {
+    border-top: 1px solid #f0f0f0;
+    color: #999;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    padding-top: 8px;
+    word-break: break-all;
+}
+.main .persional_property .person_deliver_letter {
+    background: #79b51f none repeat scroll 0 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    position: absolute;
+    right: 29px;
+    top: 23px;
+}
+.main .persional_property .person_deliver_letter:hover {
+    background: #89c530 none repeat scroll 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+.main .persional_property .person_add_focus {
+    background: #e96f5d none repeat scroll 0 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    position: absolute;
+    right: 114px;
+    top: 23px;
+}
+.main .persional_property .person_add_focus:hover {
+    background: #eb8171 none repeat scroll 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+.main .persion_section, .main .persion_article {
+    float: left;
+}
+.main .persion_section {
+    margin-bottom: 0;
+    margin-right: 10px;
+    width: 860px;
+}
+.main .persion_section .aboutMe {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: -moz-use-text-color #dcdcdc #dcdcdc;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    padding: 0 20px 28px;
+}
+.main .persion_section .aboutMe > div {
+    display: none;
+}
+.main .persion_section .aboutMe .myNews, .main .persion_section .aboutMe .myConnection {
+    padding-top: 20px;
+}
+.main .persion_section .aboutMe .current_content {
+    display: block;
+}
+.main .persion_section .aboutMe .myCollect {
+    overflow: hidden;
+}
+.main .persion_section .aboutMe .myCollect-temp {
+    display: block;
+}
+.main .persion_section .mod_product {
+    display: none;
+    margin-bottom: 10px;
+}
+.main .persion_section .mod_product .prod_fans {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #dcdcdc #dcdcdc -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    height: 148px;
+    padding: 0 46px;
+    position: relative;
+}
+.main .persion_section .mod_product .prod_fans .box {
+    height: 89px;
+    margin-top: -60px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 89px;
+}
+.main .persion_section .mod_product .prod_fans .box .IE-fans {
+    background-repeat: no-repeat;
+    height: 89px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 89px;
+    z-index: 100;
+}
+.main .persion_section .mod_product .prod_fans .box .info {
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    height: 77px;
+    left: 50%;
+    line-height: 77px;
+    margin-left: -39px;
+    margin-top: -39px;
+    position: absolute;
+    top: 50%;
+    width: 77px;
+    z-index: 100;
+}
+.main .persion_section .mod_product .prod_fans .box .box_title {
+    bottom: -33px;
+    color: #333;
+    font-size: 16px;
+    left: 50%;
+    margin-left: -15px;
+    position: absolute;
+    text-decoration: none;
+    z-index: 200;
+}
+.main .persion_section .mod_product .prod_fans .box .wraper_left, .main .persion_section .mod_product .prod_fans .box .wraper_right {
+    border-radius: 89px;
+    height: 89px;
+    position: absolute;
+    width: 89px;
+}
+.main .persion_section .mod_product .prod_fans .box .wraper_left .fan, .main .persion_section .mod_product .prod_fans .box .wraper_right .fan {
+    background: #fff none repeat scroll 0 0;
+    height: 89px;
+    position: absolute;
+    width: 89px;
+}
+.main .persion_section .mod_product .prod_fans .box .orange {
+    background: rgba(0, 0, 0, 0) url("../images/1_orange.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .green {
+    background: rgba(0, 0, 0, 0) url("../images/1_green.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .greenDark {
+    background: rgba(0, 0, 0, 0) url("../images/1_greenDark.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .blue {
+    background: rgba(0, 0, 0, 0) url("../images/1_blue.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .blueDark {
+    background: rgba(0, 0, 0, 0) url("../images/1_blueDark.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .white {
+    background: rgba(0, 0, 0, 0) url("../images/1_white.png") no-repeat scroll 0 0;
+    color: #999;
+}
+.main .persion_section .mod_product .prod_fans .box .fanOrange {
+    background: rgba(0, 0, 0, 0) url("../images/1_orange_op.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .fanGreen {
+    background: rgba(0, 0, 0, 0) url("../images/1_green_op.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .fanGreenDark {
+    background: rgba(0, 0, 0, 0) url("../images/1_greenDark_op.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .fanBlue {
+    background: rgba(0, 0, 0, 0) url("../images/1_blue_op.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .fanBlueDark {
+    background: rgba(0, 0, 0, 0) url("../images/1_blueDark_op.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .fanWhite {
+    background: rgba(0, 0, 0, 0) url("../images/1_white_op.png") no-repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .fanWhite .fan {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.main .persion_section .mod_product .prod_fans .box .wraper_right {
+    clip: rect(0px, 89px, 89px, 44px);
+}
+.main .persion_section .mod_product .prod_fans .box .wraper_right .fan {
+    clip: rect(0px, 89px, 89px, 44px);
+    transition: all 1s ease-in 0s;
+}
+.main .persion_section .mod_product .prod_fans .box .wraper_left {
+    clip: rect(0px, 45px, 89px, 0px);
+}
+.main .persion_section .mod_product .prod_fans .box .wraper_left .fan {
+    clip: rect(0px, 44px, 89px, 0px);
+    transition: all 1s ease-out 1s;
+}
+.main .persion_section .mod_product .prod_fans div[class~="box_4"] .box_title {
+    margin-left: -22px;
+}
+.main .persion_section .mod_product .prod_fans .box_1 .IE-60 {
+}
+.main .persion_section .mod_product .prod_fans .box_1 .IE-120 {
+}
+.main .persion_section .mod_product .prod_fans .box_1 .IE-180 {
+    background-image: url("../images/Blog_3.png");
+}
+.main .persion_section .mod_product .prod_fans .box_1 .IE-240 {
+}
+.main .persion_section .mod_product .prod_fans .box_1 .IE-300 {
+}
+.main .persion_section .mod_product .prod_fans .box_1 .IE-360 {
+}
+.main .persion_section .mod_product .prod_fans .box_2 .IE-60 {
+}
+.main .persion_section .mod_product .prod_fans .box_2 .IE-120 {
+}
+.main .persion_section .mod_product .prod_fans .box_2 .IE-180 {
+    background-image: url("../images/Download_3.png");
+}
+.main .persion_section .mod_product .prod_fans .box_2 .IE-240 {
+}
+.main .persion_section .mod_product .prod_fans .box_2 .IE-300 {
+}
+.main .persion_section .mod_product .prod_fans .box_2 .IE-360 {
+}
+.main .persion_section .mod_product .prod_fans .box_3 .IE-60 {
+}
+.main .persion_section .mod_product .prod_fans .box_3 .IE-120 {
+}
+.main .persion_section .mod_product .prod_fans .box_3 .IE-180 {
+}
+.main .persion_section .mod_product .prod_fans .box_3 .IE-240 {
+}
+.main .persion_section .mod_product .prod_fans .box_3 .IE-300 {
+}
+.main .persion_section .mod_product .prod_fans .box_3 .IE-360 {
+}
+.main .persion_section .mod_product .prod_fans .box_4 .IE-60 {
+}
+.main .persion_section .mod_product .prod_fans .box_4 .IE-120 {
+}
+.main .persion_section .mod_product .prod_fans .box_4 .IE-180 {
+}
+.main .persion_section .mod_product .prod_fans .box_4 .IE-240 {
+}
+.main .persion_section .mod_product .prod_fans .box_4 .IE-300 {
+}
+.main .persion_section .mod_product .prod_fans .box_4 .IE-360 {
+}
+.main .persion_section .mod_product .prod_fans .box_5 .IE-60 {
+}
+.main .persion_section .mod_product .prod_fans .box_5 .IE-120 {
+}
+.main .persion_section .mod_product .prod_fans .box_5 .IE-180 {
+}
+.main .persion_section .mod_product .prod_fans .box_5 .IE-240 {
+}
+.main .persion_section .mod_product .prod_fans .box_5 .IE-300 {
+}
+.main .persion_section .mod_product .prod_fans .box_5 .IE-360 {
+}
+.main .persion_section .mod_product .money {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #f0f0f0 #dcdcdc #dcdcdc;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #333;
+    font-size: 16px;
+    height: 39px;
+    position: relative;
+}
+.main .persion_section .mod_product .money a {
+    color: #666;
+    display: inline-block;
+    font-weight: 700;
+    margin: 0 10px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+.main .persion_section .mod_product .money ul {
+    padding-top: 7px;
+}
+.main .persion_section .mod_product .money li {
+    border-left: 1px solid #dcdcdc;
+    float: left;
+    list-style: outside none none;
+    margin-bottom: 0;
+    margin-left: -1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main .persion_section .mod_product .money li .medal {
+    background: rgba(0, 0, 0, 0) url("../images/medal-icon.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 24px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out 0s;
+    vertical-align: middle;
+    width: 20px;
+}
+.main .persion_section .mod_product .money li .medal:hover {
+    transform: scale(1.5);
+}
+.main .persion_section .mod_product .money li .m203 {
+    background-position: -150px 0;
+}
+.main .persion_section .mod_product .money li .m204 {
+    background-position: -210px 0;
+}
+.main .persion_section .mod_product .money li .m205 {
+    background-position: -180px 0;
+}
+.main .persion_section .mod_product .money li .m206 {
+    background-position: -240px 0;
+}
+.main .persion_section .mod_product .money li .m207 {
+    background-position: -270px 0;
+}
+.main .persion_section .mod_product .money li .m208 {
+    background-position: -300px 0;
+}
+.main .persion_section .mod_product .money li .m209 {
+    background-position: 0 0;
+}
+.main .persion_section .mod_product .money li .m210 {
+    background-position: -30px 0;
+}
+.main .persion_section .mod_product .money li .m211 {
+    background-position: -60px 0;
+}
+.main .persion_section .mod_product .money li .m212 {
+    background-position: -120px 0;
+}
+.main .persion_section .mod_product .money li .m213 {
+    background-position: -90px 0;
+}
+.main .persion_section .mod_product .money li .m214 {
+    background-position: -390px 0;
+}
+.main .persion_section .mod_product .money li .m301 {
+    background-position: -330px 0;
+}
+.main .persion_section .mod_product .money li .m302 {
+    background-position: -480px 0;
+}
+.main .persion_section .mod_product .money li .m304 {
+    background-position: -450px 0;
+}
+.main .persion_section .mod_product .money li .m305 {
+    background-position: -510px 0;
+}
+.main .persion_section .mod_product .money li .m306 {
+    background-position: -540px 0;
+}
+.main .persion_section .mod_field_skill h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.main .persion_section .mod_field_skill h3 span {
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.main .persion_section .mod_field_skill .field, .main .persion_section .mod_field_skill .skill {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 30px;
+    padding-top: 34px;
+}
+.main .persion_section .mod_field_skill .field .no-mess, .main .persion_section .mod_field_skill .skill .no-mess {
+    color: #ccc;
+    display: inherit;
+    font-size: 16px;
+    text-align: center;
+}
+.main .persion_section .mod_field_skill .field .no-mess span, .main .persion_section .mod_field_skill .skill .no-mess span {
+    font-family: "Microsoft YaHei";
+    margin-left: 5px;
+}
+.main .persion_section .mod_field_skill .field .tags, .main .persion_section .mod_field_skill .skill .tags {
+    margin-bottom: -20px;
+    margin-right: -39px;
+}
+.main .persion_section .mod_field_skill .field .tags .mod_stars, .main .persion_section .mod_field_skill .skill .tags .mod_stars {
+    position: relative;
+}
+.main .persion_section .mod_field_skill .field .tags .mod_stars > div, .main .persion_section .mod_field_skill .skill .tags .mod_stars > div {
+    font-size: 16px;
+    height: 22px;
+    line-height: normal;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    width: 103px;
+}
+.main .persion_section .mod_field_skill .field .tags .mod_stars .stars_bg, .main .persion_section .mod_field_skill .skill .tags .mod_stars .stars_bg {
+    color: #80c8e9;
+}
+.main .persion_section .mod_field_skill .field .tags .mod_stars .stars_fg, .main .persion_section .mod_field_skill .skill .tags .mod_stars .stars_fg {
+    color: #80c8e9;
+}
+.main .persion_section .mod_field_skill .field .tags .ok, .main .persion_section .mod_field_skill .skill .tags .ok, .main .persion_section .mod_field_skill .field .tags .del, .main .persion_section .mod_field_skill .skill .tags .del {
+    display: none;
+    height: 20px;
+    position: absolute;
+    top: 58px;
+    width: 20px;
+}
+.main .persion_section .mod_field_skill .field .tags .ok, .main .persion_section .mod_field_skill .skill .tags .ok {
+    background: rgba(0, 0, 0, 0) url("../images/ok.png") no-repeat scroll 0 0;
+    left: 22px;
+}
+.main .persion_section .mod_field_skill .field .tags .del, .main .persion_section .mod_field_skill .skill .tags .del {
+    background: rgba(0, 0, 0, 0) url("../images/del.png") no-repeat scroll 0 0;
+    right: 24px;
+}
+.main .persion_section .mod_field_skill .field .tags .tag, .main .persion_section .mod_field_skill .skill .tags .tag {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: 1px solid #02c4b9;
+    border-radius: 10px;
+    color: #333;
+    float: left;
+    font-size: 16px;
+    height: 68px;
+    line-height: 70px;
+    margin-bottom: 20px;
+    margin-right: 37px;
+    position: relative;
+    text-align: center;
+    transition: all 0.6s ease-out 0s;
+    width: 132px;
+}
+.main .persion_section .mod_field_skill .field .tags .tag span, .main .persion_section .mod_field_skill .skill .tags .tag span {
+    display: block;
+    margin-top: -5px;
+}
+.main .persion_section .mod_field_skill .field .tags .tag span:first-child, .main .persion_section .mod_field_skill .skill .tags .tag span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.main .persion_section .mod_field_skill .field .tags .tag .stars, .main .persion_section .mod_field_skill .skill .tags .tag .stars {
+    margin-left: 21px;
+    margin-top: -27px;
+}
+.main .persion_section .mod_field_skill .field .tags .tag:hover, .main .persion_section .mod_field_skill .skill .tags .tag:hover {
+    cursor: pointer;
+}
+.main .persion_section .mod_field_skill .field .tags .tag:hover .del, .main .persion_section .mod_field_skill .skill .tags .tag:hover .del {
+    background: rgba(0, 0, 0, 0) url("../images/del.png") no-repeat scroll 0 0;
+    display: block;
+    right: 24px;
+}
+.main .persion_section .mod_field_skill .field .tags .recommendTag, .main .persion_section .mod_field_skill .skill .tags .recommendTag {
+    background: #fff none repeat scroll 0 0;
+    border: 1px dashed #dcdcdc;
+    color: #c0c0c0;
+    font-size: 16px;
+}
+.main .persion_section .mod_field_skill .field .tags .recommendTag .stars, .main .persion_section .mod_field_skill .skill .tags .recommendTag .stars {
+    display: none;
+}
+.main .persion_section .mod_field_skill .field .tags .recommendTag:hover .ok, .main .persion_section .mod_field_skill .skill .tags .recommendTag:hover .ok, .main .persion_section .mod_field_skill .field .tags .recommendTag:hover .del, .main .persion_section .mod_field_skill .skill .tags .recommendTag:hover .del {
+    display: block;
+}
+.main .persion_section .mod_field_skill .field .tags .addTag, .main .persion_section .mod_field_skill .skill .tags .addTag {
+    background: #fff none repeat scroll 0 0;
+    border: 1px dashed #dcdcdc;
+    color: #a6a9ac;
+    font-size: 25px;
+    font-weight: 700;
+}
+.main .persion_section #divDetail .tag {
+    cursor: default;
+}
+.main .persion_section #divDetail .tag:hover .ok, .main .persion_section #divDetail .tag:hover .del {
+    display: none;
+}
+.main .persion_section .person_detail_tab {
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    height: 48px;
+    margin: 0 auto;
+    width: 858px;
+}
+.main .persion_section .person_detail_tab ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.main .persion_section .person_detail_tab li {
+    background: #eee none repeat scroll 0 0;
+    border-right: 1px solid #fff;
+    color: #000;
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 213px;
+}
+.main .persion_section .person_detail_tab .lastli {
+    border-right: 0 none;
+    padding-right: 16px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+.main .persion_section .person_detail_tab .lastli span {
+    line-height: 0;
+    margin-top: -3px;
+    padding: 0 10px 20px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+}
+.main .persion_section .person_detail_tab .lastli span:hover #more {
+    display: block;
+}
+.main .persion_section .person_detail_tab .current_detail {
+    background: #fff none repeat scroll 0 0;
+    border-top: 2px solid #8d8d8d;
+    height: 46px;
+    line-height: 46px;
+}
+.main .persion_section .person_detail_tab2 {
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    height: 48px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 858px;
+}
+.main .persion_section .person_detail_tab2 ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.main .persion_section .person_detail_tab2 li {
+    background: #eee none repeat scroll 0 0;
+    color: #000;
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 429px;
+}
+.main .persion_section .person_detail_tab2 .current_detail {
+    background: #fff none repeat scroll 0 0;
+    border-top: 2px solid #8d8d8d;
+    height: 46px;
+    line-height: 46px;
+}
+.main .persion_section .person_detail_tab #more {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eaeaea;
+    color: #a5a9ab;
+    display: none;
+    font-size: 14px;
+    left: 50%;
+    margin-left: -87px;
+    padding: 0 10px;
+    position: absolute;
+    top: 26px;
+    width: 101px;
+    z-index: 9999;
+}
+.main .persion_section .person_detail_tab .lastli .textMore {
+    padding-right: 65px;
+}
+.main .persion_section .jian_jiao_a {
+    border-bottom: 8px solid #ededed;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    height: 0;
+    left: 75%;
+    position: absolute;
+    top: -8px;
+    width: 0;
+}
+.main .persion_section .jian_jiao_b {
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    height: 0;
+    left: 75%;
+    position: absolute;
+    top: -7px;
+    width: 0;
+}
+.main .persion_section .shou_cang, .main .persion_section .xiang_ce, .main .persion_section .ji_fen {
+    border-bottom: 1px solid #ededed;
+    height: 33px;
+    line-height: 33px;
+    text-align: left;
+}
+.main .persion_section .xiang_ce {
+    border: medium none;
+}
+.main .persion_section #more a, .main .persion_section #more a:link, .main .persion_section #more a:visited, .main .persion_section #more a:focus, .main .persion_section #more a:hover {
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;
+}
+.main .persion_section .person_education {
+    border-bottom: 1px solid #e2e2e2;
+    margin: 10px 0;
+    padding-bottom: 25px;
+}
+.main .persion_section .person_education .no-mess {
+    color: #ccc;
+    display: none;
+    font-size: 16px;
+    text-align: center;
+}
+.main .persion_section .person_education .no-mess span {
+    font-family: "Microsoft YaHei";
+    margin-left: 5px;
+}
+.main .persion_section .person_education h3 {
+    height: 58px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.main .persion_section .person_education h3 span {
+    color: #333;
+    display: block;
+    float: left;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    font-weight: normal;
+    height: 58px;
+    line-height: 58px;
+}
+.main .persion_section .person_education h3 .add-icon {
+    color: #a6a9ac;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 14px;
+    height: 58px;
+    line-height: 58px;
+}
+.main .persion_section .person_education .education_list {
+    background: rgba(0, 0, 0, 0) url("../images/time_line.jpg") repeat-y scroll 121px center;
+    padding-top: 50px;
+}
+.main .persion_section .person_education .education_list .icon-large {
+    display: none;
+}
+.main .persion_section .person_education .education_list:hover .icon-large {
+    display: inline;
+}
+.main .persion_section .person_education .first_list {
+    padding-top: 0;
+}
+.main .persion_section .person_education .icon-angle-down {
+    position: relative;
+}
+.main .persion_section .person_education .education_list .time-range {
+    background: rgba(0, 0, 0, 0) url("../images/time_bg.png") no-repeat scroll 0 0;
+    float: left;
+    overflow: hidden;
+    width: 127px;
+}
+.main .persion_section .person_education .education_list .time-range span {
+    background: rgba(0, 0, 0, 0) url("../images/time-bend.jpg") no-repeat scroll center center;
+    color: #333;
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 5px 0 0 12px;
+    text-align: center;
+    width: 70px;
+}
+.main .persion_section .person_education .education_list .time-range .tonow {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.main .persion_section .person_education .education_list .time-range b {
+    color: #aac6d7;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    width: 92px;
+}
+.main .persion_section .person_education .education_list dl {
+    float: left;
+    margin: 0 0 0 24px;
+    overflow: hidden;
+    width: 625px;
+}
+.main .persion_section .person_education .education_list dt {
+    margin-bottom: 15px;
+    margin-right: -15px;
+    overflow: hidden;
+}
+.main .persion_section .person_education .education_list dt span {
+    color: #333;
+    display: block;
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+}
+.main .persion_section .person_education .education_list dt i {
+    color: #a6a9ac;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-weight: normal;
+    padding-right: 15px;
+}
+.main .persion_section .person_education .education_list dd span {
+    color: #2b81a9;
+    font-size: 14px;
+}
+.main .persion_section .person_education .education_list dd b {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 15px;
+}
+.main .persion_section .person_education .education_list dd em {
+    background: rgba(0, 0, 0, 0) url("../images/interval-line.jpg") no-repeat scroll 10px center;
+    color: #999;
+    font-size: 12px;
+    font-style: normal;
+    padding-left: 20px;
+}
+.main .persion_section .person_education .education_list .major-detail {
+    color: #999;
+    font-size: 12px;
+    margin-top: 3px;
+}
+.main .persion_section .person_education .icon-angle-down {
+    float: right;
+    position: relative;
+}
+.main .persion_section .person_education .more {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eaeaea;
+    color: #a5a9ab;
+    display: none;
+    font-size: 14px;
+    height: 67px;
+    overflow: hidden;
+    padding: 0 10px;
+    position: absolute;
+    right: -20px;
+    text-align: center;
+    width: 28px;
+    z-index: 9999;
+}
+.main .persion_section .more .shou_cang a {
+    text-align: center !important;
+}
+.main .persion_section .more a {
+    display: inline-block !important;
+    width: 100% !important;
+}
+.main .persion_section .more .xiang_ce a {
+    text-align: center !important;
+}
+.main .persion_section .more a, .main .persion_section .more a:link, .main .persion_section .more a:visited, .main .persion_section .more a:focus, .main .persion_section .more a:hover {
+    color: #999;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+}
+.main .persion_section .icon-angle-down {
+    color: #a6a9ac;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.main .persion_section .mod_per_dy h3 {
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+.main .persion_section .mod_per_dy h3 .mineTab, .main .persion_section .mod_per_dy h3 .focusTab {
+    color: #333;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+.main .persion_section .mod_per_dy h3 .mineTab em, .main .persion_section .mod_per_dy h3 .focusTab em {
+    font-style: normal;
+}
+.main .persion_section .mod_per_dy h3 .icon {
+    display: none;
+}
+.main .persion_section .mod_per_dy h3 .active .icon {
+    background: rgba(0, 0, 0, 0) url("../images/active.png") no-repeat scroll 0 0;
+    display: block;
+    height: 7px;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+    top: 36px;
+    width: 15px;
+}
+.main .persion_section .mod_per_dy h3 span {
+    background: #d2d2d2 none repeat scroll 0 0;
+    display: inline-block;
+    height: 10px;
+    margin: 0 39px;
+    width: 1px;
+}
+.main .persion_section .mod_per_dy .focus {
+    display: none;
+}
+.main .persion_section .mod_per_dy li {
+    border-bottom: 1px dashed #f0f0f0;
+    color: #333;
+    font-size: 12px;
+    list-style: outside none none;
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 20px 0;
+    position: relative;
+    transition: all 0.7s ease-out 10s;
+}
+.main .persion_section .mod_per_dy li .info {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 730px;
+}
+.main .persion_section .mod_per_dy li .info a {
+    color: #5694b5;
+    font-size: 14px;
+    text-decoration: none;
+}
+.main .persion_section .mod_per_dy li .cont li {
+    border-bottom: 0 none;
+    padding: 0;
+}
+.main .persion_section .mod_per_dy li .time {
+    color: #999;
+    margin-top: -10px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+.main .persion_section .mod_per_dy li .no-mess {
+    color: #bcbcbc;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+.main .persion_section .mod_per_dy li .no-mess span {
+    font-family: "Microsoft YaHei";
+    margin-left: 5px;
+}
+.main .persion_section .mod_per_dy .more {
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+}
+.main .persion_section .mod_per_dy .more a {
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;
+}
+.main .persion_section .mod_per_dy .more span {
+    color: #b3b6b8;
+    font-size: 18px;
+    left: 50%;
+    margin-left: 30px;
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+}
+.main .persion_section .connection_title_con {
+    background: rgba(0, 0, 0, 0) url("../images/connection_title_bg.jpg") repeat scroll 0 0;
+    height: 52px;
+    margin: 0 auto;
+    width: 820px;
+}
+.main .persion_section .connection_title_con ul {
+    float: left;
+    height: 72px;
+    list-style: outside none none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 600px;
+}
+.main .persion_section .connection_title_con .connection_search_form {
+    background: #fdfdfd none repeat scroll 0 0;
+    border: 1px solid #f1f1f1;
+    float: right;
+    height: 26px;
+    margin-top: 5px;
+    width: 217px;
+}
+.main .persion_section .connection_title_con .connection_search_form .input_text {
+    border: 0 none;
+    color: #999;
+    height: 20px;
+    margin: 2px 0 0 5px;
+    width: 182px;
+}
+.main .persion_section .connection_title_con .connection_search_form .connection_search {
+    background: rgba(0, 0, 0, 0) url("../images/search_zoon_btn.png") repeat scroll 0 0;
+    border: medium none;
+    height: 18px;
+    width: 17px;
+}
+.main .persion_section .connection_title_con ul li {
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 16px;
+    height: 52px;
+    line-height: 40px;
+    margin-right: 5px;
+}
+.main .persion_section .my_connections .no-mess {
+    color: #bcbcbc;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+}
+.main .persion_section .my_connections .no-mess span {
+    font-family: "Microsoft YaHei";
+    margin-left: 5px;
+}
+.main .persion_section .connection_title_con ul .current_foucus {
+    background: rgba(0, 0, 0, 0) url("../images/connection_title_cur_bg.jpg") no-repeat scroll center center;
+}
+.main .persion_section .connection_title_con ul .interval_line {
+    background: rgba(0, 0, 0, 0) url("../images/interval-line.jpg") no-repeat scroll center 16px;
+    width: 70px;
+}
+.main .persion_section .connection_list_con {
+    background: #fff none repeat scroll 0 0;
+    width: 820px;
+}
+.main .persion_section .connection_list_con .more {
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+}
+.main .persion_section .connection_list_con .more a {
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;
+}
+.main .persion_section .connection_list_con .more span {
+    color: #b3b6b8;
+    font-size: 18px;
+    left: 50%;
+    margin-left: 30px;
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+}
+.main .persion_section .connection_list_con ul {
+    list-style: outside none none;
+    padding: 0;
+    width: 840px;
+}
+.main .persion_section .connection_list_con li {
+    float: left;
+    height: 125px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    width: 255px;
+}
+.main .persion_section .connection_list_con li dl {
+    border: 1px solid #f0f0f0;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    width: 253px;
+}
+.main .persion_section .connection_list_con li dl dt {
+    float: left;
+    height: 50px;
+    margin-left: 16px;
+    margin-top: 15px;
+    width: 60px;
+}
+.main .persion_section .connection_list_con li dl .connection_name {
+    margin-top: 20px;
+    overflow: hidden;
+    width: 165px;
+}
+.main .persion_section .connection_list_con li dl .connection_name a {
+    color: #333;
+    display: block;
+    float: left;
+    font-size: 18px;
+    text-decoration: none;
+}
+.main .persion_section .connection_list_con li dl .connection_name a:hover {
+    text-decoration: none;
+}
+.main .persion_section .connection_list_con li dl .connection_name b {
+    background: rgba(0, 0, 0, 0) url("../images/v2.png") repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 13px;
+    margin: 7px 0 0 5px;
+    width: 15px;
+}
+.main .persion_section .connection_list_con li dl .connection_pos {
+    color: #333;
+    font-size: 12px;
+    height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 165px;
+}
+.main .persion_section .connection_list_con .letter-btn-con {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #f0f0f0 #f0f0f0;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    height: 42px;
+    overflow: hidden;
+    width: 253px;
+}
+.main .persion_section .connection_list_con .letter-btn-con a {
+    background: #f3f3f3 none repeat scroll 0 0;
+    color: #999;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    margin: 10px 0 0 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 80px;
+}
+.main .persion_section .connection_list_con .letter-btn-con a .icon-large {
+    color: #999;
+    font-size: 1em;
+    padding-right: 3px;
+    padding-top: 1px;
+}
+.main .persion_section .connection_list_con .letter-btn-con a:hover {
+    text-decoration: none;
+}
+.main .persion_section .connection_list_con ul li dl dt img {
+    height: 50px;
+    width: 50px;
+}
+.main .persion_section .mod_contact {
+    overflow: hidden;
+    padding-top: 30px;
+    position: relative;
+}
+.main .persion_section .mod_contact:hover .modify {
+    display: block;
+}
+.main .persion_section .mod_contact .modify {
+    color: #a6a9ac;
+    display: none;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+}
+.main .persion_section .mod_contact h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 22px;
+}
+.main .persion_section .mod_contact ul {
+    margin-bottom: -20px;
+    margin-right: -126px;
+}
+.main .persion_section .mod_contact li {
+    color: #666;
+    float: left;
+    font-size: 14px;
+    list-style: outside none none;
+    margin-bottom: 20px;
+    margin-right: 0;
+    overflow: hidden;
+    width: 410px;
+}
+.main .persion_section .mod_contact li i {
+    float: left;
+}
+.main .persion_section .mod_contact li span {
+    float: left;
+    margin-right: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 320px;
+}
+.main .persion_section .person_job {
+    border-bottom: 1px solid #e2e2e2;
+    margin: 10px 0;
+    padding-bottom: 25px;
+}
+.main .persion_section .person_job .no-mess {
+    color: #ccc;
+    display: none;
+    font-size: 16px;
+    text-align: center;
+}
+.main .persion_section .person_job .no-mess span {
+    font-family: "Microsoft YaHei";
+    margin-left: 5px;
+}
+.main .persion_section .person_job h3 {
+    height: 58px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.main .persion_section .person_job h3 span {
+    color: #333;
+    display: block;
+    float: left;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    font-weight: normal;
+    height: 58px;
+    line-height: 58px;
+}
+.main .persion_section .person_job h3 .add-icon {
+    color: #a6a9ac;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 14px;
+    height: 58px;
+    line-height: 58px;
+}
+.main .persion_section .person_job .job_list {
+    background: rgba(0, 0, 0, 0) url("../images/time_line.jpg") repeat-y scroll 121px center;
+    padding-top: 50px;
+}
+.main .persion_section .person_job .job_list .icon-large {
+    display: none;
+}
+.main .persion_section .person_job .job_list:hover .icon-large {
+    display: inline;
+}
+.main .persion_section .person_job .first_list {
+    padding-top: 0;
+}
+.main .persion_section .person_job .job_list .time-range {
+    background: rgba(0, 0, 0, 0) url("../images/time_bg.png") no-repeat scroll 0 0;
+    float: left;
+    height: 57px;
+    overflow: hidden;
+    width: 127px;
+}
+.main .persion_section .person_job .job_list .time-range span {
+    background: rgba(0, 0, 0, 0) url("../images/time-bend.jpg") no-repeat scroll center center;
+    color: #333;
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 5px 0 0 12px;
+    text-align: center;
+    width: 70px;
+}
+.main .persion_section .person_job .job_list .time-range .tonow {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.main .persion_section .person_job .job_list .time-range b {
+    color: #aac6d7;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    width: 92px;
+}
+.main .persion_section .person_job .job_list dl {
+    float: left;
+    margin: 0 0 0 24px;
+    overflow: hidden;
+    width: 625px;
+}
+.main .persion_section .person_job .job_list dt {
+    margin-bottom: 15px;
+    margin-right: -15px;
+    overflow: hidden;
+}
+.main .persion_section .person_job .job_list dt span {
+    color: #333;
+    display: block;
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+}
+.main .persion_section .person_job .job_list dt i {
+    color: #a6a9ac;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-weight: normal;
+    padding-right: 15px;
+}
+.main .persion_section .person_job .job_list dd span {
+    color: #2b81a9;
+    font-size: 14px;
+}
+.main .persion_section .person_job .job_list dd b {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 15px;
+}
+.main .persion_section .person_job .job_list dd em {
+    background: rgba(0, 0, 0, 0) url("../images/interval-line.jpg") no-repeat scroll 10px center;
+    color: #999;
+    font-size: 12px;
+    font-style: normal;
+    padding-left: 20px;
+}
+.main .persion_section .person_job .job_list .major-detail {
+    color: #999;
+    font-size: 12px;
+    margin-top: 3px;
+}
+.main .persion_section .person_job .icon-angle-down {
+    float: right;
+    position: relative;
+}
+.main .persion_section .person_job .more {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eaeaea;
+    color: #a5a9ab;
+    display: none;
+    font-size: 14px;
+    height: 67px;
+    overflow: hidden;
+    padding: 0 10px;
+    position: absolute;
+    right: -20px;
+    text-align: center;
+    width: 28px;
+    z-index: 9999;
+}
+.main .persion_section .person_job .more .shou_cang {
+    text-align: center;
+}
+.main .persion_section .person_job .more .xiang_ce {
+    text-align: center;
+}
+.main .persion_section .more a, .main .persion_section .more a:link, .main .persion_section .more a:visited, .main .persion_section .more a:focus, .main .persion_section .more a:hover {
+    color: #999;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+}
+.main .persion_section .mod-my-collect {
+    padding-top: 27px;
+    text-align: center;
+}
+.main .persion_section .mod-my-collect .silder-wraper {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 17px;
+    position: relative;
+}
+.main .persion_section .mod-my-collect .silder {
+    overflow: hidden;
+    width: 790px;
+}
+.main .persion_section .mod-my-collect .silder .active {
+    background: rgba(0, 0, 0, 0) url("../images/active.png") no-repeat scroll 0 0;
+    height: 7px;
+    left: 7px;
+    margin-top: 19px;
+    position: absolute;
+    top: 50%;
+    transition: all 1s ease-in 0s;
+    width: 15px;
+}
+.main .persion_section .mod-my-collect .silder .wraper {
+    overflow: hidden;
+    transition: all 0.3s ease-in 0s;
+    width: 10000px;
+}
+.main .persion_section .mod-my-collect .silder .wraper ul {
+    margin-right: -20px;
+}
+.main .persion_section .mod-my-collect .silder .wraper ul li {
+    float: left;
+    margin: 0;
+    position: static;
+}
+.main .persion_section .mod-my-collect .silder .wraper ul li:first-child {
+    border-left: medium none;
+    padding-left: 0;
+}
+.main .persion_section .mod-my-collect .silder .wraper ul li span {
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.main .persion_section .mod-my-collect .silder .wraper ul li em {
+    border-left: 1px solid #d2d2d2;
+    display: inline-block;
+    height: 10px;
+    line-height: 10px;
+    margin: 0 20px;
+    padding: 0;
+    vertical-align: middle;
+}
+.main .persion_section .mod-my-collect .silder .wraper ul li:first-child em {
+    display: none;
+}
+.main .persion_section .mod-my-collect .operate {
+    margin-top: -18px;
+    padding-right: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.main .persion_section .mod-my-collect .map_tag {
+    color: #666;
+    padding-top: 8px;
+}
+.main .persion_section .mod-my-collect .map_tag a {
+    color: #428bca;
+}
+.main .persion_section .mod-my-collect .map_tag a:hover {
+    color: #2a6496;
+}
+.main .persion_section .mod-my-collect .operate span {
+    padding-right: 0;
+}
+.main .persion_section .mod-my-collect .operate .none {
+    color: #cdcdcd;
+}
+.main .persion_section .mod-my-collect .operate span {
+    color: #777;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 5px;
+    padding: 0;
+}
+.main .persion_section .mod-my-collect .silder-content {
+    margin-bottom: 73px;
+    text-align: left;
+}
+.main .persion_section .mod-my-collect .silder-content .no-mess {
+    border-bottom: 0 none;
+    color: #bcbcbc;
+    display: block;
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+.main .persion_section .mod-my-collect .silder-content .no-mess span {
+    font-family: "Microsoft YaHei";
+    margin-left: 10px;
+}
+.main .persion_section .mod-my-collect .silder-content ul li {
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0;
+    padding: 26px 0;
+    position: relative;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .header, .main .persion_section .mod-my-collect .silder-content ul li .content {
+    vertical-align: top;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .header {
+    margin-right: 10px;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .header img {
+    border: 0 none;
+    height: 30px;
+    width: 30px;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .content {
+    display: inline-block;
+    font-size: 14px;
+    width: 650px;
+    word-break: break-all;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .content a[data-bind="cont"] {
+    color: #428bca;
+    text-decoration: none;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .content .tags {
+    display: inline;
+    margin-left: 13px;
+    padding: 0;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .content .tags .tag {
+    background: #f3f3f3 none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 17px;
+    margin-left: 12px;
+    padding: 0 12px;
+    text-align: center;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .content .tags .tag:first-child {
+    margin-left: 0;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .content .tags .tag:hover {
+    background: #be1a21 none repeat scroll 0 0;
+    color: #fff;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .operate {
+    margin-top: 0;
+    position: absolute;
+    right: 0;
+    top: 26px;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .operate em, .main .persion_section .mod-my-collect .silder-content ul li .operate span {
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0;
+    vertical-align: middle;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .operate .time {
+    font-size: 12px;
+    margin-right: 25px;
+}
+.main .persion_section .mod-my-collect .silder-content ul li .operate .edit {
+    margin-right: 8px;
+}
+.main .persion_section .mod-my-collect .more {
+    color: #999;
+}
+.main .persion_section .mod-my-collect .more i {
+    font-size: 14px;
+    margin-left: 5px;
+}
+.main .persion_article {
+    width: 300px;
+}
+.main .persion_article .mod_personal_info {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 10px;
+    padding: 17px 23px 20px;
+}
+.main .persion_article .mod_personal_info .per_info {
+    margin-bottom: 20px;
+}
+.main .persion_article .mod_personal_info .per_info .percentage, .main .persion_article .mod_personal_info .per_info .prog {
+    float: left;
+}
+.main .persion_article .mod_personal_info .per_info .percentage {
+    background: rgba(0, 0, 0, 0) url("../images/per_info.png") no-repeat scroll 0 0;
+    color: #fff;
+    font-size: 25px;
+    height: 61px;
+    line-height: 61px;
+    text-align: center;
+    width: 61px;
+}
+.main .persion_article .mod_personal_info .per_info .percentage em {
+    font-style: normal;
+}
+.main .persion_article .mod_personal_info .per_info .percentage span {
+    font-size: 12px;
+}
+.main .persion_article .mod_personal_info .per_info .prog {
+    position: relative;
+}
+.main .persion_article .mod_personal_info .per_info .prog .prog_bg, .main .persion_article .mod_personal_info .per_info .prog .prog_fg {
+    height: 11px;
+    left: 0;
+    margin-top: 25px;
+    position: absolute;
+    top: 0;
+    width: 196px;
+}
+.main .persion_article .mod_personal_info .per_info .prog .prog_bg {
+    background: #e7e7e7 none repeat scroll 0 0;
+}
+.main .persion_article .mod_personal_info .per_info .prog .prog_fg {
+    background: rgba(0, 0, 0, 0) url("../images/prog_info.png") repeat-y scroll 0 0;
+    transition: all 1.3s ease-out 1s;
+    width: 0;
+}
+.main .persion_article .mod_personal_info .money_info {
+    clear: both;
+    color: #5d5d5d;
+    font-size: 14px;
+    margin-bottom: 17px;
+    position: relative;
+}
+.main .persion_article .mod_personal_info .money_info > span {
+    display: inline-block;
+}
+.main .persion_article .mod_personal_info .money_info .modify {
+    display: block;
+}
+.main .persion_article .mod_personal_info .money_info .modify .info, .main .persion_article .mod_personal_info .money_info .modify .money {
+    display: inline-block;
+}
+.main .persion_article .mod_personal_info .money_info .perfect {
+    display: none;
+}
+.main .persion_article .mod_personal_info .money_info .info {
+    margin-right: 15px;
+    width: 63px;
+}
+.main .persion_article .mod_personal_info .money_info .complate {
+    display: block;
+    width: 108px;
+}
+.main .persion_article .mod_personal_info .money_info .complate i, .main .persion_article .mod_personal_info .money_info .complate em {
+    font-style: normal;
+}
+.main .persion_article .mod_personal_info .money_info .complate i {
+    color: #f8b62d;
+    font-weight: 700;
+    margin-left: 5px;
+}
+.main .persion_article .mod_personal_info .money_info .complate i em {
+    background: rgba(0, 0, 0, 0) url("../images/money_icon.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 13px;
+    margin: 0 1px;
+    vertical-align: middle;
+    width: 13px;
+}
+.main .persion_article .mod_personal_info .money_info .money {
+    border: 1px solid #f0f0f0;
+    color: #f39c11;
+    font-size: 14px;
+    height: 37px;
+    line-height: 37px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 84px;
+}
+.main .persion_article .mod_personal_info .money_info .money .icon-angle-left {
+    background: #fff none repeat scroll 0 0;
+    color: #f0f0f0;
+    font-size: 15px;
+    font-style: normal;
+    left: -5px;
+    line-height: 9px;
+    margin-top: -5px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+}
+.main .persion_article .mod_personal_info .money_info .money span {
+    font-size: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.main .persion_article .mod_personal_info .money_info .money .icon {
+    background: rgba(0, 0, 0, 0) url("/assets2/images/cb-icon.png") no-repeat scroll 0 0;
+    display: inline-block;
+    font-style: normal;
+    height: 16px;
+    margin: 0 1px;
+    vertical-align: middle;
+    width: 16px;
+}
+.main .persion_article .mod_personal_info .money_info .money .fix {
+    font-size: 16px;
+    vertical-align: middle;
+}
+.main .persion_article .mod_personal_info .money_info .receive {
+    background: #f3af7e none repeat scroll 0 0;
+    border: 1px solid #f0f0f0;
+    color: #fff;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: -12px;
+    position: absolute;
+    right: 63px;
+    text-align: center;
+    text-decoration: none;
+    top: 50%;
+    width: 64px;
+}
+.main .persion_article .mod_personal_info .money_info .receive:hover {
+    background: #eb7d64 none repeat scroll 0 0;
+}
+.main .persion_article .mod_personal_info .money_info .receive_over {
+    background: #eee none repeat scroll 0 0;
+    color: #999;
+}
+.main .persion_article .mod_personal_info .money_info .receive_over:hover {
+    background: #eee none repeat scroll 0 0;
+    color: #999;
+}
+.main .persion_article .mod_personal_info .info {
+    margin-bottom: -5px;
+}
+.main .persion_article .mod_personal_info .info ul li {
+    color: #c0c0c0;
+    font-size: 12px;
+    list-style: outside none none;
+    margin-bottom: 5px;
+}
+.main .persion_article .mod_personal_info .info ul li i {
+    font-size: 15px;
+    margin-right: 10px;
+}
+.main .persion_article .mod_personal_info .info ul li .icon-exclamation-sign {
+    color: #c0c0c0;
+}
+.main .persion_article .mod_personal_info .info ul li em {
+    display: inline-block;
+    font-size: 12px;
+    font-style: normal;
+    padding: 0;
+}
+.main .persion_article .mod_jobs {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f0f0f0;
+    display: none;
+}
+.main .persion_article .mod_jobs h3 {
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 15px 0;
+    position: relative;
+    text-indent: 20px;
+}
+.main .persion_article .mod_jobs h3 a {
+    color: #a6a9ac;
+    font-size: 13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 23px;
+    top: 50%;
+}
+.main .persion_article .mod_jobs .job_list {
+    padding: 15px 20px;
+}
+.main .persion_article .mod_jobs .job_list .tips {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+.main .persion_article .mod_jobs .job_list .tips em {
+    color: #2b81a9;
+    font-style: normal;
+    margin: 0 3px;
+}
+.main .persion_article .mod_jobs .job_list .list {
+    margin-bottom: -16px;
+}
+.main .persion_article .mod_jobs .job_list .list li {
+    border-bottom: 1px solid #f0f0f0;
+    list-style: outside none none;
+    padding: 20px 0;
+}
+.main .persion_article .mod_jobs .job_list .list li .header, .main .persion_article .mod_jobs .job_list .list li .info {
+    float: left;
+}
+.main .persion_article .mod_jobs .job_list .list li .header {
+    margin-right: 20px;
+}
+.main .persion_article .mod_jobs .job_list .list li .header img {
+    border: 0 none;
+    height: 50px;
+    outline: 0 none;
+    width: 50px;
+}
+.main .persion_article .mod_jobs .job_list .list li .info .tit, .main .persion_article .mod_jobs .job_list .list li .info .dis, .main .persion_article .mod_jobs .job_list .list li .info em {
+    display: block;
+    font-style: normal;
+    line-height: normal;
+}
+.main .persion_article .mod_jobs .job_list .list li .info .tit {
+    color: #2b81a9;
+    font-size: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 186px;
+}
+.main .persion_article .mod_jobs .job_list .list li .info .dis {
+    color: #333;
+    font-size: 14px;
+}
+.main .persion_article .mod_jobs .job_list .list li .info em {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 0;
+}
+.main .persion_article .interested_con {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #dcdcdc;
+    display: none;
+    margin-bottom: 10px;
+    width: 298px;
+}
+.main .persion_article .interested_con h3 {
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    font-weight: normal;
+    height: 44px;
+    line-height: 44px;
+    margin: 0;
+    padding: 0;
+    text-indent: 19px;
+}
+.main .persion_article .interested_con ul {
+    list-style: outside none none;
+    margin: 20px 0 20px 20px;
+    padding: 0;
+    width: 280px;
+}
+.main .persion_article .interested_con ul li {
+    float: left;
+    height: 50px;
+    margin-right: 20px;
+    width: 50px;
+}
+.main .persion_article .interested_con ul li a {
+    display: inline-block;
+}
+.main .persion_article .interested_con ul li img {
+    border: medium none;
+    height: 50px;
+    width: 50px;
+}
+.main .persion_article .count-and-more {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+    width: 262px;
+}
+.main .persion_article .count-and-more span {
+    color: #666;
+    display: block;
+    float: left;
+    font-size: 12px;
+}
+.main .persion_article .count-and-more span em {
+    color: #2b81a9;
+    font-style: normal;
+    padding: 0 3px;
+}
+.main .persion_article .count-and-more a {
+    color: #666;
+    display: block;
+    float: right;
+    font-size: 12px;
+    text-decoration: none;
+}
+.main .persion_article .count-and-more a:hover {
+    text-decoration: none;
+}
+.main .marker {
+    background: #000 none repeat scroll 0 0;
+    height: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease-in 0s;
+    width: 0;
+    z-index: 900;
+}
+.main .pop_edit {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #dcdcdc;
+    clear: both;
+    left: 50%;
+    margin-left: -333px;
+    margin-top: -205px;
+    opacity: 0;
+    position: absolute;
+    top: -300px;
+    z-index: 1000;
+}
+.main .pop_edit h3 {
+    border-bottom: 1px solid #f0f0f0;
+    color: #666;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    padding-bottom: 16px;
+    padding-left: 19px;
+    padding-top: 16px;
+    position: relative;
+}
+.main .pop_edit h3 .err {
+    bottom: -23px;
+    font-size: 12px;
+    left: 0;
+    margin: 0;
+    padding-left: 5px;
+    position: absolute;
+    text-align: left;
+    top: inherit;
+    width: 99%;
+}
+.main .pop_edit .close {
+    color: #ccc;
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    text-decoration: none;
+    top: 5px;
+}
+.main .pop_edit .context {
+    color: #333;
+    font-size: 16px;
+    padding: 0 20px 10px;
+}
+.main .pop_edit .context form {
+    position: relative;
+}
+.main .pop_edit .red {
+    color: #f00;
+    display: inline-block;
+    left: -11px;
+    margin-top: -10px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+}
+.main .edit_intro {
+    width: 667px;
+}
+.main li {
+    list-style: outside none none;
+    margin-bottom: 20px;
+    margin-right: -40px;
+    position: relative;
+}
+.main li span {
+    display: inline-block;
+    padding-right: 20px;
+}
+.main li em, .main li .nick_tip {
+    color: #be0000;
+    display: none;
+    font-style: normal;
+    padding-left: 20px;
+}
+.main li i {
+    font-style: normal;
+}
+.main li em {
+    color: #999;
+    font-size: 16px;
+}
+.main li em i {
+    color: #bcbcbc;
+    font-size: 12px;
+    margin-left: 12px;
+}
+.main li input {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+}
+.main li .radio_sex {
+    height: auto;
+    width: 20px;
+}
+.main li select {
+    border: 1px solid #dcdcdc;
+    color: #666;
+    font-size: 14px;
+    height: 28px;
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 183px;
+}
+.main li .district {
+    display: none;
+}
+.main li textarea {
+    border: 1px solid #dcdcdc;
+    color: #666;
+    font-size: 14px;
+    height: 87px;
+    padding-left: 14px;
+    padding-top: 11px;
+    vertical-align: top;
+}
+.main li .info-alert {
+    color: #bc0000;
+    display: block;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-top: 5px;
+    text-align: right;
+}
+.main li .info-alert em {
+    color: #bc0000;
+    display: inline;
+    font-size: 12px;
+    font-style: normal;
+    padding: 0;
+}
+.main .industry {
+    width: 272px;
+}
+.main .mp_dl {
+    display: inline-block;
+    width: 100%;
+}
+.main .mp_field1 {
+    width: 232px;
+}
+.main .mp_field2 {
+    width: 112px;
+}
+.main .mp_label {
+    display: inline-block;
+}
+.main .mp_em_i {
+    color: #bcbcbc;
+    font-size: 12px;
+    margin-left: 12px;
+}
+.main .mp_wid {
+    width: 550px;
+}
+.main li input, .main li select {
+    vertical-align: middle;
+}
+.main li .edit_edu {
+    width: 591px;
+}
+.main li .school {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+    width: 499px;
+}
+.main li .pro {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+    width: 205px;
+}
+.main li .edu {
+    border: 1px solid #dcdcdc;
+    width: 221px;
+}
+.main li .date {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+    width: 181px;
+}
+.main li .time {
+    color: #bcbcbc;
+    margin: 0 5px;
+    padding: 0;
+}
+.main li .now {
+    height: auto;
+    vertical-align: middle;
+    width: auto;
+}
+.main li i {
+    color: #333;
+    font-size: 14px;
+}
+.main li .intro_info {
+    border: 1px solid #dcdcdc;
+    height: 100px;
+    width: 483px;
+}
+.main .edit_job {
+    width: 591px;
+}
+.main .edit_job .job {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+    width: 205px;
+}
+.main .edit_job .textara_Mes {
+    color: #f00;
+    float: right;
+    font-size: 12px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.main .edit_intro .textara_Mes {
+    color: #f00;
+    float: right;
+    font-size: 12px;
+    margin-right: 15px;
+}
+.main .edit_contact {
+    margin-top: -170px;
+    width: 591px;
+}
+.main .edit_contact input {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+    width: 464px;
+}
+.main .edit_contact ul li {
+    margin-right: -3px;
+    text-align: right;
+}
+.main .add_fields {
+    margin-top: -99px;
+    width: 500px;
+}
+.main .add_fields .fields {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    width: 460px;
+}
+.main .del_confirm {
+    height: 252px;
+    width: 430px;
+}
+.main .del_confirm .del_content {
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    font-weight: normal;
+    height: 150px;
+    line-height: 150px;
+    margin-top: -39px;
+    text-align: center;
+}
+.main .add_pro {
+    width: 500px;
+}
+.main .add_pro .pro, .main .add_pro .add_stars {
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+.main .add_pro .pro {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 5px;
+    width: 317px;
+}
+.main .add_pro .add_stars {
+    border: 1px solid #dcdcdc;
+    color: #333;
+    font-size: 14px;
+    height: 28px;
+    padding-left: 10px;
+    width: 122px;
+}
+.main .edit_header {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f0f0f0;
+    padding: 20px 20px 0;
+    width: 685px;
+}
+.main .edit_header .change {
+    background: #be0000 none repeat scroll 0 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 97px;
+}
+.main .edit_header .change span {
+    margin-right: 5px;
+}
+.main .edit_header .change .file {
+    height: auto;
+    left: 0;
+    line-height: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+}
+.main .edit_header .des {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.main .edit_header .headers {
+    margin-bottom: 30px;
+    margin-right: -41px;
+}
+.main .edit_header .headers .pic, .main .edit_header .headers .big {
+    float: left;
+    padding-right: 40px;
+    text-align: center;
+}
+.main .edit_header .headers .pic span, .main .edit_header .headers .big span {
+    color: #666;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.main .edit_header .headers .big {
+    height: 250px;
+    overflow: hidden;
+    width: 250px;
+}
+.main .edit_header .headers .big #drag {
+}
+.main .edit_header .headers .p150 {
+    height: 150px;
+    width: 150px;
+}
+.main .edit_header .headers .p75 {
+    height: 75px;
+    width: 75px;
+}
+.main .edit_header .headers .p50 {
+    height: 50px;
+    width: 50px;
+}
+.main .edit_header .operate {
+    border-top: 1px solid #f0f0f0;
+    padding: 10px 0;
+    text-align: right;
+}
+.main .edit_header .operate a {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 80px;
+}
+.main .edit_header .operate .cancel {
+    background: #999 none repeat scroll 0 0;
+}
+.main .edit_header .operate .submit {
+    background: #be0000 none repeat scroll 0 0;
+}
+.main .se_key {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    color: #656565;
+    font-size: 12px;
+    font-weight: normal;
+    height: 21px;
+    line-height: 21px;
+    margin-right: 15px;
+    padding: 0 15px;
+    text-align: center;
+}
+.main .se_key:hover {
+    background-color: #bd1921;
+    color: #fff;
+}
+.main .ask_first {
+    height: 560px;
+    left: 50%;
+    position: absolute;
+    top: 250px;
+    width: 667px;
+}
+.main .ask_first .askFirst_desc {
+    height: 370px;
+}
+.main .ask_first .askFirst_desc .afd_p {
+    color: #333;
+    font-size: 14px;
+    line-height: 21px;
+}
+.main .ask_first .askFirst_desc .afd_p a {
+    color: #2b81a9;
+    cursor: pointer;
+}
+.main .ask_first .askFirst_se {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.main .ask_first .search_div {
+    height: 35px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    width: 100%;
+}
+.main .ask_first .search_div input {
+    width: 100%;
+}
+.main .ask_second {
+    height: 590px;
+    position: absolute;
+    top: 250px;
+    width: 670px;
+}
+.main .ask_second .err_div {
+    border: 1px solid #ffdada;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.main .ask_second .err_div .err_ico {
+    background: rgba(0, 0, 0, 0) url("../images/ph_pop_err_icon.fw.png") no-repeat scroll 0 0;
+    height: 16px;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 16px;
+}
+.main .ask_second .err_div .err_txt {
+    color: #b74d46;
+    font-size: 12px;
+}
+.main .ask_second .input_div {
+    height: 35px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    width: 100%;
+}
+.main .ask_second .input_div input {
+    color: #656565;
+    font-size: 16px;
+    width: 100%;
+}
+.main .ask_second .second_se {
+    color: #656565;
+    font-size: 16px;
+}
+.main .ask_second .div_rich_editor {
+    border: 1px solid #ddd;
+    height: 245px;
+    position: relative;
+    width: 630px;
+}
+.main .ask_second .div_tags {
+    height: 35px;
+    margin-top: 15px;
+    width: 100%;
+}
+.main .ask_second .tags_con {
+    border: 1px solid #ddd;
+    float: left;
+    font-size: 14px;
+    height: 35px;
+    padding: 0 5px;
+    width: 630px;
+}
+.main .ask_second .tags_con input {
+    border: 0 none;
+    float: left;
+    height: 20px;
+    margin-top: 7px;
+    outline: medium none;
+    width: 82px;
+}
+.main .ask_second .tags_con .tag {
+    background: #e0eaf1 none repeat scroll 0 0;
+    border-bottom: 1px solid #3e6d8e;
+    border-radius: 15px;
+    border-right: 1px solid #7f9fb6;
+    color: #5d6daf;
+    display: block;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+.main .ask_second .tags_con .tag span {
+    display: block;
+    float: left;
+}
+.main .ask_second .tags_con .tag a {
+    color: #82ad2b;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 20px;
+    margin-left: 5px;
+}
+.main .ask_second .tags_con .tag a:hover {
+    text-decoration: none;
+}
+.main .ask_second .drt_tagRecomm {
+    height: 20px;
+    margin-top: 15px;
+}
+.main .ask_second .drt_tagRecomm .drt_tit {
+    color: #656565;
+    font-size: 14px;
+}
+.main .ask_second .left_area {
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+}
+.main .ask_second .left_area .wyxs {
+    color: #999;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.main .ask_second .left_area .cb_num {
+    line-height: 23px;
+}
+.main .ask_second .left_area .phib_rii {
+    color: #f9bf47;
+    display: inline-block;
+    margin-left: 10px;
+    text-align: left;
+    width: 185px;
+}
+.main .ask_second .left_area .phib_rii span {
+    background: rgba(0, 0, 0, 0) url("../images/ph_right_cb.fw.png") no-repeat scroll 0 0;
+    display: inline-block;
+    padding-left: 20px;
+}
+.main .div_del_confirm {
+    height: 240px;
+    left: 50%;
+    position: absolute;
+    top: 250px;
+    width: 370px;
+}
+.main .div_del_confirm .del_content {
+    height: 90px;
+    text-align: center;
+}
+.main .dySetting {
+    height: 545px;
+    left: 50%;
+    position: absolute;
+    top: 250px;
+    width: 680px;
+}
+.main .dySetting .dy_content {
+    height: 400px;
+    overflow-y: scroll;
+}
+.main .dySetting .dy_content .div_input {
+    height: 35px;
+    width: 600px;
+}
+.main .dySetting .dy_content .div_input .input_dy {
+    border: 1px solid #ebebeb;
+    color: #656565;
+    display: block;
+    float: left;
+    font-size: 16px;
+    height: 33px;
+    margin-left: 1px;
+    margin-top: 1px;
+    padding-left: 10px;
+    padding-right: 35px;
+    width: 600px;
+}
+.main .dySetting .dy_content .div_input .div_btn {
+    display: inline-block;
+    float: right;
+    height: 35px;
+    margin-top: -34px;
+    width: 30px;
+}
+.main .dySetting .dy_content .div_input .div_btn .btn_dy {
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    width: 35px;
+}
+.main .dySetting .dy_content .div_input .div_btn .btn_dy .btn_dy_img {
+    margin-left: 7px;
+    margin-top: 10px;
+}
+.main .dySetting .dy_content .div_reco_topic {
+    margin-top: 15px;
+    width: 590px;
+}
+.main .dySetting .dy_content .div_reco_topic .drt_title {
+    color: #656565;
+    font-size: 14px;
+}
+.main .dySetting .dy_content .div_reco_topic .drt_topic {
+    display: inline-block;
+}
+.main .dySetting .dy_content .div_reco_topic .drt_topic .ph_key {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    color: #656565;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+    height: 21px;
+    line-height: 22px;
+    margin-right: 20px;
+    padding: 0 15px;
+    text-align: center;
+}
+.main .dySetting .dy_content .div_reco_topic .drt_topic .ph_key:hover {
+    background-color: #bd1921 !important;
+    color: #fff !important;
+}
+.main .dySetting .dy_content .div_myDy {
+    margin-top: 15px;
+    width: 620px;
+}
+.main .dySetting .dy_content .div_myDy .sp_myDy_tit {
+    color: #333;
+    font-size: 16px;
+}
+.main .dySetting .dy_content .div_myDy .myDy_Data {
+    width: 100%;
+}
+.main .dySetting .dy_content .div_myDy .myDy_Data .dy_key {
+    background-color: #f3f3f3;
+    border: 1px solid #d9e5e5;
+    border-radius: 10px;
+    color: #333;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 19px;
+    margin-top: 20px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 130px;
+}
+.main .dySetting .dy_content .div_myDy .myDy_Data .dy_key span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.main .dySetting .dy_content .div_myDy .myDy_Data .dy_key .btn_del {
+    background: rgba(0, 0, 0, 0) url("../images/ph_dy_del.fw.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: none;
+    height: 20px;
+    left: 43%;
+    position: absolute;
+    top: 30px;
+    width: 20px;
+}
+.main .dySetting .dy_content .div_myDy .myDy_Data .dy_key:hover {
+    border: 1px solid #41d3cb;
+}
+.main .dySetting .dy_content .div_myDy .myDy_Data .dy_key:hover .btn_del {
+    display: block;
+}
+.main .dySetting .dy_content .div_myDy .myDy_Data .dy_key_Hover {
+    border: 1px solid #41d3cb;
+}
+.main .dySetting .dy_content .div_myDy .myDy_Data .dy_key_Hover .btn_del {
+    display: block;
+}
+.main .ask_success {
+    height: 470px;
+    left: 50%;
+    position: absolute;
+    top: 250px;
+    width: 430px;
+}
+.main .ask_success .s_first {
+    border-bottom: 1px dashed #ddd;
+    height: 180px;
+}
+.main .ask_success .s_first .s_success {
+    margin-top: 20px;
+}
+.main .ask_success .s_first .s_success .ss_img {
+    margin-left: 90px;
+    margin-right: 10px;
+    margin-top: -5px;
+}
+.main .ask_success .s_first .s_success .ss_txt {
+    color: #656565;
+    font-size: 18px;
+}
+.main .ask_success .s_first .ss_desc {
+    margin-top: 15px;
+    text-align: center;
+}
+.main .ask_success .s_first .ss_desc .ss_desc_txt {
+    color: #656565;
+    font-size: 14px;
+}
+.main .ask_success .s_first .hot_p_list {
+    margin-top: 25px;
+    width: 415px;
+}
+.main .ask_success .s_first .hot_p_list .hot_p_item {
+    cursor: pointer;
+    height: 52px;
+    margin-right: 30px;
+    width: 53px;
+}
+.main .ask_success .s_first .hot_p_foot {
+    color: #999;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.main .ask_success .s_second {
+    height: 150px;
+    margin-top: 15px;
+}
+.main .ask_success .s_second .ss_pable {
+    color: #333;
+    font-size: 16px;
+}
+.main .ask_success .s_second .ss_like_list {
+    margin-top: 15px;
+}
+.main .ask_success .s_second .ss_like_list .ss_like_item {
+    cursor: pointer;
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+}
+.main .ask_success .s_second .ss_like_list .ss_like_item .ss_num {
+    background-color: #5399d1;
+    color: #fff;
+    font-size: 10px;
+    height: 15px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25px;
+}
+.main .ask_success .s_second .ss_like_list .ss_like_item .ss_a {
+    color: #656565;
+    font-size: 14px;
+}
+.main .ask_success .s_second .ss_like_list .ss_like_item:link .ss_a, .main .ask_success .s_second .ss_like_list .ss_like_item:visited .ss_a {
+    color: #be1a21;
+}
+.main .ask_success .s_second .ss_like_list .ss_like_item:hover .ss_a, .main .ask_success .s_second .ss_like_list .ss_like_item:focus .ss_a {
+    color: #be1a21;
+}
+.main .edit-myCollect input {
+    border: 1px solid #ddd;
+    height: 26px;
+    padding: 0 5px;
+    width: 426px;
+}
+.main .edit-myCollect li {
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: right;
+}
+.main .edit-myCollect li em {
+    color: #f00;
+    display: inline-block;
+    margin-right: 4px;
+    padding: 0;
+    vertical-align: middle;
+}
+.main .success {
+    border-top: 1px solid #f0f0f0;
+    padding: 10px 20px 10px 0;
+    text-align: right;
+}
+.main .success a {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 80px;
+}
+.main .success .cancel {
+    background: #999 none repeat scroll 0 0;
+}
+.main .success .ok {
+    background: #be0000 none repeat scroll 0 0;
+}
+.main .success .del {
+    background: #999 none repeat scroll 0 0;
+    display: none;
+}

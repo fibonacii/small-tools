@@ -18,39 +18,9 @@
     width: 200px;
     height: 200px;
 }
-.lif{
-    font-size: 15px;
-    font-family: inherit;
-    color: #2eb3ba;
-    font-weight: 600;
-    margin-top: 30px;
-    margin-left: 20px;
-}
-.lif:hover {
-    cursor: pointer;
-    color: #2a6496;
-}
-
-#tablist li{
-    list-style: none;
-    display: inline;
-    margin: 0;
-}
-#tablist li a{
-    text-decoration: none;
-    padding: 3px 0.5em;
-    margin-right: 3px;
-    border: 1px solid rebeccapurple;
-    border-bottom: none;
-    background: royalblue;
-}
-#tablist li a:link, #tablist li a:visited{
-    color: navy;
-}
-#tablist li a:hover,#tablist li a.current{
-    color: white;
-    background: rebeccapurple;
-    border-color: rebeccapurple;
-}
 .cavatar img{border:0;}
-.cavatar250{width:250px; height:250px;}
+.cavatar150{
+    width:150px;
+    height:150px;
+    border: medium none;
+}
