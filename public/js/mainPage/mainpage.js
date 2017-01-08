@@ -2,19 +2,10 @@
  * Created by yuanchen on 16-11-22.
  */
 $(function () {
-    // $('#register').bind('click',function () {
-    //     window.location.href="http://localhost:10086/user/register";
-    // });
-    // $('#login').bind('click',function () {
-    // });
-    //
-    // $("#logout").bind("click",function () {
-    //     $.cookie("user_name", null, {path: '/'});
-    //     console.log($.cookie("user_name"));
-    //     window.location.href='/';
-    // });
 
-    if("null" != $.cookie('user_name') && null != $.cookie('user_name') && "" != $.cookie('user_name')){
+    initTable();
+
+    if(userIsExist()){
         $("#login_or_username").text($.cookie('user_name'));
         $("#login_or_username").attr("value", "username");
         $("#logout_or_register").text("退出");
@@ -25,7 +16,7 @@ $(function () {
         if ($("#login_or_username").attr("value") == "login") {
             window.location.href = "/user/login";
         }else {
-            //跳转到个人中心
+            window.location.href = "/user/userSpace";
         }
     });
 
@@ -39,3 +30,39 @@ $(function () {
     });
 
 });
+
+function checkUserExist() {
+    if(!userIsExist()){
+        alert("请先登录！");
+        return false;
+    }else{
+        window.location.href="/user/newTask";
+        return true;
+    }
+
+};
+
+function userIsExist() {
+    if($.cookie('user_name')==null ||$.cookie('user_name')==undefined ||$.cookie('user_name')==''||$.cookie('user_name')=='null'){
+        return false;
+    }return true;
+};
+
+function initTable() {
+    var url="/user/taskList"
+    $.get(url,function(data) {
+        console.log(data);
+        var a=JSON.stringify(data);
+        console.log(a);
+        $('#example').dataTable().fnClearTable();   //将数据清除
+        $('#example').dataTable().fnAddData(packagingdatatabledata(data),true);  //数据必须是json对象或json对象数组
+    });
+
+};
+
+function packagingdatatabledata(msgObj){
+    var a=[];
+    var tableName=['_id','user','taskName','createdAt',,'updatedAt','status','_v'];
+        a.push(JSON.parse(JSON.stringify(msgObj,tableName)));
+    return a;
+}

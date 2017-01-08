@@ -5,6 +5,7 @@
 var express = require('express');
 var router = express.Router();
 var UserModel = require('../models/user.js');
+var TaskModel = require('../models/task.js');
 var NodeRSA = require('node-rsa');
 var crypto = require('crypto');
 var config = require('config-lite');
@@ -29,6 +30,13 @@ router.get('/userSpace',function (req, res) {
 router.get('/login', function (req, res) {
     res.render('userInfo/login');
 });
+
+router.get('/taskList',function (req, res) {
+    TaskModel.findAll().then(function (data) {
+      res.send(data);
+    });
+});
+
 
 router.post('/signUp', function (req, res) {
 

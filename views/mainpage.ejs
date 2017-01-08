@@ -1,6 +1,8 @@
 <%- include('components/header') %>
 <link rel="stylesheet" href="../../public/css/plus.css"/>
 <link rel="stylesheet" href="../../public/css/userSpace.css"/>
+<link rel="stylesheet" href="../../public/css/demo_table.css"/>
+<script type="text/javascript" src="../public/js/public/jquery.dataTables.js"></script>
 <script type="text/javascript" src="../public/js/mainPage/mainpage.js"></script>
 
 <body background="https://img.alicdn.com/tps/TB1jnqtOVXXXXX8XFXXXXXXXXXX-1600-880.png">
@@ -12,7 +14,7 @@
                 <!--说明文件-->
                 <li><a  href="#">使用说明</a></li>
                 <li><a  href="#">意见反馈</a></li>
-                <li><a  href="/user/newTask">发布任务</a></li>
+                <li><a  href="/user/newTask" onclick="checkUserExist();return false;">发布任务</a></li>
                 <li><a  href="#">资源中心</a></li>
                 <!--排行榜包括 任务(按评论)排行，人气(按浏览量)排行，用户(按发布数和接单数之和)排行-->
                 <li><a  href="#">排行榜</a></li>
@@ -45,5 +47,23 @@
     </div>
 </div><hr>
 
+<div id="contentTable">
+    <div class="index_viewport">
+        <table id="example" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <thead>
+            <tr>
+                <th >_id</th>
+                <th >user</th>
+                <th >taskName</th>
+                <th >createdAt</th>
+                <th >updatedAt</th>
+                <th >status</th>
+                <th >_v</th>
+            </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
 </body>
 <%- include('components/footer') %>

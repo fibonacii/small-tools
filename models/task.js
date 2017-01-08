@@ -12,5 +12,8 @@ var TaskSchema=new mongoose.Schema({
 });
 
 var TaskModel=mongoose.model('task',TaskSchema);
+TaskModel.findAll=function () {
+    return this.find().exec();
+};
 
 module.exports=TaskModel;
