@@ -1,16 +1,18 @@
 <%- include('components/header') %>
 <link rel="stylesheet" href="../../public/css/plus.css"/>
 <link rel="stylesheet" href="../../public/css/userSpace.css"/>
-<link rel="stylesheet" href="../../public/css/demo_table.css"/>
-<script type="text/javascript" src="../public/js/public/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="../../public/css/jquery.dataTables.min.css"/>
+<script type="text/javascript" src="../public/js/public/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../public/js/mainPage/mainpage.js"></script>
+<!--<link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.css"/>-->
+<!--<script type="text/javascript" src="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.js"></script>-->
 
 <body background="https://img.alicdn.com/tps/TB1jnqtOVXXXXX8XFXXXXXXXXXX-1600-880.png">
 <div role="banner" class="nav" style="margin-top: 10px">
     <div class="container">
         <div role="navigation" class="navbar-collapse">
             <ul class="nav_content" >
-                <li class="active"><a  href="#">首页</a></li>
+                <li class="active"><a  href="#"><span class="glyphicon glyphicon-home"></span>首页</a></li>
                 <!--说明文件-->
                 <li><a  href="#">使用说明</a></li>
                 <li><a  href="#">意见反馈</a></li>
@@ -48,21 +50,20 @@
 </div><hr>
 
 <div id="contentTable">
-    <div class="index_viewport">
-        <table id="example" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <div class="dataTables_info" id="data-empty" role="status" aria-live="polite">
+        <table id="apply-data" class="table table-bordered table-hover stripe">
             <thead>
             <tr>
-                <th >_id</th>
-                <th >user</th>
-                <th >taskName</th>
-                <th >createdAt</th>
-                <th >updatedAt</th>
-                <th >status</th>
-                <th >_v</th>
+                <td>_id</td>
+                <td>createdAt</td>
+                <td>updatedAt</td>
+                <td>user</td>
+                <td>taskName</td>
+                <td>status</td>
             </tr>
             </thead>
-
         </table>
+
     </div>
 </div>
 </body>

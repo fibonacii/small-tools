@@ -3,7 +3,7 @@
  */
 $(function () {
 
-    initTable();
+    initData();
 
     if(userIsExist()){
         $("#login_or_username").text($.cookie('user_name'));
@@ -48,21 +48,54 @@ function userIsExist() {
     }return true;
 };
 
-function initTable() {
+function initData() {
     var url="/user/taskList"
-    $.get(url,function(data) {
-        console.log(data);
-        var a=JSON.stringify(data);
-        console.log(a);
-        $('#example').dataTable().fnClearTable();   //将数据清除
-        $('#example').dataTable().fnAddData(packagingdatatabledata(data),true);  //数据必须是json对象或json对象数组
+    $.get(url,function(result) {
+        console.log(result);
+        initTable(result);
+        var pagination=$("#pagination");
+        // var paginationHtml=generatePages(result.currentPage,result.totalPage,result.pageSize,result.totalCount);
+        // pagination.html(paginationHtml);
     });
 
+function initTable(data) {
+    if(data.length==0){
+        $("#apply-data").html("");
+        return;
+    }
+
+    $("#apply-data").dataTable({
+        "paging":false,
+        "ordering":false,
+        "info":false,
+        "filter":false,
+        "stateSave":false,
+        "retrieve":false,
+        "destroy":true,
+        "aoColumns":[
+            {"data":"_id","title":"ID"},
+            {"data":"createdAt","title":"创建时间"},
+            {"data":"updatedAt","title":"更新时间"},
+            {"data":"user","title":"用户名"},
+            {"data":"taskName","title":"任务名"},
+            {"data":"status","title":"任务状态"}
+        ],
+        "data":data,
+        "aoColumnDefs":[
+            {
+                sDefaultContent:'',
+                aTargets:['all']
+            }
+        ],
+        "oLanguage":{
+            "sProcessing":"正在加载中.....",
+            "sLengthMenu":"每页显示 _MENU_ 条记录",
+            "sZeroRecords":"抱歉，每页找到",
+            "sInfo":"共"+ data.length +" 条数据",
+            "sInfoEmpty":"没有数据",
+            "sInfoFiltered":"(从 _MAX_ 条数据中检索)"
+        }
+    })
 };
 
-function packagingdatatabledata(msgObj){
-    var a=[];
-    var tableName=['_id','user','taskName','createdAt',,'updatedAt','status','_v'];
-        a.push(JSON.parse(JSON.stringify(msgObj,tableName)));
-    return a;
-}
+};
