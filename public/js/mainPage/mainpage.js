@@ -2,10 +2,19 @@
  * Created by yuanchen on 16-11-22.
  */
 $(function () {
+    // $('#register').bind('click',function () {
+    //     window.location.href="http://localhost:10086/user/register";
+    // });
+    // $('#login').bind('click',function () {
+    // });
+    //
+    // $("#logout").bind("click",function () {
+    //     $.cookie("user_name", null, {path: '/'});
+    //     console.log($.cookie("user_name"));
+    //     window.location.href='/';
+    // });
 
-    initData();
-
-    if(userIsExist()){
+    if("null" != $.cookie('user_name') && null != $.cookie('user_name') && "" != $.cookie('user_name')){
         $("#login_or_username").text($.cookie('user_name'));
         $("#login_or_username").attr("value", "username");
         $("#logout_or_register").text("退出");
@@ -16,7 +25,7 @@ $(function () {
         if ($("#login_or_username").attr("value") == "login") {
             window.location.href = "/user/login";
         }else {
-            window.location.href = "/user/userSpace";
+            //跳转到个人中心
         }
     });
 
@@ -29,6 +38,8 @@ $(function () {
         }
     });
 
+
+    initData();
 });
 
 function checkUserExist() {
@@ -49,10 +60,12 @@ function userIsExist() {
 };
 
 function initData() {
-    var url="/user/taskList"
-    $.get(url,function(result) {
+    var url="/task/getList";
+    var param={};
+    param.pageSize=1;
+    $.get(url,param,function(result) {
         console.log(result);
-        initTable(result);
+        initTable(result.data);
         var pagination=$("#pagination");
         // var paginationHtml=generatePages(result.currentPage,result.totalPage,result.pageSize,result.totalCount);
         // pagination.html(paginationHtml);

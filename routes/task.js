@@ -26,6 +26,28 @@ router.post('/save',function (req,res) {
             res.send('00');
         })
     }
+});
+
+
+router.get('/getList',function (req,res) {
+
+    var pageNum=req.param('pageNum');
+    var pageSize=req.param('pageSize');
+    var queryParam={};
+    queryParam.status=req.param('status');
+
+    TaskModel.countList(queryParam).then(function (totalNum) {
+        TaskModel.findList(pageNum,pageSize).then(function (tasks) {
+            var pagination = new Object();
+            pagination.pageNum=pageNum;
+            pagination.pageSize=pageSize;
+            pagination.totalNum = totalNum;
+            pagination.data=tasks;
+            res.send(pagination);
+        });
+    })
+
+
 })
 
 module.exports=router;
