@@ -62,7 +62,8 @@ function userIsExist() {
 function initData() {
     var url="/task/getList";
     var param={};
-    param.pageSize=1;
+    param.pageSize=100;
+    param.status="init";
     $.get(url,param,function(result) {
         console.log(result);
         initTable(result.data);
@@ -78,19 +79,26 @@ function initTable(data) {
     }
 
     $("#apply-data").dataTable({
-        "paging":false,
-        "ordering":false,
-        "info":false,
-        "filter":false,
-        "stateSave":false,
-        "retrieve":false,
+        "Paginate":true,
+        "paging":true,
+        "ordering":true,
+        "info":true,
+        "filter":true,
+        "stateSave":true,
+        "retrieve":true,
         "destroy":true,
         "aoColumns":[
             {"data":"_id","title":"ID"},
             {"data":"createdAt","title":"创建时间"},
             {"data":"updatedAt","title":"更新时间"},
             {"data":"user","title":"用户名"},
-            {"data":"taskName","title":"任务名"},
+            {
+                "data": "taskName",
+                "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                    $(nTd).html("<div><a href='/task/content?id="+oData._id+"'>"+sData+"</a></div>");
+                },
+                "title": "任务名"
+            },
             {"data":"status","title":"任务状态"}
         ],
         "data":data,

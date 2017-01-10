@@ -1,0 +1,14 @@
+<%- include('../components/header') %>
+<script type="text/javascript" src="../../public/js/public/jquery-3.1.1.js"></script>
+<body>
+
+    <label>标题：</label>
+    <p style="margin-left: 10px"><%- task.taskName %></p>
+    <label>内容:</label>
+    <div><%- task.content %></div>
+    <button type="button" class="btn btn-info" id="saveTask">接受</button>
+    <button type="button" class="btn btn-info" id="cancelTask">更新</button>
+</body>
+
+
+<%- include('../components/footer') %>

@@ -36,17 +36,22 @@ router.get('/getList',function (req,res) {
     var queryParam={};
     queryParam.status=req.param('status');
 
-    TaskModel.countList(queryParam).then(function (totalNum) {
-        TaskModel.findList(pageNum,pageSize).then(function (tasks) {
-            var pagination = new Object();
-            pagination.pageNum=pageNum;
-            pagination.pageSize=pageSize;
-            pagination.totalNum = totalNum;
-            pagination.data=tasks;
-            res.send(pagination);
-        });
-    })
+    TaskModel.findList(pageNum, pageSize,queryParam).then(function (tasks) {
+        var pagination = new Object();
+        pagination.pageNum = pageNum;
+        pagination.pageSize = pageSize;
+        pagination.data = tasks;
+        res.send(pagination);
+    });
+})
 
+router.get('/content',function (req,res) {
+    var id=req.query.id;
+    var queryParam={};
+    queryParam.id=id;
+    TaskModel.findTask(queryParam).then(function (task) {
+        res.render('task/taskDetail',{task:task[0]});
+    })
 
 })
 

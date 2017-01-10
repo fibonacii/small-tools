@@ -20,7 +20,7 @@ $(function () {
 function editorHandler(editor) {
     return {
         getContent : function(){
-            editor.$txt.html()
+            return editor.$txt.html();
         }
     }
 }
