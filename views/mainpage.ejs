@@ -8,7 +8,7 @@
 <script type="text/javascript" src="../public/js/libs/dataTables.bootstrap.min.js"></script>
 
 
-<body style="background-image:url('../public/img/background/bacgrd1.jpg')"  >
+<body id="bacgrd" style="background-image:url('../public/img/background/bacgrd1.jpg');background-attachment:scroll"  >
 <div role="banner" class="nav" style="margin-top: 10px">
     <div class="container">
         <div role="navigation" class="navbar-collapse">
@@ -22,29 +22,11 @@
                 <!--排行榜包括 任务(按评论)排行，人气(按浏览量)排行，用户(按发布数和接单数之和)排行-->
                 <li><a  href="#">排行榜</a></li>
                 <!--个人中心-->
-                <li><a  href="/user/userSpace">个人中心</a></li>
+                <li><a  href="/user/userSpace" onclick="userSpaceCheck();return false;">个人中心</a></li>
 
                 <li style="float:right;margin-right: 60px"><p  id="logout_or_register" value="register">注册</p></li>
                 <li style="float:right;margin-right: 60px"><p  id="login_or_username" value="login">登陆</p></li>
 
-                <!--<li class="dropdown">-->
-                    <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">-->
-                        <!--个人中心 <span class="caret"></span>-->
-                    <!--</a>-->
-                    <!--<ul class="dropdown-menu">-->
-                        <!--<% if(userName) { %>-->
-                            <!--<li><a href="#">修改头像</a></li>-->
-                            <!--<li><a href="#">修改签名</a></li>-->
-                            <!--<li><a href="#">修改密码</a></li>-->
-                            <!--<li><a href="#">我的日志</a></li>-->
-                            <!--<li class="divider"></li>-->
-                            <!--<li><a href="#" id="logout">退出</a></li>-->
-                        <!--<% } else { %>-->
-                            <!--<li><a href="/user/login">登录</a></li>-->
-                            <!--<li><a href="/user/register">注册</a></li>-->
-                        <!--<% } %>-->
-                    <!--</ul>-->
-                <!--</li>-->
             </ul>
         </div>
     </div>

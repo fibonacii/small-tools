@@ -1,64 +1,14 @@
-/**
- * Created by yuanchen on 16-11-22.
- */
-$(function () {
+$(document).ready(function () {
 
-    initData();
+    init();
 
-    if(userIsExist()){
-        $("#login_or_username").text($.cookie('user_name'));
-        $("#login_or_username").attr("value", "username");
-        $("#logout_or_register").text("退出");
-        $("#logout_or_register").attr("value", "logout");
-    }
-
-    $("#login_or_username").bind("click",function(){
-        if ($("#login_or_username").attr("value") == "login") {
-            window.location.href = "/user/login";
-        }else {
-            window.location.href = "/user/userSpace";
-        }
-    });
-
-    $("#logout_or_register").bind("click",function() {
-        if ($("#logout_or_register").attr("value") == "logout") {
-            $.cookie("user_name", null, {path: '/'});
-            window.location.href = "/";
-        }else {
-            window.location.href = "/user/register";
-        }
-    });
 
 });
 
-function checkUserExist() {
-    if(!userIsExist()){
-        alert("请先登录！");
-        return false;
-    }else{
-        window.location.href="/user/newTask";
-        return true;
-    }
+function init() {
+    var user_name=$.cookie('user_name');
+    $("#user_name").text("Hi,"+user_name);
 
-};
-
-function userSpaceCheck() {
-    if(!userIsExist()){
-        alert("请先登录！");
-        return false;
-    }else{
-        window.location.href="/user/userSpace";
-        return true;
-    }
-}
-
-function userIsExist() {
-    if($.cookie('user_name')==null ||$.cookie('user_name')==undefined ||$.cookie('user_name')==''||$.cookie('user_name')=='null'){
-        return false;
-    }return true;
-};
-
-function initData() {
     var url="/task/getList";
     var param={};
     param.pageSize=100;
@@ -67,6 +17,7 @@ function initData() {
         console.log(result);
         initTable(result.data);
     });
+};
 
 function initTable(data) {
     if(data.length==0){
@@ -113,6 +64,4 @@ function initTable(data) {
             "sInfoFiltered":"(从 _MAX_ 条数据中检索)"
         }
     })
-};
-
 };

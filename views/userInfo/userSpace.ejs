@@ -1,8 +1,16 @@
 <%- include('../components/header') %>
 <link rel="stylesheet" href="../../public/css/userSpace.css"/>
+<link rel="stylesheet" href="../public/css/libs/dataTables.bootstrap.min.css"/>
+<link rel="stylesheet" href="../../public/css/jquery.dataTables.min.css"/>
+<script type="text/javascript" src="../public/js/public/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../public/js/libs/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript" src="../../public/js/user/userSpace.js"></script>
-
 <body >
+<div>
+    <div class="active">
+        <a style="margin-left: 30px" href="/"><span class="glyphicon glyphicon-home"></span></a>
+    </div>
+</div>
 <div class="main clearfix">
     <div class="persional_property">
         <div class="person_info_con"><i class="icon-edit icon-large person-info-edit"></i><a name="M_base"></a>
@@ -13,7 +21,7 @@
             </dl>
             <dl class="person-info">
                 <dt class="person-nick-name">
-                    <span>起个名字咋内难</span>            </dt>
+                    <span id="user_name"></span>            </dt>
                 <dd class="person-detail">
                     <span class="info_null">未填写部门</span><span>|</span><span class="info_null">未填写姓名</span><span>|</span>上海<span>|</span>男<span>|</span><span class="info_null">未填写生日</span> </dd>
                 <dd class="person-sign">个人简介</dd><br>
@@ -22,6 +30,24 @@
             </dl>
 
         </div>
+    </div>
+</div>
+
+//个人文章链接查询:
+<div id="contentTable">
+    <div class="dataTables_info" id="data-empty" role="status" aria-live="polite">
+        <table id="apply-data" class="table table-bordered table-hover stripe">
+            <thead>
+            <tr>
+                <td>_id</td>
+                <td>createdAt</td>
+                <td>updatedAt</td>
+                <td>user</td>
+                <td>taskName</td>
+                <td>status</td>
+            </tr>
+            </thead>
+        </table>
     </div>
 </div>
 </body>
