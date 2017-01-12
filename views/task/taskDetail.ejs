@@ -1,13 +1,21 @@
 <%- include('../components/header') %>
 <script type="text/javascript" src="../../public/js/public/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="../../public/js/task/taskDetail.js"></script>
 <body>
-
+    <div id="taskInformation" style="display: none" taskId=<%= task._id %>></div>
     <label>标题：</label>
     <p style="margin-left: 10px"><%- task.taskName %></p>
     <label>内容:</label>
     <div><%- task.content %></div>
-    <button type="button" class="btn btn-info" id="saveTask">接受</button>
-    <button type="button" class="btn btn-info" id="cancelTask">更新</button>
+
+    <% if(!isAccepted) { %>
+        <button type="button" class="btn btn-info" id="buyTask">接受</button>
+    <% } else if(isMajorWorker) { %>
+        <button type="button" class="btn btn-info" id="askForPartner">寻找合作人</button>
+    <% } %>
+    <% if(isAuthor) { %>
+        <button type="button" class="btn btn-info" id="updateTask">更新</button>
+    <% } %>
 </body>
 
 

@@ -38,7 +38,7 @@ function initTable(data) {
             {"data":"_id","title":"ID"},
             {"data":"createdAt","title":"创建时间"},
             {"data":"updatedAt","title":"更新时间"},
-            {"data":"user","title":"用户名"},
+            {"data":"author","title":"用户名"},
             {
                 "data": "taskName",
                 "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {

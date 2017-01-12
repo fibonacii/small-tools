@@ -12,7 +12,7 @@ router.post('/save',function (req,res) {
         res.send('01');
     }else {
         var taskEntity = new TaskModel({
-            user: req.session.userName,
+            author: req.session.userName,
             taskName: req.body.taskName,
             content: req.body.content,
             createdAt: new Date(),
@@ -50,9 +50,39 @@ router.get('/content',function (req,res) {
     var queryParam={};
     queryParam.id=id;
     TaskModel.findTask(queryParam).then(function (task) {
-        res.render('task/taskDetail',{task:task[0]});
-    })
+        if (!task) {
+            res.send("no such task");
+            return;
+        }
+        var isAccepted = task.majorWorker ? true : false;
+        var isMajorWorker = (task.majorWorker === req.session.uid) ? true : false;
+        var isAuthor = (task.author === req.session.uid) ? true : false;
 
+
+        res.render('task/taskDetail',
+            {
+                task: task,
+                isAccepted: isAccepted,
+                isMajorWorker: isMajorWorker,
+                isAuthor: isAuthor
+            });
+    })
+})
+
+router.get('/buy',function (req,res) {
+    var queryParam={};
+    queryParam.id=req.query.taskId;
+    queryParam.majorWorker=req.session.uid;
+    TaskModel.findTask(queryParam).then(function (task) {
+        if(task.majorWorker){
+            req.flash.info('info','该任务已被其他人接受，如果想继续参加此任务，请点击【报名参加此任务】》');
+            res.send('00');
+            return;
+        }
+        TaskModel.updateTask(queryParam);
+        req.flash('info','接受任务成功');
+        res.send('00');
+    })
 })
 
 module.exports=router;
