@@ -7,6 +7,7 @@ var userModel=require('../models/user.js');
 var userInfo=require('./userInfo.js');
 var wangEditor=require('./wangEditor.js');
 var task=require('./task.js');
+var gt_app=require('./gt-app.js');
 
 module.exports=function (app) {
     app.get('/',function (req,res,next) {
@@ -15,16 +16,5 @@ module.exports=function (app) {
     app.use('/user',userInfo);
     app.use('/wangEditor',wangEditor);
     app.use('/task',task);
+    app.use('',gt_app);
 };
-
-/**
- * mongoose使用
- */
-// var person=new userModel({name:new Date()});
-// person.save(function (err) {
-//     if(err){
-//         console.log(err);
-//     }else {
-//         console.log("successful");
-//     }
-// });

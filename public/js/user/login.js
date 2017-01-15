@@ -2,9 +2,9 @@
  * Created by yuanchen on 16-12-18.
  */
 $(function () {
-    $('#login').bind('click',function () {
-        loginHandler().postLogin();
-    })
+
+    showData();
+
 });
 
 function loginHandler() {
@@ -44,4 +44,43 @@ function loginHandler() {
             return param
         }
     }
+}
+
+function showData() {
+    $.ajax({
+        url: "/pc-geetest/register?t=" + (new Date()).getTime(), // 加随机数防止缓存
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            initGeetest({
+                gt: data.gt,
+                challenge: data.challenge,
+                product: "embed",
+                offline: !data.success
+            }, handlerEmbed);
+        }
+    });
+
+    var handlerEmbed = function (captchaObj) {
+        $('#login').click(function (e) {
+            // console.log(captchaObj);
+            var validate = captchaObj.getValidate();
+            if (!validate) {
+                alert("验证失败:拖动滑块将悬浮图像正确拼合");
+                $("#notice")[0].className = "show";
+                    setTimeout(function () {
+                        $("#notice")[0].className = "hide";
+                    }, 3000);
+                e.preventDefault();
+            }else{
+              loginHandler().postLogin();
+            }
+        });
+
+        captchaObj.appendTo("#embed-captcha");
+        captchaObj.onReady(function () {
+            $("#wait")[0].className = "hide";
+        });
+    };
+
 }
