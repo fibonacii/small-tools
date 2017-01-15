@@ -9,10 +9,9 @@ function init() {
     var user_name=$.cookie('user_name');
     $("#user_name").text("Hi,"+user_name);
 
-    var url="/task/getList";
+    var url="/task/userTaskDetail";
     var param={};
-    param.pageSize=100;
-    param.status="init";
+    param.author=user_name;
     $.get(url,param,function(result) {
         console.log(result);
         initTable(result.data);
@@ -38,7 +37,7 @@ function initTable(data) {
             {"data":"_id","title":"ID"},
             {"data":"createdAt","title":"创建时间"},
             {"data":"updatedAt","title":"更新时间"},
-            {"data":"author","title":"用户名"},
+            {"data":"author","title":"作者"},
             {
                 "data": "taskName",
                 "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {

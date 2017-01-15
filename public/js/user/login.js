@@ -66,7 +66,7 @@ function showData() {
             // console.log(captchaObj);
             var validate = captchaObj.getValidate();
             if (!validate) {
-                alert("验证失败:拖动滑块将悬浮图像正确拼合");
+                // alert("验证失败:拖动滑块将悬浮图像正确拼合");
                 $("#notice")[0].className = "show";
                     setTimeout(function () {
                         $("#notice")[0].className = "hide";
