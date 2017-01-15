@@ -11,8 +11,7 @@ function init() {
 
     var url="/task/getList";
     var param={};
-    param.pageSize=100;
-    param.status="init";
+    param.filter = 'user';
     $.get(url,param,function(result) {
         console.log(result);
         initTable(result.data);

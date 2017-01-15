@@ -4,15 +4,16 @@
 var express = require('express');
 var router = express.Router();
 var TaskModel=require('../models/task.js');
+var UserModel = require('../models/user.js');
 
 router.post('/save',function (req,res) {
 
-    if(!req.session.userName){
+    if(!req.session.uid){
         req.flash('error','请登录后发表');
         res.send('01');
     }else {
         var taskEntity = new TaskModel({
-            author: req.session.userName,
+            author: req.session.uid,
             taskName: req.body.taskName,
             content: req.body.content,
             createdAt: new Date(),
@@ -31,17 +32,34 @@ router.post('/save',function (req,res) {
 
 router.get('/getList',function (req,res) {
 
-    var pageNum=req.param('pageNum');
-    var pageSize=req.param('pageSize');
-    var queryParam={};
-    queryParam.status=req.param('status');
 
-    TaskModel.findList(pageNum, pageSize,queryParam).then(function (tasks) {
-        var pagination = new Object();
-        pagination.pageNum = pageNum;
-        pagination.pageSize = pageSize;
-        pagination.data = tasks;
-        res.send(pagination);
+    var queryParam={};
+    queryParam.status=req.query.status;
+
+    if(req.query.filter=='user'){
+        queryParam.user=req.session.uid;
+        TaskModel.findUserList(queryParam).then(function (tasks) {
+            var pagination = new Object();
+            pagination.data = tasks;
+            res.send(pagination);
+        });
+        return;
+    }
+
+    TaskModel.findList(queryParam).then(function (tasks) {
+        var oneTask;
+        var count = 0;
+        for(oneTask in tasks) {
+            UserModel.findUserById(oneTask.author).then(function (user) {
+                tasks.author = user.userName;
+                count++;
+                if ( count == tasks.length) {
+                    var pagination = new Object();
+                    pagination.data = tasks;
+                    res.send(pagination);
+                }
+            })
+        }
     });
 })
 
@@ -73,6 +91,7 @@ router.get('/buy',function (req,res) {
     var queryParam={};
     queryParam.id=req.query.taskId;
     queryParam.majorWorker=req.session.uid;
+    queryParam.status = 'accepted';
     TaskModel.findTask(queryParam).then(function (task) {
         if(task.majorWorker){
             req.flash.info('info','该任务已被其他人接受，如果想继续参加此任务，请点击【报名参加此任务】》');
