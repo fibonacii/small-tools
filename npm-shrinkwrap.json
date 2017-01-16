@@ -354,6 +354,11 @@
       "from": "minimist@>=0.0.1 <0.1.0",
       "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz"
     },
+    "moment": {
+      "version": "2.17.1",
+      "from": "moment@latest",
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.17.1.tgz"
+    },
     "mongodb": {
       "version": "2.2.11",
       "from": "mongodb@>=1.2.0 <3.0.0",

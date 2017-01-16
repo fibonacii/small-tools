@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 var TaskModel=require('../models/task.js');
 var UserModel = require('../models/user.js');
+var moment = require('moment');
 
 router.post('/save',function (req,res) {
 
@@ -16,8 +17,6 @@ router.post('/save',function (req,res) {
             author: req.session.uid,
             taskName: req.body.taskName,
             content: req.body.content,
-            createdAt: new Date(),
-            updatedAt: new Date(),
             status: 'init'
         });
 
@@ -47,19 +46,11 @@ router.get('/getList',function (req,res) {
     }
 
     TaskModel.findList(queryParam).then(function (tasks) {
-        var oneTask;
-        var count = 0;
-        for(oneTask in tasks) {
-            UserModel.findUserById(oneTask.author).then(function (user) {
-                tasks.author = user.userName;
-                count++;
-                if ( count == tasks.length) {
-                    var pagination = new Object();
-                    pagination.data = tasks;
-                    res.send(pagination);
-                }
-            })
-        }
+        TaskModel.findList(queryParam).then(function (tasks) {
+            var pagination = new Object();
+            pagination.data = tasks;
+            res.send(pagination);
+        })
     });
 })
 

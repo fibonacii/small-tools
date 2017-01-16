@@ -34,18 +34,33 @@ function initTable(data) {
         "retrieve":true,
         "destroy":true,
         "aoColumns":[
-            {"data":"_id","title":"ID"},
-            {"data":"createdAt","title":"创建时间"},
-            {"data":"updatedAt","title":"更新时间"},
-            {"data":"author","title":"用户名"},
             {
                 "data": "taskName",
                 "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-                    $(nTd).html("<div><a href='/task/content?id="+oData._id+"'>"+sData+"</a></div>");
+                    $(nTd).html("<div><a href='/task/content?id=" + oData._id + "'>" + sData + "</a></div>");
                 },
                 "title": "任务名"
             },
-            {"data":"status","title":"任务状态"}
+            {"data": "author.userName", "title": "发布者"},
+            {
+                "data": "status",
+                "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                    var status;
+                    if (sData === 'init') {
+                        status = '新发布';
+                    } else if (sData === 'accepted') {
+                        status = '进行中';
+                    } else if (sData === 'done') {
+                        status = '已完成';
+                    } else {
+                        status = sData;
+                    }
+                     $(nTd).html(status);
+                },
+                "title": "任务状态"
+            },
+            {"data":"createdAt","title":"创建时间"},
+            {"data":"updatedAt","title":"更新时间"}
         ],
         "data":data,
         "aoColumnDefs":[

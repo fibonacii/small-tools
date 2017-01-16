@@ -21,6 +21,7 @@
     "express-winston": "^2.1.1",
     "formidable": "^1.0.17",
     "fs": "0.0.1-security",
+    "moment": "^2.17.1",
     "mongoose": "4.6.8",
     "node-rsa": "^0.4.2",
     "util": "^0.10.3",
