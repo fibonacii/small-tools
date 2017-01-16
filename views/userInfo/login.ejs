@@ -1,9 +1,11 @@
 <%- include('../components/header') %>
+<link rel="stylesheet" href="../../public/css/plus.css/login_y.css"/>
+<script src="http://static.geetest.com/static/tools/gt.js"></script>
 <script type="text/javascript" src="../../public/js/libs/rsa/jsencrypt.js"></script>
 <script type="text/javascript" src="../../public/js/base/baseInput.js"></script>
 <script type="text/javascript" src="../../public/js/user/login.js"></script>
 
-<body background=https://img.alicdn.com/tps/TB1jnqtOVXXXXX8XFXXXXXXXXXX-1600-880.png >
+<body >
 <div class="container">
     <h1 >这是登录页</h1>
     <p id="notification"></p>
@@ -23,15 +25,27 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-5 ">
+                    <div class="input-group input-group-lg col-lg-6">
+                        <div id="embed-captcha"></div>
+                        <p id="wait" class="show">正在加载验证码......</p>
+                        <p id="notice" style="color: red" class="hide">请先拖动验证码到相应位置</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-group-lg col-lg-5">
                         <button type="button" class="btn btn-primary btn-block " id="login">登 录</button>
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-lg-offset-1">
-                        <span><a href="#">忘记密码</a>
-                        <text>  没有账号,去注册>>></text></span>
-                        <a href="/user/register" class="btn btn-primary" id="register">注册</a>
+                    <div class="container">
+                        <div class="row-fluid">
+                            <div class="col-md-2">
+                                <a href="#">忘记密码?</a>
+                            </div>
+                            <div class="col-md-4 ">
+                                <a href="/user/register">没有账号,去注册</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>

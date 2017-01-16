@@ -615,5 +615,6 @@
       "from": "wordwrap@>=0.0.2 <0.1.0",
       "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz"
     }
-  }
+  },
+  "repository": "https://github.com/GeeTeam/gt-node-sdk"
 }

@@ -86,6 +86,9 @@ TaskModel.countList = function (param) {
 TaskModel.findTask = function (param) {
     return this.findOne({_id: param.id}).select({author: 1, taskName: 1, content: 1, majorWorker: 1});
 }
+TaskModel.findTaskByUserName = function (param) {
+    return this.find({author:param.author}).select({author:1,_id:1,createdAt:1,updatedAt:1,taskName:1,status:1});
+};
 TaskModel.updateTask = function (param) {
     return this.findOneAndUpdate({'_id': param.id}, {
         $set: {
@@ -98,4 +101,4 @@ TaskModel.updateTask = function (param) {
 }
 
 
-module.exports = TaskModel;
+module.exports=TaskModel;

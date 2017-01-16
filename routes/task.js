@@ -52,7 +52,18 @@ router.get('/getList',function (req,res) {
             res.send(pagination);
         })
     });
-})
+});
+
+router.get('/userTaskDetail',function (req,res) {
+    var queryParam={};
+    queryParam.status=req.param('author');
+
+    TaskModel.findTaskByUserName(queryParam).then(function (tasks) {
+        var pagination = new Object();
+        pagination.data = tasks;
+        res.send(pagination);
+    });
+});
 
 router.get('/content',function (req,res) {
     var id=req.query.id;

@@ -1,0 +1,22 @@
+{
+  "name": "geetest",
+  "version": "4.0.0",
+  "description": "Node SDK for Geetest captcha",
+  "main": "gt-sdk.js",
+  "keywords": [
+    "Geetest",
+    "Captcha"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.54.0"
+  },
+  "devDependencies": {
+    "express": "^4.13.3",
+    "body-parser": "^1.14.1"
+  },
+  "repository": "https://github.com/GeeTeam/gt-node-sdk",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
