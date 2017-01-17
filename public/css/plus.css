@@ -24,3 +24,22 @@
     height:150px;
     border: medium none;
 }
+@media screen {
+    html { margin-top: 0px !important; }
+}
+#backTop {
+    width: 50px;
+    height: 66px;
+    background-color: #06c;
+    color: #fff;
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+    line-height:32px;
+    border:1px solid #06c;
+    border-radius:5px;
+    font-family: "微软雅黑";
+}

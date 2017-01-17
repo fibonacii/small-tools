@@ -14,73 +14,74 @@
     <div class="col-md-offset-4">
     <form class="form-horizontal">
         <div class="form-group ">
-            <div class="col-lg-5">
-                <label  class="control-label">邮箱:</label>
+            <div class="input-group input-group-lg col-lg-6">
+                <span class="input-group-addon">
+                <span class="glyphicon glyphicon-envelope" style="color: rgb(255, 140, 60);"> </span></span>
                 <input type="text" class="form-control input-lg" id="mailBox" placeholder="请输入邮箱"/>
-             </div>
+            </div>
         </div>
         <div class="form-group ">
-            <div class="col-lg-5">
-                <label  class="control-label">用户名:</label>
-                <input type="text" class="form-control input-lg" id="userName" placeholder="请输入用户名"/>
+            <div class="input-group input-group-lg col-lg-6">
+                 <span class="input-group-addon">
+                <span class="glyphicon glyphicon-user" style="color: rgb(255, 140, 60);"> </span></span>
+            <input type="text" class="form-control input-lg" id="userName" placeholder="请输入用户名"/>
             </div>
         </div>
 
         <% /*对输入密码进行密码强度校验*/%>
         <div class="form-group ">
-            <div class="col-lg-5">
-            <label  for="passWord">密码:</label>
-            <input type="password" id="passWord" class="form-control input-lg" placeholder="请输入密码,最少6位"/>
+            <div class="input-group input-group-lg col-lg-6">
+                 <span class="input-group-addon">
+               <span class="glyphicon glyphicon-asterisk" style="color: rgb(255, 140, 60);"></span></span>
+                <input type="password" id="passWord" class="form-control input-lg" placeholder="请输入密码,最少6位"/>
             </div>
         </div>
         <div class="form-group ">
-            <div class="col-lg-5">
-            <label  for="passWord2">密码确认:</label>
-            <input type="password" id="passWord2" class="form-control input-lg" placeholder="请再次输入密码"/>
+            <div class="input-group input-group-lg col-lg-6">
+                 <span class="input-group-addon">
+               <span class="glyphicon glyphicon-asterisk" style="color: rgb(255, 140, 60);"> </span></span>
+                <input type="password" id="passWord2" class="form-control input-lg" placeholder="请再次输入密码"/>
             </div>
         </div>
+        <div class="form-group " style="margin-right: 50px">
+            <div class="input-group-lg col-lg-7 " >
+                <div class="input-group input-group-lg col-lg-3" style="float: left;width: 49%;" >
+                   <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-check" style="color: rgb(255, 140, 60);"> </span></span>
+                   <input type="text" id="inputAlpha" class="form-control input-lg" placeholder="请输入验证码" >
+                </div>
+                    <div  class="col-lg-3" style="float: right;width: 49%">
+                <input type="button" class="btn btn-block input-lg code" id="code" style="color:#357ebd;font-weight:bold;font-style:oblique;letter-spacing: 12px";>
+                    </div>
+            </div>
+        </div>
+        <!--<div class="form-group">-->
+            <!--<div class="col-lg-5">-->
+                <!--<label for="gender">性别:</label>-->
+                <!--<select class=" dropdown-menu-left" name="gender">-->
+                    <!--<option value="m">男</option>-->
+                    <!--<option value="f">女</option>-->
+                    <!--<option value="x">保密</option>-->
+                <!--</select>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group field required">-->
+            <!--<div class="col-lg-5">-->
+                <!--<label>头像:</label>-->
+                <!--<input type="file" id="avatar" name="avatar">-->
+                <!--<input type="button" id="fileUpload" name="fileUpload"  value="上传头像">-->
+                <!--<span id="avatar-message"></span>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <div class="form-group">
-            <div class="col-lg-5">
-                <label for="gender">性别:</label>
-                <select class=" dropdown-menu-left" name="gender">
-                    <option value="m">男</option>
-                    <option value="f">女</option>
-                    <option value="x">保密</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-group field required">
-            <div class="col-lg-5">
-                <label>头像:</label>
-                <input type="file" id="avatar" name="avatar">
-                <input type="button" id="fileUpload" name="fileUpload"  value="上传头像">
-                <span id="avatar-message"></span>
-            </div>
-        </div>
-        <div class="form-group ">
-            <div class="col-lg-5">
-                <label  for="inputAlpha">验证码：</label>
-                <div>
-                    <div style="float: left;width:49%">
-                        <input type="text" id="inputAlpha" class="form-control input-lg" placeholder="请输入验证码" >
-                    </div>
-                    <div style="float: right;width:49%">
-                        <input type="button" class="btn btn-block input-lg code" id="code" style="color:#357ebd;font-weight:bold;font-style:oblique;letter-spacing: 12px";>
-                    </div>
-                </div>
-            </div><br>
-            <h4 class="text-error" id="message"></h4>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-5 ">
+            <div class="col-lg-6">
                 <button type="button" class="btn btn-primary btn-block " id="sign_up">注 册</button>
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-offset-2">
-                <text >已有账号，去登录>>></text>
-                <a href="/user/login" class="btn btn-primary" id="login">登录</a>
+            <div class="col-lg-offset-4">
+                <a href="/user/login" id="login">已有账号，去登录</a>
             </div>
         </div>
 

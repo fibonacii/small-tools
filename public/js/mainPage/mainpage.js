@@ -29,6 +29,10 @@ $(function () {
         }
     });
 
+    $('#backTop').on('click',function(){
+        $('body').animate({'scrollTop':0},200);
+    })
+
 });
 
 function checkUserExist() {
@@ -67,16 +71,16 @@ function initData() {
         console.log(result);
         initTable($('#applyData'), result.data);
     });
-    // param.status = 'accepted';
-    // $.get(url, param, function (result) {
-    //     console.log(result);
-    //     initTable($('#applyDataDoing'), result.data);
-    // });
-    // param.status = 'done';
-    // $.get(url, param, function (result) {
-    //     console.log(result);
-    //     initTable($('#applyDataDone'), result.data);
-    // });
+    param.status = 'accepted';
+    $.get(url, param, function (result) {
+        console.log(result);
+        initTable($('#applyDataDoing'), result.data);
+    });
+    param.status = 'done';
+    $.get(url, param, function (result) {
+        console.log(result);
+        initTable($('#applyDataDone'), result.data);
+    });
 }
 
 
