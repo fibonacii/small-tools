@@ -112,7 +112,7 @@ function initTable(tableDom, data) {
                 "data": "majorWorker.userName",
                 "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
                     if(sData){
-                        $(nTd).html(sData);
+                        $(nTd).html(oData.majorWorker.userName);
                     }else {
                         $(nTd).html('');
                     }

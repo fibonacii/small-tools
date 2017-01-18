@@ -55,6 +55,7 @@ TaskModel.findList = function (param) {
         createdAt: 1,
         updatedAt: 1,
         taskName: 1,
+        majorWorker: 1,
         status: 1
     }).populate({
         path: 'author',
@@ -71,6 +72,7 @@ TaskModel.findUserList = function (param) {
         createdAt: 1,
         updatedAt: 1,
         taskName: 1,
+        majorWorker: 1,
         status: 1
     }).populate({
         path: 'author',
@@ -84,10 +86,23 @@ TaskModel.countList = function (param) {
     return this.find({status: param.status}).count();
 }
 TaskModel.findTask = function (param) {
-    return this.findOne({_id: param.id}).select({author: 1, taskName: 1, content: 1, majorWorker: 1});
+    return this.findOne({_id: param.id}).select({
+        author: 1, taskName: 1, content: 1, majorWorker: 1
+    }).populate({
+        path: 'author',
+        select: '_id'
+    });
 }
 TaskModel.findTaskByUserName = function (param) {
-    return this.find({author:param.author}).select({author:1,_id:1,createdAt:1,updatedAt:1,taskName:1,status:1});
+    return this.find({author:param.author}).select({
+        author:1,_id:1,createdAt:1,updatedAt:1,taskName:1,status:1
+    }).populate({
+        path: 'author',
+        select: '_id'
+    }).populate({
+        path: 'author',
+        select: '_id'
+    });
 };
 TaskModel.updateTask = function (param) {
     return this.findOneAndUpdate({'_id': param.id}, {

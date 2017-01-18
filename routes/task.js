@@ -74,10 +74,16 @@ router.get('/content',function (req,res) {
             res.send("no such task");
             return;
         }
-        var isAccepted = task.majorWorker ? true : false;
-        var isMajorWorker = (task.majorWorker === req.session.uid) ? true : false;
-        var isAuthor = (task.author === req.session.uid) ? true : false;
 
+        var isAccepted;
+
+        if(task.majorWorker){
+            isAccepted = true;
+            var isMajorWorker = (task.majorWorker._id === req.session.uid) ? true : false;
+            var isAuthor = (task.author._id === req.session.uid) ? true : false;
+        }else {
+            isAccepted = false;
+        }
 
         res.render('task/taskDetail',
             {
@@ -102,6 +108,28 @@ router.get('/buy',function (req,res) {
         }
         TaskModel.updateTask(queryParam);
         req.flash('info','接受任务成功');
+        res.send('00');
+    })
+})
+
+router.get('/finish',function (req,res) {
+    var queryParam = {};
+    queryParam.id = req.query.taskId;
+    queryParam.status = 'done';
+    TaskModel.findTask(queryParam).then(function (task) {
+        if(task.majorWorker._id !== req.session.uid){
+            req.flash.info('info','请重新登录');
+            res.send('00');
+            return;
+        }
+
+        if(task.status !== 'accepted'){
+            req.flash.info('info','该任务已被其他人修改，请刷新页面');
+            res.send('00');
+            return;
+        }
+        TaskModel.updateTask(queryParam);
+        req.flash('info','更新任务状态成功');
         res.send('00');
     })
 })
