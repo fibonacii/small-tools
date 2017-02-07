@@ -87,9 +87,9 @@ function registerHandler() {
             //通过公钥私钥进行加密传输
             password = $('#passWord').val(),
             password2 = $('#passWord2').val(),
-            userName = $('#userName').val(),
-            gender = $('#gender').val(),
-            avatar = $('#avatar').val();
+            userName = $('#userName').val();
+            // gender = $('#gender').val(),
+            // avatar = $('#avatar').val();
         var getSignUpParam = function () {
             var encrypt = new JSEncrypt();
             var public_key = '-----BEGIN PUBLIC KEY-----' +
@@ -103,8 +103,8 @@ function registerHandler() {
             param.email = email;
             param.password = encrypt.encrypt(password);
             param.userName = userName;
-            param.gender = gender;
-            param.avatar = avatar;
+            // param.gender = gender;
+            // param.avatar = avatar;
             return param;
         };
 
@@ -118,10 +118,10 @@ function registerHandler() {
                     alert('两次输入的密码不一致');
                     return false;
                 }
-                if (!gender) {
-                    alert("请输入性别");
-                    return false;
-                }
+                // if (!gender) {
+                //     alert("请输入性别");
+                //     return false;
+                // }
                 return true;
             },
             postRegister: function () {
