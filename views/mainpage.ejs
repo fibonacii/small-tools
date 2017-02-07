@@ -9,7 +9,7 @@
 <script type="text/javascript" src="../public/js/mainPage/mainpage.js"></script>
 <script type="text/javascript" src="../public/js/libs/dataTables.bootstrap.min.js"></script>
 
-
+</head>
 <body id="bacgrd" style="background-image:url('../public/img/background/bacgrd1.jpg');background-attachment:scroll">
 <div role="banner" class="nav" style="margin-top: 10px">
     <div class="container">
@@ -17,12 +17,10 @@
             <ul class="nav_content">
                 <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>首页</a></li>
                 <!--说明文件-->
-                <li><a href="#">使用说明</a></li>
-                <li><a href="/advice/feedback">意见反馈</a></li>
+                <li><a href="/instructions/direction">使用说明</a></li>
+                <li><a href="/advice/showFeedback">意见反馈</a></li>
                 <li><a href="/user/newTask" onclick="checkUserExist();return false;">发布任务</a></li>
                 <li><a href="#">资源中心</a></li>
-                <!--排行榜包括 任务(按评论)排行，人气(按浏览量)排行，用户(按发布数和接单数之和)排行-->
-                <li><a href="#">排行榜</a></li>
                 <!--个人中心-->
                 <li><a href="/user/userSpace" onclick="userSpaceCheck();return false;">个人中心</a></li>
 

@@ -1,35 +1,17 @@
 
-var config=require('config-lite');
-var Mongolass = require('mongolass');
-var mongolass = new Mongolass();
-var moment = require('moment');
-var objectIdToTimestamp = require('objectid-to-timestamp');
-mongolass.connect(config.mongodb);
+var mongoose = require('../lib/mongo.js');
 
-// 根据 id 生成创建时间 created_at
-mongolass.plugin('addCreatedAt', {
-    afterFind: function (results) {
-        results.forEach(function (item) {
-            item.created_at = moment(objectIdToTimestamp(item._id)).format('YYYY-MM-DD HH:mm:ss');
-        });
-        return results;
-    },
-    afterFindOne: function (result) {
-        if (result) {
-            result.created_at = moment(objectIdToTimestamp(result._id)).format('YYYY-MM-DD HH:mm:ss');
-        }
-        return result;
-    }
-});
 
 //feedback or advice table
-exports.feedback = mongolass.model('feedback', {
-    alias: { type: 'string' },
-    problem_title: { type: 'string' },
-    problem_content:{type:'string'},
-    problem_type:{type:'number',enum: ['0', '1', '2',''] },
-    contact_email: { type: 'string' },
-    contact_phone: { type: 'string' },
-    handle_or_not:{type:'string'}
+var feedbackSchema = new mongoose.Schema({
+    problem_title: { type: String},
+    problem_content:{type:String},
+    problem_type:{type:String },
+    contact_email: { type: String },
+    contact_phone: { type:String },
+    status:{type:String},//0未处理，1已处理
+    createdAt: {type: Date,default: Date.now()}
 });
-exports.feedback.index({ alias: 1, _id: -1 }).exec();// 按创建时间降序查看用户的feedback
+
+var feedbackModel = mongoose.model('feedback', feedbackSchema);
+module.exports=feedbackModel;
