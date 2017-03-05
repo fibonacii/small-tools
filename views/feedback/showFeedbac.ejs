@@ -1,0 +1,46 @@
+<%- include('../components/header') %>
+<link rel="stylesheet" href="../../public/css/plus.css"/>
+<link rel="stylesheet" href="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
+<script type="text/javascript" src="../../public/js/feedBack/feedBack.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
+
+</head>
+<body>
+<div style="margin-top: 10px;height: 15px;width: auto;margin-left: 10px" >
+   <h2>反馈中心</h2>
+</div>
+
+<div class="five wide column" style="margin-top: 25px">
+    <form class="ui form segment" id="feedbackForm">
+        <div class="field required">
+            <label>标题</label>
+            <input type="text" name="problem_title" id="problem_title">
+        </div>
+        <div class="field required">
+            <label>问题类型</label>
+            <select class="selection dropdown" name="problem_type" id="problem_type">
+                <option value="0" selected="selected">bug</option>
+                <option value="1">建议</option>
+                <option value="2">其他</option>
+            </select>
+        </div>
+        <div class="field required">
+            <label>内容</label>
+            <textarea name="problem_content" rows="8" id="problem_content"></textarea>
+            <!--<input type="hidden" name="problem_content" id="problem_content">-->
+        </div>
+        <div class="field required">
+            <label>联系邮箱</label>
+            <input type="text" name="contact_email" id="contact_email">
+        </div>
+        <div class="field required">
+            <label>联系电话</label>
+            <input type="text" name="contact_phone" id="contact_phone">
+        </div>
+
+        <input id="submitBtn" type="submit" class="ui positive button" value="提交">
+        <input id="cancelBtn" type="button" class="ui negative button" value="取消">
+</form>
+</div>
+</body>
+<%- include('../components/footer') %>

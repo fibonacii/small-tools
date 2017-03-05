@@ -6,7 +6,7 @@ $(function () {
     initData();
 
     if (userIsExist()) {
-        $("#login_or_username").text($.cookie('user_name'));
+        $("#login_or_username").text("Hi,"+$.cookie('user_name'));
         $("#login_or_username").attr("value", "username");
         $("#logout_or_register").text("退出");
         $("#logout_or_register").attr("value", "logout");

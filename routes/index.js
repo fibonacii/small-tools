@@ -8,6 +8,8 @@ var userInfo=require('./userInfo.js');
 var wangEditor=require('./wangEditor.js');
 var task=require('./task.js');
 var gt_app=require('./gt-app.js');
+var feedBack=require('./feedback.js');
+var instructions=require('./direction.js');
 
 module.exports=function (app) {
     app.get('/',function (req,res,next) {
@@ -17,4 +19,6 @@ module.exports=function (app) {
     app.use('/wangEditor',wangEditor);
     app.use('/task',task);
     app.use('',gt_app);
+    app.use('/advice',feedBack);
+    app.use('/instructions',instructions);
 };

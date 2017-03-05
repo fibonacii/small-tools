@@ -3,11 +3,13 @@
 <link rel="stylesheet" href="../../public/css/userSpace.css"/>
 <link rel="stylesheet" href="../public/css/libs/dataTables.bootstrap.min.css"/>
 <link rel="stylesheet" href="../../public/css/jquery.dataTables.min.css"/>
+<link rel="stylesheet" href="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css">
+<script src="http://cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js"></script>
 <script type="text/javascript" src="../public/js/public/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../public/js/mainPage/mainpage.js"></script>
 <script type="text/javascript" src="../public/js/libs/dataTables.bootstrap.min.js"></script>
 
-
+</head>
 <body id="bacgrd" style="background-image:url('../public/img/background/bacgrd1.jpg');background-attachment:scroll">
 <div role="banner" class="nav" style="margin-top: 10px">
     <div class="container">
@@ -15,45 +17,51 @@
             <ul class="nav_content">
                 <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>首页</a></li>
                 <!--说明文件-->
-                <li><a href="#">使用说明</a></li>
-                <li><a href="#">意见反馈</a></li>
+                <li><a href="/instructions/direction">使用说明</a></li>
+                <li><a href="/advice/showFeedback">意见反馈</a></li>
                 <li><a href="/user/newTask" onclick="checkUserExist();return false;">发布任务</a></li>
                 <li><a href="#">资源中心</a></li>
-                <!--排行榜包括 任务(按评论)排行，人气(按浏览量)排行，用户(按发布数和接单数之和)排行-->
-                <li><a href="#">排行榜</a></li>
                 <!--个人中心-->
                 <li><a href="/user/userSpace" onclick="userSpaceCheck();return false;">个人中心</a></li>
 
-                <li style="float:right;margin-right: 60px"><p id="logout_or_register" value="register">注册</p></li>
-                <li style="float:right;margin-right: 60px"><p id="login_or_username" value="login">登陆</p></li>
+                <li style="float:right;margin-right: 80px">
+                    <div class="ui buttons">
+                        <button id="login_or_username" value="login" class="ui green basic button"><i class="user icon"></i>登录</button>
+                        <div class="or"></div>
+                        <button id="logout_or_register" value="register" class="ui red basic button"><i class="add user icon"></i>注册</button>
+                    </div>
+                </li>
+
 
             </ul>
         </div>
     </div>
 </div>
 <hr>
-<label>新发布任务：</label>
-<div id="contentTable">
-    <div class="dataTables_info" role="status" aria-live="polite">
-        <table id="applyData" class="table table-bordered table-hover stripe">
-        </table>
+<div style="margin-left: 80px">
+    <label>新发布任务：</label>
+    <div id="contentTable">
+        <div class="dataTables_info" role="status" aria-live="polite">
+            <table id="applyData" class="table table-bordered table-hover stripe">
+            </table>
 
+        </div>
     </div>
-</div>
-<label>进行中任务:</label>
-<div id="contentTableDoing">
-    <div class="dataTables_info" role="status" aria-live="polite">
-        <table id="applyDataDoing" class="table table-bordered table-hover stripe">
-        </table>
+    <label>进行中任务:</label>
+    <div id="contentTableDoing">
+        <div class="dataTables_info" role="status" aria-live="polite">
+            <table id="applyDataDoing" class="table table-bordered table-hover stripe">
+            </table>
 
+        </div>
     </div>
-</div>
-<label>已完成任务:</label>
-<div id="contentTableDone">
-    <div class="dataTables_info" role="status" aria-live="polite">
-        <table id="applyDataDone" class="table table-bordered table-hover stripe">
-        </table>
+    <label>已完成任务:</label>
+    <div id="contentTableDone">
+        <div class="dataTables_info" role="status" aria-live="polite">
+            <table id="applyDataDone" class="table table-bordered table-hover stripe">
+            </table>
 
+        </div>
     </div>
 </div>
 <div id="backTop">返回<br>顶部</div>
