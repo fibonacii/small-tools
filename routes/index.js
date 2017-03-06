@@ -10,6 +10,7 @@ var task=require('./task.js');
 var gt_app=require('./gt-app.js');
 var feedBack=require('./feedback.js');
 var instructions=require('./direction.js');
+var score=require('./score');
 
 module.exports=function (app) {
     app.get('/',function (req,res,next) {
@@ -21,4 +22,5 @@ module.exports=function (app) {
     app.use('',gt_app);
     app.use('/advice',feedBack);
     app.use('/instructions',instructions);
+    app.use('/apps/score',score);
 };

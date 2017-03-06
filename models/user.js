@@ -24,6 +24,9 @@ UserModel.findUserByEmail = function (email) {
 UserModel.findUserById = function (id) {
     return this.findOne({_id: id}).exec();
 }
+UserModel.findAllUser = function () {
+    return this.find({},{'id':1,'userName':1}).exec();
+}
 
 
 module.exports = UserModel;

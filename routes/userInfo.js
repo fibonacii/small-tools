@@ -11,19 +11,19 @@ var crypto = require('crypto');
 var config = require('config-lite');
 var formidable = require('formidable'),
     http = require('http'),
-    fs=require("fs"),
+    fs = require("fs"),
     util = require('util');
 
 router.get('/register', function (req, res) {
     // res.render('task/createTask');
-     res.render('userInfo/register');
+    res.render('userInfo/register');
 });
 
-router.get('/newTask',function (req, res) {
+router.get('/newTask', function (req, res) {
     res.render('task/createTask');
 });
 
-router.get('/userSpace',function (req, res) {
+router.get('/userSpace', function (req, res) {
     res.render('userInfo/userSpace');
 });
 
@@ -31,9 +31,9 @@ router.get('/login', function (req, res) {
     res.render('userInfo/login');
 });
 
-router.get('/taskList',function (req, res) {
+router.get('/taskList', function (req, res) {
     TaskModel.findAll().then(function (data) {
-      res.send(data);
+        res.send(data);
     });
 });
 
@@ -61,13 +61,13 @@ router.post('/signUp', function (req, res) {
         if (err) {
             if (err.code === 11000) {
                 console.log(err);
-                resJson.code='01';
-                resJson.msg='email has been 注册'
+                resJson.code = '01';
+                resJson.msg = 'email has been 注册'
                 res.send(resJson);
             } else {
                 console.log(err);
-                resJson.code='99'
-                resJson.msg='unknown exception , please call administror';
+                resJson.code = '99'
+                resJson.msg = 'unknown exception , please call administror';
                 res.send(resJson);
             }
         } else {
@@ -76,8 +76,8 @@ router.post('/signUp', function (req, res) {
                     req.flash('info', '注册成功');
                     req.session.uid = person.id;
                     req.session.userName = person.userName;
-                    resJson.code='00';
-                    resJson.msg='diao';
+                    resJson.code = '00';
+                    resJson.msg = 'diao';
                     res.send(resJson);
                 }
             })
@@ -85,7 +85,7 @@ router.post('/signUp', function (req, res) {
     })
 });
 
-router.post('/loginHandler',function (req,res) {
+router.post('/loginHandler', function (req, res) {
 
     var private_key = config.RSA_PRIVATE_KEY;
 
@@ -96,40 +96,40 @@ router.post('/loginHandler',function (req,res) {
     var md5 = crypto.createHash('md5');
     password1 = md5.update(password1).digest('base64');
     var email1 = req.body.email;
-    var resJson= new Object();
+    var resJson = new Object();
     UserModel.findUserByEmail(email1).then(function (person) {
-        if(person){
-            if(person.password===password1){
-                resJson.code='00';
-                resJson.msg="success";
-                resJson.userName=person.userName;
-                req.flash('info', '欢迎回来,'+person.userName);
-                req.session.uid=person.id;
-                req.session.userName=person.userName;
+        if (person) {
+            if (person.password === password1) {
+                resJson.code = '00';
+                resJson.msg = "success";
+                resJson.userName = person.userName;
+                req.flash('info', '欢迎回来,' + person.userName);
+                req.session.uid = person.id;
+                req.session.userName = person.userName;
                 res.send(resJson);
-            }else {
-                resJson.code='01';
-                resJson.userName=person.userName;
-                resJson.msg='incorrect password';
+            } else {
+                resJson.code = '01';
+                resJson.userName = person.userName;
+                resJson.msg = 'incorrect password';
                 res.send(resJson);
             }
-        }else{
-            resJson.code='02';
-            resJson.msg='no such user';
+        } else {
+            resJson.code = '02';
+            resJson.msg = 'no such user';
             res.send(resJson);
         }
     })
 });
 
 //touxiang
-router.post('/fileUpload', function(req, res, next) {
+router.post('/fileUpload', function (req, res, next) {
     var form = formidable.IncomingForm();
     form.encoding = 'utf-8';
-    form.uploadDir ='public/img/upload';
+    form.uploadDir = 'public/img/upload';
     form.keepExtensions = true;
     // form.maxFieldsSize = 2 * 1024 * 1024; // 单位为byte
 
-    form.on('progress', function(bytesReceived, bytesExpected) {
+    form.on('progress', function (bytesReceived, bytesExpected) {
         var progressInfo = {
             value: bytesReceived,
             total: bytesExpected
@@ -138,17 +138,26 @@ router.post('/fileUpload', function(req, res, next) {
         res.write(JSON.stringify(progressInfo));
     });
 
-    form.on('end', function() {
+    form.on('end', function () {
         console.log('end');
         res.send('success');
     });
 
-    form.on('error', function(err) {
+    form.on('error', function (err) {
         console.error('upload failed', err.message);
         next(err);
     });
 
     form.parse(req);
 });
+
+router.post('/getUser', function (req, res, next) {
+    UserModel.findAllUser().then(function (persons) {
+        var retJson = new Object();
+        retJson.code = '00';
+        retJson.data = persons;
+        res.send(retJson);
+    })
+})
 
 module.exports = router;
