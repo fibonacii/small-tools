@@ -41,5 +41,60 @@ router.post('/addSubmit', function (req, res, next) {
 
 })
 
+router.post('/findScoreList',function (req,res,next) {
+    var userId=req.session.uid;
+    var queryType = req.body.queryType;
+    var queryParam = {};
+    queryParam.userId = userId;
+    ScoreModel.findListByUser(queryParam).then(function (scoreList) {
+        var votedList = [];
+        var unVotedList = [];
+        scoreList.forEach(function (entry,index,array) {
+            entry.scorerResults.forEach(function (entry1,index1,array1) {
+                var tempScore = new Object();
+                tempScore.id = entry._id;
+                tempScore.sponsor = entry.sponsor;
+                tempScore.lowScore = entry.lowScore;
+                tempScore.highScore =entry.highScore;
+                tempScore.scoreName = entry.scoreName;
+                if(entry1.scorerId==userId){
+                    if(entry1.rank){
+                        tempScore.rank = entry1.rank;
+                        votedList.push(tempScore);
+                    }else {
+                        unVotedList.push(tempScore);
+                    }
+                }
+            })
+        });
+
+        var ret = new Object();
+        ret.code='00';
+        if(queryType === 'voted'){
+            ret.votedList = votedList;
+        }else if(queryType === 'unVoted'){
+            ret.unVotedList = unVotedList;
+        }else if(queryType === 'allInclude'){
+            ret.votedList = votedList;
+            ret.unVotedList = unVotedList;
+        }
+        res.send(ret);
+    })
+})
+
+router.get('/mainPage',function (req,res) {
+    res.render('apps/score/scorepage');
+})
+
+router.get('/content',function (req,res,next) {
+    var id = req.query.id;
+    var queryParam={};
+    queryParam.id = id;
+
+    ScoreModel.findScore(queryParam).then(function (score) {
+        res.render
+    })
+})
+
 
 module.exports = router;

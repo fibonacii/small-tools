@@ -1,0 +1,14 @@
+<%- include('../../components/header') %>
+<script type="text/javascript" src="../../public/js/task/taskDetail.js"></script>
+</head>
+<body>
+<div id="scoreInformation" style="display: none" scoreId=<%= score._id %></div>
+<label>标题：</label>
+<p style="margin-left: 10px"><%- score.scoreName %></p>
+<label>描述:</label>
+<div><%- score.scoreOverView %></div>
+<label>链接:</label>
+<div><%- score.scoreLink %></div>
+
+
+<%- include('../../components/footer') %>

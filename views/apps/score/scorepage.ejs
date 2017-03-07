@@ -1,0 +1,31 @@
+<%- include('../../components/header') %>
+<link rel="stylesheet" href="../../../public/css/libs/dataTables.bootstrap.min.css"/>
+<link rel="stylesheet" href="../../../../public/css/jquery.dataTables.min.css"/>
+<script type="text/javascript" src="../../../public/js/public/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../../public/js/libs/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../public/js/apps/score/scorepage.js"></script>
+
+
+</head>
+<body>
+
+<div style="margin-left: 80px">
+    <label>未打分任务：</label>
+    <div>
+        <div class="dataTables_info" role="status" aria-live="polite">
+            <table id="unVotedTable" class="table table-bordered table-hover stripe">
+            </table>
+
+        </div>
+    </div>
+    <label>已打分任务:</label>
+    <div>
+        <div class="dataTables_info" role="status" aria-live="polite">
+            <table id="votedTable" class="table table-bordered table-hover stripe">
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+<%- include('../../components/footer') %>
