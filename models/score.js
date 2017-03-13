@@ -32,9 +32,9 @@ var ScoreShema = new mongoose.Schema({
     highScore: {
         type: Number
     },
-    sponsor:{
+    sponsor: {
         type: mongoose.Schema.Types.ObjectId,
-        ref:'user'
+        ref: 'user'
     },
     scorers: [{
         type: mongoose.Schema.Types.ObjectId,
@@ -47,7 +47,7 @@ var ScoreShema = new mongoose.Schema({
                 ref: 'user'
             },
             rank: {
-                Number
+                type: Number
             }
         }
     ]
@@ -55,26 +55,38 @@ var ScoreShema = new mongoose.Schema({
 
 var ScoreModel = mongoose.model('score', ScoreShema);
 ScoreModel.findListByUser = function (param) {
-    return this.find({scorers:param.userId}).sort({"updatedAt":-1}).select({
-        _id:1,
-        scoreName:1,
-        scorers:1,
-        scorerResults:1,
-        lowScore:1,
-        highScore:1
+    return this.find({scorers: param.userId}).sort({"updatedAt": -1}).select({
+        _id: 1,
+        scoreName: 1,
+        scorers: 1,
+        scorerResults: 1,
+        lowScore: 1,
+        highScore: 1
     }).populate({
-        path:'sponsor',
-        select:'userName'
+        path: 'sponsor',
+        select: 'userName'
     })
 };
 ScoreModel.findScore = function (param) {
-    return this.findOne({_id:param.id}).select({
-        scoreName:1,
-        scoreOverView:1,
-        scoreLink:1,
-        lowScore:1,
-        highScore:1
+    return this.findOne({_id: param.id}).select({
+        scoreName: 1,
+        scoreOverView: 1,
+        scoreLink: 1,
+        lowScore: 1,
+        highScore: 1
     })
-
+};
+ScoreModel.updateScore = function (param) {
+    return this.findOneAndUpdate({
+            '_id': param.id,
+            'scorerResults.scorerId': param.userId
+        },
+        {
+            $set: {
+                'scorerResults.$.rank': param.rank
+            }
+        }, function (err) {
+            console.log(err);
+        });
 }
 module.exports = ScoreModel;

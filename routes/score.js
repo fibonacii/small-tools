@@ -33,35 +33,35 @@ router.post('/addSubmit', function (req, res, next) {
         highScore: req.body.highScore
     });
 
-    ScoreModel.create(scoreEntity,function (err) {
+    ScoreModel.create(scoreEntity, function (err) {
         console.log(err);
-        req.flash('info','打分任务创建成功');
+        req.flash('info', '打分任务创建成功');
         res.send('00');
     })
 
 })
 
-router.post('/findScoreList',function (req,res,next) {
-    var userId=req.session.uid;
+router.post('/findScoreList', function (req, res, next) {
+    var userId = req.session.uid;
     var queryType = req.body.queryType;
     var queryParam = {};
     queryParam.userId = userId;
     ScoreModel.findListByUser(queryParam).then(function (scoreList) {
         var votedList = [];
         var unVotedList = [];
-        scoreList.forEach(function (entry,index,array) {
-            entry.scorerResults.forEach(function (entry1,index1,array1) {
+        scoreList.forEach(function (entry, index, array) {
+            entry.scorerResults.forEach(function (entry1, index1, array1) {
                 var tempScore = new Object();
                 tempScore.id = entry._id;
                 tempScore.sponsor = entry.sponsor;
                 tempScore.lowScore = entry.lowScore;
-                tempScore.highScore =entry.highScore;
+                tempScore.highScore = entry.highScore;
                 tempScore.scoreName = entry.scoreName;
-                if(entry1.scorerId==userId){
-                    if(entry1.rank){
+                if (entry1.scorerId == userId) {
+                    if (entry1.rank) {
                         tempScore.rank = entry1.rank;
                         votedList.push(tempScore);
-                    }else {
+                    } else {
                         unVotedList.push(tempScore);
                     }
                 }
@@ -69,12 +69,12 @@ router.post('/findScoreList',function (req,res,next) {
         });
 
         var ret = new Object();
-        ret.code='00';
-        if(queryType === 'voted'){
+        ret.code = '00';
+        if (queryType === 'voted') {
             ret.votedList = votedList;
-        }else if(queryType === 'unVoted'){
+        } else if (queryType === 'unVoted') {
             ret.unVotedList = unVotedList;
-        }else if(queryType === 'allInclude'){
+        } else if (queryType === 'allInclude') {
             ret.votedList = votedList;
             ret.unVotedList = unVotedList;
         }
@@ -82,18 +82,37 @@ router.post('/findScoreList',function (req,res,next) {
     })
 })
 
-router.get('/mainPage',function (req,res) {
+router.get('/mainPage', function (req, res) {
     res.render('apps/score/scorepage');
 })
 
-router.get('/content',function (req,res,next) {
+router.get('/content', function (req, res, next) {
     var id = req.query.id;
-    var queryParam={};
+    var queryParam = {};
     queryParam.id = id;
 
     ScoreModel.findScore(queryParam).then(function (score) {
-        res.render
+        res.render(
+            'apps/score/vote',
+            {
+                score: score
+            }
+        )
     })
+});
+
+router.post('/voteSubmit', function (req, res) {
+    var userId = req.session.uid;
+    var scoreId = req.body.scoreId;
+    var scoreVote = req.body.scoreVote;
+    var queryParam = {};
+    queryParam.id=scoreId;
+    queryParam.userId = userId;
+    queryParam.rank = Number(scoreVote);
+
+    ScoreModel.updateScore(queryParam);
+    req.flash('info','评分成功');
+    res.send('00');
 })
 
 

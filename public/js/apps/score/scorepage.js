@@ -1,5 +1,9 @@
 $(function () {
     initData();
+
+    $('#addScoreBtn').bind('click', function () {
+        window.location.href = '/apps/score/add';
+    })
 })
 
 function initData() {
@@ -33,7 +37,7 @@ function initTable(tableDom, data) {
             {
                 "data": "scoreName",
                 "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-                    $(nTd).html("<div><a href='/apps/score/content?id=" + oData._id + "'>" + sData + "</a></div>");
+                    $(nTd).html("<div><a href='/apps/score/content?id=" + oData.id + "'>" + sData + "</a></div>");
                 },
                 "title": "任务名"
             },
