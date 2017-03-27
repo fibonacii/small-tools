@@ -41,6 +41,8 @@ function initTable(tableDom, data) {
                 },
                 "title": "任务名"
             },
+            {"data":"averageRank","title":"平均分"},
+            {"data":"unVotedCount","title":"未打分人数"},
             {"data": "sponsor", "title": "发布者"},
         ],
         "data": data,

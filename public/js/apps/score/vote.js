@@ -32,7 +32,7 @@ function scoreVote() {
 
             return $.post(scoreVoteUrl, param, function (response) {
 
-                if (response.code === '00') {
+                if (response === '00') {
                     window.location.href='/apps/score/mainPage';
                 }
             })

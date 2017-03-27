@@ -73,7 +73,8 @@ ScoreModel.findScore = function (param) {
         scoreOverView: 1,
         scoreLink: 1,
         lowScore: 1,
-        highScore: 1
+        highScore: 1,
+        scorerResults: 1
     })
 };
 ScoreModel.updateScore = function (param) {

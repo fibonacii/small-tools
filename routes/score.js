@@ -30,7 +30,8 @@ router.post('/addSubmit', function (req, res, next) {
         scorers: req.body.scorerChose,
         scorerResults: scorerResults,
         lowScore: req.body.lowScore,
-        highScore: req.body.highScore
+        highScore: req.body.highScore,
+        sponsor: req.session.uid
     });
 
     ScoreModel.create(scoreEntity, function (err) {
@@ -50,13 +51,23 @@ router.post('/findScoreList', function (req, res, next) {
         var votedList = [];
         var unVotedList = [];
         scoreList.forEach(function (entry, index, array) {
+
+            var votedRank = 0;
+            var votedCount = 0;
+            var tempScore = new Object();
+            tempScore.id = entry._id;
+            tempScore.sponsor = entry.sponsor;
+            tempScore.lowScore = entry.lowScore;
+            tempScore.highScore = entry.highScore;
+            tempScore.scoreName = entry.scoreName;
+
             entry.scorerResults.forEach(function (entry1, index1, array1) {
-                var tempScore = new Object();
-                tempScore.id = entry._id;
-                tempScore.sponsor = entry.sponsor;
-                tempScore.lowScore = entry.lowScore;
-                tempScore.highScore = entry.highScore;
-                tempScore.scoreName = entry.scoreName;
+
+                if(entry1.rank) {
+                    votedRank += entry1.rank;
+                    votedCount++;
+                }
+
                 if (entry1.scorerId == userId) {
                     if (entry1.rank) {
                         tempScore.rank = entry1.rank;
@@ -66,6 +77,12 @@ router.post('/findScoreList', function (req, res, next) {
                     }
                 }
             })
+
+            if(votedCount!==0){
+                tempScore.averageRank = votedRank/votedCount;
+            }
+            tempScore.unVotedCount = entry.scorerResults.length - votedCount;
+
         });
 
         var ret = new Object();
@@ -92,6 +109,7 @@ router.get('/content', function (req, res, next) {
     queryParam.id = id;
 
     ScoreModel.findScore(queryParam).then(function (score) {
+
         res.render(
             'apps/score/vote',
             {
